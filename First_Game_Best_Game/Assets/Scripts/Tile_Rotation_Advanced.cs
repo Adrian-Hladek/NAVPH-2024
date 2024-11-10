@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class Tile_Rotation_Advanced : MonoBehaviour
+public class Tile_Rotation_ : MonoBehaviour
 {
     [SerializeField] string centerChildName = "MiddleChild"; // The name of the child to rotate around
     [SerializeField] float rotationAmount = 90f; // Rotation amount in degrees (fixed to 90)

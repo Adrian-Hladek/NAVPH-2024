@@ -1349,7 +1349,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3190854161117445051}
-  - component: {fileID: 1197891417881857232}
   - component: {fileID: 4277562831094191784}
   m_Layer: 6
   m_Name: Policko
@@ -1382,22 +1381,6 @@ Transform:
   - {fileID: 6628107829301973566}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1197891417881857232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6029629165522979994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd47121ccae791e4f8d091e53be4be2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerChildName: Bunka_B2
-  rotationAmount: 90
-  hasRotated: 0
-  requiredHeldObject: {fileID: 6916141685699917870, guid: 95838ea80c8c7204e8fda680aa077dd1, type: 3}
 --- !u!61 &4277562831094191784
 BoxCollider2D:
   m_ObjectHideFlags: 0

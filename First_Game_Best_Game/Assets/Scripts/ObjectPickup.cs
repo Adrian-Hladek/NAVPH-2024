@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ObjectPickup : MonoBehaviour
 {
-    
+
     private Vector3 originalPosition;  // Original position of the object to return to
     private bool isPickedUp = false;   // Whether the object is being dragged
     private Camera mainCamera;         // Reference to the main camera
@@ -74,7 +74,7 @@ public class ObjectPickup : MonoBehaviour
             // Calculate the offset between the mouse position and the object's position
             offset = transform.position - mousePosition;
 
-           // Cursor.visible = false;
+            // Cursor.visible = false;
 
             Debug.Log("Object picked up!");
         }
