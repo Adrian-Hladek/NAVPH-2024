@@ -11,9 +11,9 @@ public class Tile_Rotation : MonoBehaviour
     public GameObject requiredHeldObject;  // Optional: Specify which object needs to be held for rotation
 
     [Header("Layer Settings")]
-    [SerializeField] LayerMask touchLayerMask = 6; // Exposed Layer Mask to specify which layer to check against
+    // Exposed Layer Mask to specify which layer to check against
     [SerializeField] string targetTag = "Bunka";  // Target tag to look for
-
+    private LayerMask touchLayerMask;
     // This will store the list of game objects touching child colliders and also child objects of the rotated parent
     private List<GameObject> interactingObjects = new List<GameObject>();
 
@@ -23,7 +23,12 @@ public class Tile_Rotation : MonoBehaviour
         if (GetComponent<Collider2D>() == null)
         {
             Debug.LogWarning("Collider2D not found! Please add a collider to this object for mouse detection.");
+           
         }
+
+        touchLayerMask = LayerMask.GetMask("Game_Map");
+
+
     }
 
     private void OnMouseDown()
@@ -114,7 +119,11 @@ public class Tile_Rotation : MonoBehaviour
 
                 // Use OverlapBoxAll to detect all colliders that intersect with this one
                 Collider2D[] touching = Physics2D.OverlapBoxAll(collider.bounds.center, collider.bounds.size, 0, touchLayerMask);
+                Debug.Log(collider.bounds.center);
+                Debug.Log(collider.bounds.size);
 
+
+                Debug.Log(touching);
                 // Loop through each collider detected by OverlapBoxAll
                 foreach (Collider2D col in touching)
                 {
