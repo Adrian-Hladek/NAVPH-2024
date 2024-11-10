@@ -1350,6 +1350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3190854161117445051}
   - component: {fileID: 4277562831094191784}
+  - component: {fileID: 7028521819937381269}
   m_Layer: 6
   m_Name: Policko
   m_TagString: Policko
@@ -1426,6 +1427,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.562234, y: 3.5290582}
   m_EdgeRadius: 0
+--- !u!114 &7028521819937381269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6029629165522979994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd47121ccae791e4f8d091e53be4be2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAmount: 90
+  hasRotated: 0
+  requiredHeldObject: {fileID: 0}
 --- !u!1 &6201483925942249941
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,10 +5,17 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class Tile_Rotation : MonoBehaviour
 {
-    [SerializeField] float rotationAmount = 90f; // Rotation amount in degrees (fixed to 90)
-    [SerializeField] bool hasRotated = false;    // Flag to ensure rotation happens only once per click
+    [SerializeField] float rotationAmount = 90f;  // Rotation amount in degrees (fixed to 90)
+    [SerializeField] bool hasRotated = false;     // Flag to ensure rotation happens only once per click
 
     public GameObject requiredHeldObject;  // Optional: Specify which object needs to be held for rotation
+
+    [Header("Layer Settings")]
+    [SerializeField] LayerMask touchLayerMask = 6; // Exposed Layer Mask to specify which layer to check against
+    [SerializeField] string targetTag = "Bunka";  // Target tag to look for
+
+    // This will store the list of game objects touching child colliders and also child objects of the rotated parent
+    private List<GameObject> interactingObjects = new List<GameObject>();
 
     private void Start()
     {
@@ -29,6 +36,7 @@ public class Tile_Rotation : MonoBehaviour
             Debug.Log("Object clicked: Rotating object now.");
             hasRotated = true;
             RotateChildrenAroundCenter();
+            DetectInteractingObjects();  // Detect interacting objects after rotation
         }
     }
 
@@ -78,5 +86,82 @@ public class Tile_Rotation : MonoBehaviour
         child.position = center + direction;
 
         Debug.Log("Rotating child: " + child.name + " around point " + center);
+    }
+
+    // Method to detect and add all colliders that are touching the child objects' side colliders, and include children of the rotated parent
+    void DetectInteractingObjects()
+    {
+        List<GameObject> interacting = new List<GameObject>();
+
+        // Iterate through each child of the rotated object
+        foreach (Transform child in transform)
+        {
+            // First, add the child object itself to the interacting list (since you want to include them)
+            if (!interacting.Contains(child.gameObject))
+            {
+                interacting.Add(child.gameObject);
+                Debug.Log("Added child object: " + child.name);
+            }
+
+            // Get all the colliders attached to the current child (assuming there may be multiple colliders)
+            Collider2D[] childColliders = child.GetComponents<Collider2D>();
+
+            // Iterate through each collider attached to the child
+            foreach (Collider2D collider in childColliders)
+            {
+                // Debugging: Log collider bounds to check if the area is correct
+                Debug.Log($"Checking for touching colliders for child: {child.name}, Collider Bounds: {collider.bounds}");
+
+                // Use OverlapBoxAll to detect all colliders that intersect with this one
+                Collider2D[] touching = Physics2D.OverlapBoxAll(collider.bounds.center, collider.bounds.size, 0, touchLayerMask);
+
+                // Loop through each collider detected by OverlapBoxAll
+                foreach (Collider2D col in touching)
+                {
+                    if (col != null && col.gameObject != child.gameObject)  // Ensure we don't add the child itself
+                    {
+                        // Log the detected colliders
+                        Debug.Log("Detected collider: " + col.name);
+
+                        // Only add objects with the specified tag
+                        if (col.CompareTag(targetTag))
+                        {
+                            // Avoid adding duplicates to the list
+                            if (!interacting.Contains(col.gameObject))
+                            {
+                                interacting.Add(col.gameObject);
+                                Debug.Log("Touching tagged object added: " + col.name);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Store the result in the parent class's array of interacting objects
+        interactingObjects = interacting;
+
+        // Print the number of interacting objects in the array
+        Debug.Log("Total number of interacting objects: " + interactingObjects.Count);
+
+        // Optionally, log all the objects in the list
+        foreach (GameObject obj in interactingObjects)
+        {
+            Debug.Log("Interacting object: " + obj.name);
+        }
+
+        // Call your separate function to perform operations on the interacting objects
+        PerformOperationsOnInteractingObjects();
+    }
+
+    // Example function to perform operations on the array of interacting objects
+    void PerformOperationsOnInteractingObjects()
+    {
+        foreach (GameObject obj in interactingObjects)
+        {
+            // Perform your desired operation, for example:
+            Debug.Log("Performing operation on: " + obj.name);
+            // Your custom logic goes here
+        }
     }
 }
