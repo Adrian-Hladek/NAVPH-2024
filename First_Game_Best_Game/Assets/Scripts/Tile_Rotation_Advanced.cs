@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class Tile_Rotation : MonoBehaviour
+public class Tile_Rotation_Advanced : MonoBehaviour
 {
-    [SerializeField] string centerChildName; // The name of the child to rotate around
+    [SerializeField] string centerChildName = "MiddleChild"; // The name of the child to rotate around
     [SerializeField] float rotationAmount = 90f; // Rotation amount in degrees (fixed to 90)
     [SerializeField] bool hasRotated = false; // Flag to ensure rotation happens only once per click
 
@@ -37,6 +35,7 @@ public class Tile_Rotation : MonoBehaviour
         }
 
         // Only proceed if we have the required object held
+        // We assume ObjectPickup.heldObject is a reference to the currently held object
         if (ObjectPickup.heldObject == requiredHeldObject && !hasRotated)
         {
             Debug.Log("Object clicked: Rotating object now.");
@@ -55,17 +54,24 @@ public class Tile_Rotation : MonoBehaviour
     // Method to rotate the children of the object around the center (middle child or calculated center)
     void RotateChildrenAroundNamedCenter()
     {
+        // Try to find the center child by its name
         Transform centerChild = transform.Find(centerChildName);
+
+        // If the center child is found, use its position as the center for rotation
         Vector3 center = centerChild != null ? centerChild.position : CalculateCenterOfChildren();
 
-        // Rotate each child around the center
+        // Rotate each child around the calculated center of the grid
         foreach (Transform child in transform)
         {
-            if (child != centerChild)  // Don't rotate the center itself
+            // Skip the center child itself to avoid rotating it
+            if (child != centerChild)
             {
-                RotateAroundPoint(child, center);
+                RotateChildAroundItsOwnCenter(child);
             }
         }
+
+        // Now, rotate the parent object around the center
+        RotateAroundPoint(transform, center);
     }
 
     // Method to calculate the center point by averaging the positions of all child objects
@@ -92,19 +98,38 @@ public class Tile_Rotation : MonoBehaviour
         return sum / count;
     }
 
-    // Method to rotate a specific child around a given point (center)
-    void RotateAroundPoint(Transform child, Vector3 center)
+    // Method to rotate a specific child around its own center
+    void RotateChildAroundItsOwnCenter(Transform child)
     {
-        // Get the direction from the center to the child in the 2D plane (Z-axis rotation)
-        Vector3 direction = child.position - center;
+        // Get the direction from the child’s local position to the origin (0, 0)
+        Vector3 direction = child.localPosition;
 
-        // Apply a fixed 90 degree rotation to the direction vector (rotate it around the Z-axis for 2D)
+        // Apply a fixed 90-degree rotation to the direction vector (rotate it around the Z-axis for 2D)
         direction = Quaternion.Euler(0, 0, rotationAmount) * direction;
 
-        // Update the child's position based on the new direction
-        child.position = center + direction;
+        // Update the child's local position based on the new direction
+        child.localPosition = direction;
+
+        // Apply the rotation to the child itself (so that it rotates around its own center)
+        child.Rotate(Vector3.forward, rotationAmount);
 
         // Debug log for each child being rotated
-        Debug.Log("Rotating child: " + child.name + " around point " + center);
+        Debug.Log("Rotating child: " + child.name + " around its own center");
+    }
+
+    // Method to rotate the parent around a specific point (center)
+    void RotateAroundPoint(Transform parent, Vector3 center)
+    {
+        // Get the direction from the center to the parent in the 2D plane (Z-axis rotation)
+        Vector3 direction = parent.position - center;
+
+        // Apply a fixed 90-degree rotation to the direction vector (rotate it around the Z-axis for 2D)
+        direction = Quaternion.Euler(0, 0, rotationAmount) * direction;
+
+        // Update the parent's position based on the new direction
+        parent.position = center + direction;
+
+        // Debug log for the parent being rotated
+        Debug.Log("Rotating parent: " + parent.name + " around point " + center);
     }
 }
