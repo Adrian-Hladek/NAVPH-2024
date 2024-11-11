@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 21300000, guid: e9f4b84369d7833468cd7e6914455020, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 256598de514736a47ad056c734cfb6e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -345,7 +345,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 21300000, guid: e9f4b84369d7833468cd7e6914455020, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 256598de514736a47ad056c734cfb6e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -613,7 +613,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 21300000, guid: e9f4b84369d7833468cd7e6914455020, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 256598de514736a47ad056c734cfb6e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -818,6 +818,7 @@ GameObject:
   - component: {fileID: 8130648499044184207}
   - component: {fileID: 2585402361126051798}
   - component: {fileID: 448663843213308451}
+  - component: {fileID: 5096189974939045802}
   m_Layer: 6
   m_Name: Side1
   m_TagString: Bunka
@@ -881,7 +882,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 21300000, guid: f3561dac55234a94f9e64692dc20c0a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba3e1263e6624224d818ea09fa3c3539, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1072,6 +1073,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &5096189974939045802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3703599529989548803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasRight: 0
+  HasLeft: 0
+  HasUpper: 0
+  HasBottom: 0
+  IsPath: 1
+  HasPath: 0
+  HasTurret: 0
 --- !u!1 &4378328071317712019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1106,7 @@ GameObject:
   - component: {fileID: 6218243328851525814}
   - component: {fileID: 7580502206382587846}
   - component: {fileID: 7288425181993663220}
+  - component: {fileID: 6404889924377572970}
   m_Layer: 6
   m_Name: Middle1
   m_TagString: Bunka
@@ -1340,6 +1361,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &6404889924377572970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4378328071317712019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasRight: 0
+  HasLeft: 0
+  HasUpper: 0
+  HasBottom: 0
+  IsPath: 1
+  HasPath: 0
+  HasTurret: 0
 --- !u!1 &6029629165522979994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1560,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 21300000, guid: e9f4b84369d7833468cd7e6914455020, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 256598de514736a47ad056c734cfb6e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1725,6 +1765,7 @@ GameObject:
   - component: {fileID: 8598469449092427757}
   - component: {fileID: 3805301699341111807}
   - component: {fileID: 2045207885028577626}
+  - component: {fileID: 4711366062840889240}
   m_Layer: 6
   m_Name: Side1
   m_TagString: Bunka
@@ -1979,6 +2020,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &4711366062840889240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8111720958139422451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasRight: 0
+  HasLeft: 0
+  HasUpper: 0
+  HasBottom: 0
+  IsPath: 1
+  HasPath: 0
+  HasTurret: 0
 --- !u!1 &8517396008252807327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2053,7 @@ GameObject:
   - component: {fileID: 8004521237430061798}
   - component: {fileID: 5302679631362877502}
   - component: {fileID: 7524591690435337815}
+  - component: {fileID: 5743045763882590815}
   m_Layer: 6
   m_Name: Side1
   m_TagString: Bunka
@@ -2247,6 +2308,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &5743045763882590815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517396008252807327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasRight: 0
+  HasLeft: 0
+  HasUpper: 0
+  HasBottom: 0
+  IsPath: 1
+  HasPath: 0
+  HasTurret: 0
 --- !u!1 &8902117001463617410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,6 +2341,7 @@ GameObject:
   - component: {fileID: 1944146528633344599}
   - component: {fileID: 9180891299221749095}
   - component: {fileID: 5644812038302328915}
+  - component: {fileID: 3015688620408889274}
   m_Layer: 6
   m_Name: Side1
   m_TagString: Bunka
@@ -2515,3 +2596,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &3015688620408889274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902117001463617410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasRight: 0
+  HasLeft: 0
+  HasUpper: 0
+  HasBottom: 0
+  IsPath: 1
+  HasPath: 0
+  HasTurret: 0
