@@ -6,6 +6,9 @@ public class BunkaChange : MonoBehaviour
     // Store references to the detected objects
     private List<GameObject> detectedObjects = new List<GameObject>();
 
+    // Threshold value for comparing floating point numbers
+    private const float epsilon = 0.01f;
+
     // Method to recalculate and detect objects in contact with colliders of the main object
     public void Recalculate()
     {
@@ -17,12 +20,8 @@ public class BunkaChange : MonoBehaviour
         // Log the main object (the one calling this method)
         Debug.Log($"Main object: {gameObject.name}");
 
-
         // Print the global position of the main object
         Debug.Log($"Global Position of {gameObject.name}: {transform.position}");
-
-
-       
 
         // Find the colliders on the main object
         Collider2D[] colliders = GetComponents<Collider2D>();
@@ -66,7 +65,6 @@ public class BunkaChange : MonoBehaviour
             Debug.LogWarning($"More than 4 objects detected: {detectedObjects.Count} objects found.");
         }
 
-
         // Optionally, log all detected objects
         Debug.Log("Detected objects: ");
         foreach (var obj in detectedObjects)
@@ -84,26 +82,38 @@ public class BunkaChange : MonoBehaviour
         // Get the global position of the detected object
         Vector3 detectedPosition = detectedCollider.transform.position;
 
-        // Calculate the relative direction based on the detected object's position compared to the main object’s position
-        if (detectedPosition.y > mainObjectPosition.y)
+        // Check if Y is close enough (within epsilon threshold)
+        bool isYClose = Mathf.Abs(detectedPosition.y - mainObjectPosition.y) < epsilon;
+
+        // Check if X is close enough (within epsilon threshold)
+        bool isXClose = Mathf.Abs(detectedPosition.x - mainObjectPosition.x) < epsilon;
+
+        // If both X and Y are close enough, consider the detected object as "Center"
+        if (isYClose && isXClose)
         {
-            return "Up";  // Detected object is above the main object
-        }
-        if (detectedPosition.y < mainObjectPosition.y)
-        {
-            return "Down";  // Detected object is below the main object
-        }
-        if (detectedPosition.x > mainObjectPosition.x)
-        {
-            return "Right";  // Detected object is to the right of the main object
-        }
-        if (detectedPosition.x < mainObjectPosition.x)
-        {
-            return "Left";  // Detected object is to the left of the main object
+            return "Center";  // Treat them as being in the same position
         }
 
-        // Fallback if the position matches exactly
+        // Calculate the relative direction based on the detected object's position compared to the main object’s position
+        if (detectedPosition.y > mainObjectPosition.y && !isYClose)
+        {
+            return "Up";  // Detected object is above the main object (if Y is not close)
+        }
+        if (detectedPosition.y < mainObjectPosition.y && !isYClose)
+        {
+            return "Down";  // Detected object is below the main object (if Y is not close)
+        }
+
+        if (detectedPosition.x > mainObjectPosition.x && !isXClose)
+        {
+            return "Right";  // Detected object is to the right of the main object (if X is not close)
+        }
+        if (detectedPosition.x < mainObjectPosition.x && !isXClose)
+        {
+            return "Left";  // Detected object is to the left of the main object (if X is not close)
+        }
+
+        // Fallback if something goes wrong (shouldn't happen with correct data)
         return "Center";
     }
-
 }
