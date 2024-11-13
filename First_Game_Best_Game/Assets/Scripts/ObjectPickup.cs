@@ -10,12 +10,14 @@ public class ObjectPickup : MonoBehaviour
     private Collider2D objectCollider; // Reference to the Collider2D component
     public static GameObject heldObject = null;
 
+    // [EDIT] bolo by good pricapiù ten object v strede na koniec kurzora ale ako to je eöte ot·zka :D 
+
     private void Start()
     {
-        // Store the original position of the object when the script starts
+        
         originalPosition = transform.position;
         mainCamera = Camera.main;
-        objectCollider = GetComponent<Collider2D>(); // Get the Collider2D component
+        objectCollider = GetComponent<Collider2D>(); 
     }
 
     private void Update()
@@ -63,7 +65,7 @@ public class ObjectPickup : MonoBehaviour
 
             isPickedUp = true;
             heldObject = gameObject;
-            objectCollider.enabled = false;
+            objectCollider.enabled = false; // Nutna feature ... pretoûe keÔ dragujem object je pred cursorom takûe by som maËkal st·le ten object, ktor˝ nosÌm a nie mapu pod nÌm
 
             // Calculate the offset between the mouse position and the object's center
             offset = transform.position - mousePosition;
@@ -78,10 +80,7 @@ public class ObjectPickup : MonoBehaviour
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0; // Set z to 0 for 2D
 
-        // Move the object based on the mouse position and the offset, ensuring the object's center is at the mouse position
-       
         transform.position = mousePosition + offset;
-
        
     }
 
