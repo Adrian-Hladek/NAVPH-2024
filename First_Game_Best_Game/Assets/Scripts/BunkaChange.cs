@@ -14,19 +14,15 @@ public class BunkaChange : MonoBehaviour
     [SerializeField] private bool HasPath;
     [SerializeField] private bool HasTurret;
 
-    
 
 
-
-
-
-    // Store references to the detected objects
+    // na zistenie textury objektu potrebujem vedeiù vlastnosti z okolit˝ch objektov, tie s˙ uloûenÈ v tomto poli
     private List<GameObject> detectedObjects = new List<GameObject>();
 
-    // Threshold value for comparing floating point numbers
+    // Threshold value for comparing floating point numbers, prech·dzali veci ako 4<4 v ife pretoûe float bol prÌliû blizky ale nie rovnak˝ z nejakÈho dÙvodu to neölo pekne v Gride tak bolo treba nejakÈ overenie
     private const float epsilon = 0.01f;
 
-    // Method to recalculate and detect objects in contact with colliders of the main object
+    // dostaù Sprite/Obr·zok z objektu (Nwm preËo to pomenovali Sprite ale budiö)
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
@@ -35,7 +31,7 @@ public class BunkaChange : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
         {
-            Debug.LogError("SpriteRenderer component not found on the main object.");
+            Debug.LogWarning("SpriteRenderer component not found on the main object.");
         }
 
 
@@ -47,12 +43,12 @@ public class BunkaChange : MonoBehaviour
     public void Recalculate()
     {
         // Reset flags to false at the start of each recalculation
-
+        // AK by nebol reset robilo by to srandy :D na konci by bolo vöetko farebnÈ :D
         HasRight = false;
         HasLeft = false;
         HasUpper = false;
         HasBottom = false;
-        detectedObjects.Clear();
+        detectedObjects.Clear(); // toto som myslel ûe bude robiù automaticky ale nono 
 
         // Sync transforms to ensure colliders are accurate after any changes
         Physics2D.SyncTransforms();
@@ -61,7 +57,7 @@ public class BunkaChange : MonoBehaviour
         Debug.Log($"Main object: {gameObject.name}");
         Debug.Log($"Global Position of {gameObject.name}: {transform.position}");
 
-        // Find the colliders on the main object
+        // Find the colliders on the main object  (Bud˙ 4)
         Collider2D[] colliders = GetComponents<Collider2D>();
 
         foreach (Collider2D mainCollider in colliders)
@@ -82,10 +78,11 @@ public class BunkaChange : MonoBehaviour
                 {
                     string position = GetRelativePosition(mainCollider, col);
 
-                    // Log which object was detected by which collider
-                    Debug.Log($"Detected object: {col.gameObject.name} at position: {position}");
+                   
+                    //Debug.Log($"Detected object: {col.gameObject.name} at position: {position}");
 
-                    // Check the `isPath` and `hasPath` properties
+                    // Check the `isPath` and `hasPath` properties vtedy vieme ûe je to polÌËko cesty a je tam cesta
+                    
                     BunkaChange bunkaProps = col.GetComponent<BunkaChange>();
                     if (bunkaProps != null && bunkaProps.IsPath && bunkaProps.HasPath)
                     {
@@ -112,17 +109,14 @@ public class BunkaChange : MonoBehaviour
             }
         }
 
-        // Check if more than 4 objects are detected
+        
         if (detectedObjects.Count > 4)
         {
+            // niekde m·me overlap, ktor˝ by nemal nastaù
             Debug.LogWarning($"More than 4 objects detected: {detectedObjects.Count} objects found.");
         }
 
-
-
-
-
-        // here i want to do something with main object
+        
         UpdateSpriteBasedOnFlags();
 
         
@@ -174,28 +168,24 @@ public class BunkaChange : MonoBehaviour
     private void UpdateSpriteBasedOnFlags()
     {
 
-        Debug.LogWarning("Tu ma zmysel citaù");
-        // Check current sprite before changing
-        //Sprite currentSprite = spriteRenderer.sprite;
-        //Debug.Log("Current Sprite: " + currentSprite.name);  // Log the current sprite name
-
         // Update the sprite based on the boolean flags
 
         if (!IsPath && !HasTurret)
         {
             // Zelen· mimo cesty
-            Debug.Log("Green7");
+            //Debug.Log("Green7");
             spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_7");
         }
         else if (IsPath && !HasTurret && !HasPath)
         {
             // zelena na ceste 
-            Debug.Log("Green7");
+            //Debug.Log("Green7");
             spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_7");
         }
         else if (HasPath && HasUpper && HasBottom && HasLeft && HasRight)
         {
-            Debug.Log("Mid8");
+            // stred "+" crossroadu
+            //Debug.Log("Mid8");
             spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_8");
         }
         else if (HasPath && HasUpper && HasBottom)
@@ -206,19 +196,19 @@ public class BunkaChange : MonoBehaviour
             if (HasRight)
             {
                 // T ktorÈ ma top vlavo
-                Debug.Log("Tecko16");
+                //Debug.Log("Tecko16");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_16");
             }
             else if (HasLeft)
             {
                 // T ktorÈ ma top vpravo
-                Debug.Log("Tecko13");
+                //Debug.Log("Tecko13");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_13");
             }
             else
             {
                 //zhora dolu Vertical
-                Debug.Log("Straight11");
+                //Debug.Log("Straight11");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_11");
 
             }
@@ -230,19 +220,19 @@ public class BunkaChange : MonoBehaviour
             if (HasUpper)
             {
                 // T ktorÈ ma top dolu
-                Debug.Log("Tecko17");
+                //Debug.Log("Tecko17");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_17");
             }
             else if (HasBottom)
             {
                 // T ktorÈ ma top hore
-                Debug.Log("Tecko12");
+                //Debug.Log("Tecko12");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_12");
             }
             else
             {
                 // pravo lavo horizontal
-                Debug.Log("Straight9");
+                //Debug.Log("Straight9");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_9");
 
             }
@@ -257,19 +247,19 @@ public class BunkaChange : MonoBehaviour
             if (HasRight)
             {
                 // L ktorÈ ma top a pravo
-                Debug.Log("Tecko15");
+                //Debug.Log("Tecko15");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_15");
             }
             else if (HasLeft)
             {
                 // L ktorÈ ma top a lavo
-                Debug.Log("Tecko14");
+                //Debug.Log("Tecko14");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_14");
             }
             else
             {
                 // dead end Top cesta ide zhora konËi dolu
-                Debug.Log("Dead end1");
+                //Debug.Log("Dead end1");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_1");
 
 
@@ -282,19 +272,19 @@ public class BunkaChange : MonoBehaviour
             if (HasRight)
             {
                 // L ktorÈ ma Bot a pravo
-                Debug.Log("Tecko6");
+                //Debug.Log("Tecko6");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_6");
             }
             else if (HasLeft)
             {
                 // L ktorÈ ma bot a lavo
-                Debug.Log("Tecko5");
+                //Debug.Log("Tecko5");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_5");
             }
             else
             {
                 // dead end bottom cesta ide zdola konËi hore
-                Debug.Log("Dead end4");
+                //Debug.Log("Dead end4");
                 spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_4");
 
             }
@@ -302,20 +292,20 @@ public class BunkaChange : MonoBehaviour
         else if (HasPath && HasLeft)
         {
             // dead end Left cesta ide zlava konËi pravo
-            Debug.Log("Dead end3");
+            //Debug.Log("Dead end3");
             spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_3");
 
         }
         else if (HasPath && HasRight)
         {
             // dead end right cesta ide z prava konËi vlavo
-            Debug.Log("Dead end2");
+            //Debug.Log("Dead end2");
             spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_2");
         }
         else if (HasPath && !HasUpper && !HasBottom && !HasLeft && !HasRight)
         {
             // sam vojak v poli
-            Debug.Log("single10");
+            //Debug.Log("single10");
             spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_10");
         }
         else

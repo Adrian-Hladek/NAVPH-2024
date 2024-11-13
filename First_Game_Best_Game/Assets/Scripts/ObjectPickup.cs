@@ -1,23 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
+
+
 
 public class ObjectPickup : MonoBehaviour
 {
+
     private Vector3 originalPosition;  // Original position of the object to return to
     private bool isPickedUp = false;   // Whether the object is being dragged
     private Camera mainCamera;         // Reference to the main camera
-    private Vector3 offset;            // Offset between mouse position and object's center position
+    private Vector3 offset;            // Offset between mouse position and object's position
 
     private Collider2D objectCollider; // Reference to the Collider2D component
     public static GameObject heldObject = null;
 
-    // [EDIT] bolo by good pricapiù ten object v strede na koniec kurzora ale ako to je eöte ot·zka :D 
+
 
     private void Start()
     {
-        
+        // Store the original position of the object when the script starts
         originalPosition = transform.position;
         mainCamera = Camera.main;
-        objectCollider = GetComponent<Collider2D>(); 
+        objectCollider = GetComponent<Collider2D>(); // Get the Collider2D component
     }
 
     private void Update()
@@ -57,6 +61,7 @@ public class ObjectPickup : MonoBehaviour
         // Check if the mouse position is inside the object's collider
         if (objectCollider.OverlapPoint(mousePosition))
         {
+
             if (heldObject != null)  // Ensure we're not overwriting an already held object
             {
                 Debug.Log("An object is already held.");
@@ -65,10 +70,11 @@ public class ObjectPickup : MonoBehaviour
 
             isPickedUp = true;
             heldObject = gameObject;
-            objectCollider.enabled = false; // Nutna feature ... pretoûe keÔ dragujem object je pred cursorom takûe by som maËkal st·le ten object, ktor˝ nosÌm a nie mapu pod nÌm
-
-            // Calculate the offset between the mouse position and the object's center
+            objectCollider.enabled = false;
+            // Calculate the offset between the mouse position and the object's position
             offset = transform.position - mousePosition;
+
+            // Cursor.visible = false;
 
             Debug.Log("Object picked up!");
         }
@@ -80,8 +86,8 @@ public class ObjectPickup : MonoBehaviour
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0; // Set z to 0 for 2D
 
+        // Move the object based on the mouse position and the offset
         transform.position = mousePosition + offset;
-       
     }
 
     // Drop the object and return it to its original position
@@ -92,6 +98,7 @@ public class ObjectPickup : MonoBehaviour
         heldObject = null;
         transform.position = originalPosition;
         objectCollider.enabled = true;
+        //Cursor.visible = true;
 
         Debug.Log("Object dropped and returned to its original position.");
     }

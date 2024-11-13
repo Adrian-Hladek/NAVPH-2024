@@ -9,7 +9,7 @@ public class Tile_Rotation : MonoBehaviour
     [SerializeField] bool hasRotated = false;     // Flag to ensure rotation happens only once per click
                                                   // "EDIT" bolo by vhodnÈ meniù Ëi chceme 90-180-270 ale to nieje prio
 
-    public GameObject requiredHeldObject;  // Optional: Specify which object needs to be held for rotation
+    public GameObject requiredRotateObject;  // Optional: Specify which object needs to be held for rotation
 
     [Header("Layer Settings")]   //Editor Featurka 
     
@@ -37,7 +37,7 @@ public class Tile_Rotation : MonoBehaviour
         //Debug.Log("Object clicked: Checking rotation state.");
 
         // Only proceed if the required object is held and rotation hasn't happened yet
-        if (ObjectPickup.heldObject == requiredHeldObject && !hasRotated)
+        if (ObjectPickup.heldObject == requiredRotateObject && !hasRotated)
         {
             //Debug.Log("Object clicked: Rotating object now.");
             hasRotated = true;
