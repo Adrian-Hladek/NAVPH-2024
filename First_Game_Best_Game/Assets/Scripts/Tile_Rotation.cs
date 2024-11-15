@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [ExecuteInEditMode]
@@ -27,7 +28,7 @@ public class Tile_Rotation : MonoBehaviour
            
         }
 
-        touchLayerMask = LayerMask.GetMask("Game_Map");
+        touchLayerMask = LayerMask.GetMask("Bunka_Layer");
 
 
     }
@@ -106,8 +107,19 @@ public class Tile_Rotation : MonoBehaviour
         {
             // add the child object itself to the interacting list 
             {
-                interacting.Add(child.gameObject);
                 
+
+                BunkaChange bunkaChange = child.GetComponent<BunkaChange>();
+
+                if (bunkaChange != null)  // If the component exists on the child
+                {
+                    // Add the child object to the interacting list if it has the BunkaChange component
+                    interacting.Add(child.gameObject);
+                }
+
+
+
+
             }
 
             // Get all the colliders attached to the current child (assuming there may be multiple colliders -> sú práve 4, jeden na každej strane)
@@ -147,6 +159,7 @@ public class Tile_Rotation : MonoBehaviour
         // Store the result in the parent class's array of interacting objects
         interactingObjects = interacting;
 
+        Debug.LogWarning(interactingObjects.Count);
         PerformOperationsOnInteractingObjects();
     }
 

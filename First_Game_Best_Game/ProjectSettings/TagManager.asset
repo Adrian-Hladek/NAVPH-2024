@@ -8,6 +8,7 @@ TagManager:
   - Policko
   - Bunka
   - Bordering
+  - Touching
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - Water
   - UI
   - Game_Map
-  - 
-  - 
-  - 
+  - Bunka_Layer
+  - Policko_Layer
+  - Touching_Layer
   - 
   - 
   - 

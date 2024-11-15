@@ -1,10 +1,8 @@
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class BunkaChange : MonoBehaviour
 {
-    // Boolean flags for the object's neighboring paths, visible in the Inspector
     [SerializeField] private bool HasRight;
     [SerializeField] private bool HasLeft;
     [SerializeField] private bool HasUpper;
@@ -14,55 +12,43 @@ public class BunkaChange : MonoBehaviour
     [SerializeField] private bool HasPath;
     [SerializeField] private bool HasTurret;
 
-
-
-    // na zistenie textury objektu potrebujem vedeiù vlastnosti z okolit˝ch objektov, tie s˙ uloûenÈ v tomto poli
     private List<GameObject> detectedObjects = new List<GameObject>();
-
-    // Threshold value for comparing floating point numbers, prech·dzali veci ako 4<4 v ife pretoûe float bol prÌliû blizky ale nie rovnak˝ z nejakÈho dÙvodu to neölo pekne v Gride tak bolo treba nejakÈ overenie
     private const float epsilon = 0.01f;
-
-    // dostaù Sprite/Obr·zok z objektu (Nwm preËo to pomenovali Sprite ale budiö)
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
-        // Get the SpriteRenderer component attached to this GameObject
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
         {
             Debug.LogWarning("SpriteRenderer component not found on the main object.");
         }
-
-
-       
     }
-
-
 
     public void Recalculate()
     {
-        // Reset flags to false at the start of each recalculation
-        // AK by nebol reset robilo by to srandy :D na konci by bolo vöetko farebnÈ :D
         HasRight = false;
         HasLeft = false;
         HasUpper = false;
         HasBottom = false;
-        detectedObjects.Clear(); // toto som myslel ûe bude robiù automaticky ale nono 
+        detectedObjects.Clear();
 
-        // Sync transforms to ensure colliders are accurate after any changes
         Physics2D.SyncTransforms();
 
-        // Log the main object
-        Debug.Log($"Main object: {gameObject.name}");
-        Debug.Log($"Global Position of {gameObject.name}: {transform.position}");
+        // Get all colliders in children, but filter out the ones directly on this GameObject
+        Collider2D[] allColliders = GetComponentsInChildren<Collider2D>();
+        List<Collider2D> childColliders = new List<Collider2D>();
 
-        // Find the colliders on the main object  (Bud˙ 4)
-        Collider2D[] colliders = GetComponents<Collider2D>();
-
-        foreach (Collider2D mainCollider in colliders)
+        foreach (Collider2D collider in allColliders)
         {
-            // Use OverlapCollider to detect objects that are overlapping with this collider
+            if (collider.gameObject != gameObject)  // Only add colliders from child objects
+            {
+                childColliders.Add(collider);
+            }
+        }
+
+        foreach (Collider2D mainCollider in childColliders)
+        {
             Collider2D[] touchingObjects = new Collider2D[10];
             int overlapCount = Physics2D.OverlapCollider(mainCollider, new ContactFilter2D().NoFilter(), touchingObjects);
 
@@ -73,20 +59,14 @@ public class BunkaChange : MonoBehaviour
                 if (col.gameObject == gameObject)
                     continue;
 
-                // Check if the detected object has the "Bunka" tag
                 if (col.CompareTag("Bunka") && !detectedObjects.Contains(col.gameObject))
                 {
                     string position = GetRelativePosition(mainCollider, col);
+                    Debug.Log($"Detected object: {col.gameObject.name} at position: {position}");
 
-                   
-                    //Debug.Log($"Detected object: {col.gameObject.name} at position: {position}");
-
-                    // Check the `isPath` and `hasPath` properties vtedy vieme ûe je to polÌËko cesty a je tam cesta
-                    
                     BunkaChange bunkaProps = col.GetComponent<BunkaChange>();
                     if (bunkaProps != null && bunkaProps.IsPath && bunkaProps.HasPath)
                     {
-                        // Set the appropriate flag based on position
                         switch (position)
                         {
                             case "Up":
@@ -109,41 +89,27 @@ public class BunkaChange : MonoBehaviour
             }
         }
 
-        
         if (detectedObjects.Count > 4)
         {
-            // niekde m·me overlap, ktor˝ by nemal nastaù
             Debug.LogWarning($"More than 4 objects detected: {detectedObjects.Count} objects found.");
         }
 
-        
         UpdateSpriteBasedOnFlags();
-
-        
     }
 
-    // Method to determine the relative position of the detected object using World Positions
-    string GetRelativePosition(Collider2D mainCollider, Collider2D detectedCollider)
+    private string GetRelativePosition(Collider2D mainCollider, Collider2D detectedCollider)
     {
-        // Get the global position of the main object
         Vector3 mainObjectPosition = transform.position;
-
-        // Get the global position of the detected object
         Vector3 detectedPosition = detectedCollider.transform.position;
 
-        // Check if Y is close enough (within epsilon threshold)
         bool isYClose = Mathf.Abs(detectedPosition.y - mainObjectPosition.y) < epsilon;
-
-        // Check if X is close enough (within epsilon threshold)
         bool isXClose = Mathf.Abs(detectedPosition.x - mainObjectPosition.x) < epsilon;
 
-        // If both X and Y are close enough, consider the detected object as "Center"
         if (isYClose && isXClose)
         {
             return "Center";
         }
 
-        // Calculate the relative direction based on the detected object's position
         if (detectedPosition.y > mainObjectPosition.y && !isYClose)
         {
             return "Up";
@@ -161,11 +127,13 @@ public class BunkaChange : MonoBehaviour
             return "Left";
         }
 
-        return "Center";  // Fallback
+        return "Center";
     }
 
+   
 
-    private void UpdateSpriteBasedOnFlags()
+
+private void UpdateSpriteBasedOnFlags()
     {
 
         // Update the sprite based on the boolean flags
