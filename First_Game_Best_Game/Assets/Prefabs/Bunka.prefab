@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7766738705868114010}
   - component: {fileID: 2074718836411318220}
   - component: {fileID: 4108109399194548697}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Bunka
   m_TagString: Bunka
   m_Icon: {fileID: 0}
@@ -349,10 +349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 3502732428313191086}
-  firstCollider: {fileID: 2386156169566941252}
-  colliderToDisable: {fileID: 0}
-  restoreDelay: 1
   requiredHeldObject: {fileID: 0}
+  targetLayerName: Bunka_Layer
 --- !u!1 &3502732428313191086
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5989166358924192}
   - component: {fileID: 2646604768434809640}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}

@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994048654084462389}
   - component: {fileID: 7772445606338869380}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Bordering (1)
   m_TagString: Bordering
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5111341378126144618}
   - component: {fileID: 2252777405983326096}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}
@@ -1136,7 +1136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8027946287827123932}
   - component: {fileID: 4649023150464330431}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}
@@ -1374,7 +1374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4635402906161778213}
   - component: {fileID: 7894406105292104822}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}
@@ -1458,7 +1458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3105152445969531860}
   - component: {fileID: 8051721497473138975}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}
@@ -2098,7 +2098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4340835390555518004}
   - component: {fileID: 2082367122933046821}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}
@@ -2567,7 +2567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2734888659543362494}
   - component: {fileID: 4857089338477160245}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}
@@ -3145,7 +3145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAmount: 90
-  hasRotated: 0
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  specificTag: Policko
   requiredRotateObject: {fileID: 0}
   targetTag: Bunka
 --- !u!114 &2940650016420836419
@@ -3652,7 +3655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2577647758567470634}
   - component: {fileID: 3504700370517564476}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}
@@ -4138,7 +4141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 235529912085005611}
   - component: {fileID: 1025299090588595053}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}
@@ -4393,7 +4396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6137444165061611528}
   - component: {fileID: 6474120672851308844}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bordering
   m_TagString: Bordering
   m_Icon: {fileID: 0}

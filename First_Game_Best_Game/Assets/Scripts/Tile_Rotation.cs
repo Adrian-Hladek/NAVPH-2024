@@ -7,10 +7,11 @@ using UnityEngine;
 public class Tile_Rotation : MonoBehaviour
 {
     [SerializeField] float rotationAmount = 90f;  // Rotation amount in degrees (fixed to 90)
-    [SerializeField] bool hasRotated = false;     // Flag to ensure rotation happens only once per click
-                                                  // "EDIT" bolo by vhodnÈ meniù Ëi chceme 90-180-270 ale to nieje prio
 
+    [SerializeField] private LayerMask targetLayer;                                 // "EDIT" bolo by vhodnÈ meniù Ëi chceme 90-180-270 ale to nieje prio
+    [SerializeField] private string specificTag = "Policko";
     public GameObject requiredRotateObject;  // Optional: Specify which object needs to be held for rotation
+   
 
     [Header("Layer Settings")]   //Editor Featurka 
     
@@ -33,45 +34,80 @@ public class Tile_Rotation : MonoBehaviour
 
     }
 
-    private void OnMouseDown()
-    {
-        //Debug.Log("Object clicked: Checking rotation state.");
 
-        // Only proceed if the required object is held and rotation hasn't happened yet
-        if (ObjectPickup.heldObject == requiredRotateObject && !hasRotated)
+    void Update()
+    {
+        // Check for left mouse button click
+        if (Input.GetMouseButtonDown(0) )
         {
-            //Debug.Log("Object clicked: Rotating object now.");
-            hasRotated = true;
-            RotateChildrenAroundCenter();
-            DetectInteractingObjects();  
+            
+            // Check if the required object is being held
+            if (ObjectPickup.heldObject == requiredRotateObject)
+            {
+                
+                // Perform a raycast at the mouse position
+                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, targetLayer);
+
+                if (hit.collider != null)
+                {
+                    // Check if the object has the correct tag or meets other criteria
+                    if (hit.collider.CompareTag(specificTag))
+                    {
+                        // Perform your desired action
+                        Debug.Log($"Clicked on object with specific collider: {hit.collider.gameObject.name}");
+                        HandleClick(hit.collider.gameObject);
+                    }
+                }
+                
+            }
+            else
+            {
+                Debug.LogWarning("You are not holding the required object.");
+            }
         }
+
+       
+
     }
 
-    private void OnMouseUp()
+
+
+
+    private void HandleClick(GameObject clickedObject)
     {
-        //Debug.Log("Mouse button released: Resetting rotation flag.");
-        hasRotated = false;
+        // Log the name of the clicked object
+        Debug.Log($"Handling click for {clickedObject.name}");
+
+        // Perform actions related to rotating and interacting with only the clicked object
+        RotateChildrenAroundCenter(clickedObject);
+        DetectInteractingObjectsForSpecificObject(clickedObject);  // Pass the clicked object to detect its specific interactions
     }
+
+
 
     // Method to rotate all child objects around their calculated center
-    void RotateChildrenAroundCenter()
+    void RotateChildrenAroundCenter(GameObject clickedObject)
     {
-        Vector3 center = CalculateCenterOfChildren();
+        // Calculate the center of only the clicked object's children
+        Vector3 center = CalculateCenterOfChildren(clickedObject);
 
-        foreach (Transform child in transform)
+        // Rotate only the clicked object's children around the center
+        foreach (Transform child in clickedObject.transform)
         {
             RotateAroundPoint(child, center);
         }
     }
 
+
     // Method to calculate the center point by averaging the positions of all child objects
-    Vector3 CalculateCenterOfChildren()
+    Vector3 CalculateCenterOfChildren(GameObject clickedObject)
     {
-        // "EDIT" Ai Generated funkcia robÌ priemer pozÌcii 
         Vector3 sum = Vector3.zero;
         int count = 0;
 
-        foreach (Transform child in transform)
+        // Only iterate over the children of the clicked object
+        foreach (Transform child in clickedObject.transform)
         {
             sum += child.position;
             count++;
@@ -79,14 +115,14 @@ public class Tile_Rotation : MonoBehaviour
 
         if (count == 0)
         {
-            
-            return transform.position;
+            // Return the clicked object's position if it has no children
+            return clickedObject.transform.position;
         }
 
         return sum / count;
     }
 
-    
+
     void RotateAroundPoint(Transform child, Vector3 center)
     {
         Vector3 direction = child.position - center;
@@ -97,69 +133,86 @@ public class Tile_Rotation : MonoBehaviour
     }
 
     // Method to detect and add all colliders that are touching the child objects' side colliders, and include children of the rotated parent
-    void DetectInteractingObjects()
+    void DetectInteractingObjectsForSpecificObject(GameObject clickedObject)
     {
         List<GameObject> interacting = new List<GameObject>();
 
-        //V liste by malo byù teoreticky 9-21 objektov na konci funkcie, Prakticky moûe byù 12-21 re·lne bude ale 15-21(RohovÈ pole, ktorÈ sa dot˝ka 2 œalöÌch) 
-        // Iterate through each child of the rotated object
-        foreach (Transform child in transform)
+        // Ensure the clicked object is valid
+        if (clickedObject == null)
         {
-            // add the child object itself to the interacting list 
+            Debug.LogWarning("Clicked object is null. Aborting detection.");
+            return;
+        }
+
+        foreach (Transform child in clickedObject.transform)
+        {
+            // Check if the child is not null
+            if (child == null)
             {
+                Debug.LogWarning("Encountered a null child. Skipping.");
+                continue;
+            }
+
+            // Check if the child's tag matches the specific tag
+            if (child.CompareTag(targetTag))
+            {
+                Debug.Log($"Child {child.name} matches the specific tag: {targetTag}");
                 
 
-                BunkaChange bunkaChange = child.GetComponent<BunkaChange>();
-
-                if (bunkaChange != null)  // If the component exists on the child
+                if (!interacting.Contains(child.gameObject))
                 {
-                    // Add the child object to the interacting list if it has the BunkaChange component
                     interacting.Add(child.gameObject);
+                    
                 }
 
 
-
-
-            }
-
-            // Get all the colliders attached to the current child (assuming there may be multiple colliders -> s˙ pr·ve 4, jeden na kaûdej strane)
-            Collider2D[] childColliders = child.GetComponents<Collider2D>();
-
-            // Iterate through each collider attached to the child
-            foreach (Collider2D collider in childColliders)
-            {
-                
-                // Use OverlapBoxAll to detect all colliders that intersect with this one
-                Collider2D[] touching = Physics2D.OverlapBoxAll(collider.bounds.center, collider.bounds.size, 0, touchLayerMask);
-                
-
-
-                
-                // Loop through each collider detected by OverlapBoxAll
-                foreach (Collider2D col in touching)
+                // Process colliders for this child
+                Collider2D[] childColliders = child.GetComponents<Collider2D>();
+                foreach (Collider2D collider in childColliders)
                 {
-                    if (col != null && col.gameObject != child.gameObject)  // Ensure we don't add the child itself 
+                    // Use OverlapBoxAll to detect colliders overlapping with this collider
+                    Collider2D[] touching = Physics2D.OverlapBoxAll(
+                        collider.bounds.center,
+                        collider.bounds.size,
+                        0f, // No rotation needed for 2D
+                        touchLayerMask
+                    );
+
+                    foreach (Collider2D col in touching)
                     {
-                   
-                        // Only add objects with the specified tag (Moûeme sa dot˝kaù ötartovnÈho alebo koncovÈho polÌËka, ktorÈ je nemennÈ)
-                        if (col.CompareTag(targetTag))
+                        if (col != null &&
+                            col.gameObject != clickedObject &&
+                            col.gameObject != child.gameObject &&
+                            col.CompareTag(targetTag))
                         {
-                            // Avoid adding duplicates to the list
                             if (!interacting.Contains(col.gameObject))
                             {
                                 interacting.Add(col.gameObject);
-                                
                             }
                         }
                     }
                 }
             }
+            else
+            {
+                Debug.Log($"Child {child.name} does not match the specific tag: {targetTag}");
+            }
         }
 
-        // Store the result in the parent class's array of interacting objects
+        // Store the interacting objects in the parent class list
         interactingObjects = interacting;
 
-        Debug.LogWarning(interactingObjects.Count);
+        // Log the count of interacting objects for debugging
+        Debug.LogWarning($"Interacting objects count: {interactingObjects.Count}"); // [EDIT] toto sa vypÌöe XY kr·t podæa toho koæko kr·t je objekt s t˝mto scriptom na scÈne. Neviem preËo sa to tak robÌ ... nevadÌ to niËomu ale neviem ako to fixnuù :D 
+
+
+        foreach (GameObject obj in interactingObjects)
+        {
+            Debug.Log($"Interacting object: {obj.name}");
+        }
+
+
+        // Perform operations on the detected interacting objects
         PerformOperationsOnInteractingObjects();
     }
 
