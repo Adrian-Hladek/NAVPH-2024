@@ -16,6 +16,15 @@ public class BunkaChange : MonoBehaviour
     private const float epsilon = 0.01f;
     private SpriteRenderer spriteRenderer;
 
+
+
+
+    public bool IsPathValue
+    {
+        get { return IsPath; }
+    }
+
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -283,8 +292,9 @@ private void UpdateSpriteBasedOnFlags()
         }
 
         Debug.Log("Sprite updated ");  // Log the updated sprite name
+        //Debug.LogWarning("Bunka change  kolko krat?");
+
     }
 
-
-
+   
 }

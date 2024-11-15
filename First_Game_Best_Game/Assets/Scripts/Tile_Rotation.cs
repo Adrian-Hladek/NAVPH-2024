@@ -56,7 +56,7 @@ public class Tile_Rotation : MonoBehaviour
                     {
                         // Perform your desired action
                         Debug.Log($"Clicked on object with specific collider: {hit.collider.gameObject.name}");
-                        HandleClick(hit.collider.gameObject);
+                        this.HandleClick(hit.collider.gameObject);
                     }
                 }
                 
@@ -80,8 +80,8 @@ public class Tile_Rotation : MonoBehaviour
         Debug.Log($"Handling click for {clickedObject.name}");
 
         // Perform actions related to rotating and interacting with only the clicked object
-        RotateChildrenAroundCenter(clickedObject);
-        DetectInteractingObjectsForSpecificObject(clickedObject);  // Pass the clicked object to detect its specific interactions
+        this.RotateChildrenAroundCenter(clickedObject);
+        this.DetectInteractingObjectsForSpecificObject(clickedObject);  // Pass the clicked object to detect its specific interactions
     }
 
 
@@ -133,7 +133,7 @@ public class Tile_Rotation : MonoBehaviour
     }
 
     // Method to detect and add all colliders that are touching the child objects' side colliders, and include children of the rotated parent
-    void DetectInteractingObjectsForSpecificObject(GameObject clickedObject)
+    private void DetectInteractingObjectsForSpecificObject(GameObject clickedObject)
     {
         List<GameObject> interacting = new List<GameObject>();
 

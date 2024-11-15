@@ -3,7 +3,8 @@ using UnityEngine;
 public class Hover_Highlight : MonoBehaviour
 {
     [SerializeField] private GameObject highlightChild;
-    public GameObject requiredHeldObject;
+    public GameObject requiredDeleteObject;
+    public GameObject requiredCreateObject;
     [SerializeField] private string targetLayerName = "Bunka_Layer";
 
     private static int targetLayerMask; // Cache the layer mask for efficiency
@@ -32,14 +33,34 @@ public class Hover_Highlight : MonoBehaviour
 
         if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
-            if (!isHovering && (ObjectPickup.heldObject != requiredHeldObject || ObjectPickup.heldObject == null))
+
+           
+            BunkaChange bunkaChange = hit.collider.gameObject.GetComponent<BunkaChange>();
+
+            if (bunkaChange != null && bunkaChange.IsPathValue)
             {
-                isHovering = true;
-                if (highlightChild != null)
+                if (!isHovering && (ObjectPickup.heldObject == requiredDeleteObject || ObjectPickup.heldObject == requiredCreateObject || ObjectPickup.heldObject == null))
                 {
-                    highlightChild.SetActive(true);
+                    isHovering = true;
+                    if (highlightChild != null)
+                    {
+                        highlightChild.SetActive(true);
+                    }
+                    Debug.Log($"Mouse entered {gameObject.name}.");
                 }
-                Debug.Log($"Mouse entered {gameObject.name}.");
+            }
+            else if(bunkaChange != null)
+            {
+                if (!isHovering && ( ObjectPickup.heldObject == null))
+                {
+                    isHovering = true;
+                    if (highlightChild != null)
+                    {
+                        highlightChild.SetActive(true);
+                    }
+                    Debug.Log($"Mouse entered {gameObject.name}.");
+                }
+
             }
         }
         else
