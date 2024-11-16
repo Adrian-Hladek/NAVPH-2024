@@ -74,7 +74,7 @@ public class ObjectPickup : MonoBehaviour
             // Calculate the offset between the mouse position and the object's position
             offset = transform.position - mousePosition;
 
-            // Cursor.visible = false;
+            Cursor.visible = false;
 
             Debug.Log("Object picked up!");
         }
@@ -98,7 +98,7 @@ public class ObjectPickup : MonoBehaviour
         heldObject = null;
         transform.position = originalPosition;
         objectCollider.enabled = true;
-        //Cursor.visible = true;
+        Cursor.visible = true;
 
         Debug.Log("Object dropped and returned to its original position.");
     }
