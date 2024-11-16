@@ -184,6 +184,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &8702911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +690,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &17605767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,6 +774,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &37623883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,6 +902,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &55476722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,6 +986,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &76644368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,6 +1070,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &89150609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,6 +1154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &105714136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,6 +1238,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &143787057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,6 +1322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &152625645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1795,6 +1840,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &190743579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,6 +1924,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &195581347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1953,6 +2008,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &195649169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1987,6 +2047,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &203953006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2066,6 +2131,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &221699282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2145,6 +2215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &222124125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2224,6 +2299,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &228735435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2303,6 +2383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &235349437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,6 +2467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &239878737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2879,6 +2969,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &260700073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2958,6 +3053,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &263955801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3037,6 +3137,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &272738957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3522,6 +3627,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &294247158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3601,6 +3711,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &301086189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3680,6 +3795,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &303553184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3759,6 +3879,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &304433237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3838,6 +3963,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &304594946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3917,6 +4047,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &317463929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4418,6 +4553,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &333497717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4497,6 +4637,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &335195967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4576,6 +4721,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &339110950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4655,6 +4805,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &345664417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4734,6 +4889,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &356207314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4813,6 +4973,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &374134697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4892,6 +5057,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &374915999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4971,6 +5141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &375146359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5050,6 +5225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &394758545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5129,6 +5309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &418299954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5630,6 +5815,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &445812039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5709,6 +5899,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &450154582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5788,6 +5983,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &461234942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5867,6 +6067,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &463631326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5946,6 +6151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &498332148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6025,6 +6235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &507219334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6104,6 +6319,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &516897863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6320,6 +6540,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &522177707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6399,6 +6624,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &530174969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6478,6 +6708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &530476501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6557,6 +6792,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &533757851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6636,6 +6876,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &551533858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6715,6 +6960,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &561025142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6794,6 +7044,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &580960212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6873,6 +7128,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &581397292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6952,6 +7212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &583090453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6995,11 +7260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693303074689558906, guid: 16df6739253669a40946ff0473784064, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.295517
+      value: -21.98
       objectReference: {fileID: 0}
     - target: {fileID: 5693303074689558906, guid: 16df6739253669a40946ff0473784064, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8021896
+      value: -11.7
       objectReference: {fileID: 0}
     - target: {fileID: 5693303074689558906, guid: 16df6739253669a40946ff0473784064, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7106,6 +7371,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &598153631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7591,6 +7861,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &614619070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7670,6 +7945,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &615482526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7831,6 +8111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &640089102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8332,6 +8617,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &647788995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8411,6 +8701,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &655487614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8490,6 +8785,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &657287507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8569,6 +8869,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &675977238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8648,6 +8953,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &694362304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8727,6 +9037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &702977737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8806,6 +9121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &740769986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8885,6 +9205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &743267242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8964,6 +9289,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &750157199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9043,6 +9373,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &759185782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9122,6 +9457,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &782343214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9201,6 +9541,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &801851126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9280,6 +9625,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &810994609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9359,6 +9709,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &816605254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9438,6 +9793,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &822837803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9517,6 +9877,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &823647726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10002,6 +10367,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &825688033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10081,6 +10451,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &833932031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10160,6 +10535,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &840295525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10239,6 +10619,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &841571472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10318,6 +10703,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &842093135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10397,6 +10787,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &845605470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10476,6 +10871,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &850650411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11391,6 +11791,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &875398236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11470,6 +11875,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &888397848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11549,6 +11959,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &902456368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11628,6 +12043,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &909473364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11707,6 +12127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &933668316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11786,6 +12211,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &940950316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11865,6 +12295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &945870547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11944,6 +12379,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &965154316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12054,6 +12494,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &969262800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12133,6 +12578,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &978786516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12212,6 +12662,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &995004368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12291,6 +12746,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1005081007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12370,6 +12830,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1007331620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12449,6 +12914,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1022619186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12528,6 +12998,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1030622747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12607,6 +13082,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1042343306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12686,6 +13166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1048697901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12765,6 +13250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1093912044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12844,6 +13334,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1095204420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12923,6 +13418,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1135700938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13002,6 +13502,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1174974426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13081,6 +13586,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1176053607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13225,7 +13735,7 @@ Transform:
   m_GameObject: {fileID: 1177946043}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 10.847164, y: -2.26, z: 0}
+  m_LocalPosition: {x: 14.02, y: -0.18, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -13293,6 +13803,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1197829939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13372,6 +13887,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1217481658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13451,6 +13971,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1217748687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13530,6 +14055,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1228443140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13609,6 +14139,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1231505917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13670,6 +14205,10 @@ PrefabInstance:
       propertyPath: touchLayerMask.m_Bits
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 1204538002877230268, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: (1)
@@ -13677,6 +14216,14 @@ PrefabInstance:
     - target: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916697195527282489, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237096050022737004, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -13713,6 +14260,10 @@ PrefabInstance:
     - target: {fileID: 3095510191995258611, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440691705013722856, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
@@ -14142,6 +14693,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1260790501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14221,6 +14777,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1262583976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14300,6 +14861,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1272679870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14379,6 +14945,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1293960634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14458,6 +15029,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1319784562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14537,6 +15113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1321226067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14616,6 +15197,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1339977323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14695,6 +15281,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1357625695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14774,6 +15365,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1358797713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14853,6 +15449,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1363106990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14932,6 +15533,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1379339154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15011,6 +15617,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1393791388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15090,6 +15701,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1395429608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15169,6 +15785,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1412502864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15248,6 +15869,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1423735907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15327,6 +15953,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1425349379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15406,6 +16037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1431446926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15485,6 +16121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1433070480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15564,6 +16205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1440007456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15643,6 +16289,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1458302852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15722,6 +16373,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1464958095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15801,6 +16457,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1470158998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15880,6 +16541,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1474545192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15959,6 +16625,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1512439827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16038,6 +16709,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1516958826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16117,6 +16793,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1522100719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16196,6 +16877,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1545934248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16697,6 +17383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1574912971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16776,6 +17467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1576315461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17277,6 +17973,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1594143554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17356,6 +18057,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1628145191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17435,6 +18141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1643870879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17514,6 +18225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1645841795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17593,6 +18309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1646091383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17672,6 +18393,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1663616845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17751,6 +18477,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1670755537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17830,6 +18561,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1675801983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17909,6 +18645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1684628464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17988,6 +18729,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1692311734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18067,6 +18813,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1713679768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18146,6 +18897,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1726208172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18655,6 +19411,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1730260540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18734,6 +19495,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1732799357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19235,6 +20001,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1759207897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19314,6 +20085,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1764807992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19393,6 +20169,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1767596902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19472,6 +20253,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1770592283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19551,6 +20337,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1781303367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19630,6 +20421,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1783940204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19709,6 +20505,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1785228824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19788,6 +20589,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1799237281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19867,6 +20673,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1810188025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19946,6 +20757,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1831919829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20025,6 +20841,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1838999271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20104,6 +20925,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1856825882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20183,6 +21009,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1872850346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20262,6 +21093,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1873595782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20341,6 +21177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1875573329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20826,6 +21667,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1883166899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20905,6 +21751,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1883921592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20984,6 +21835,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1887915573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21063,6 +21919,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1900441652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21142,6 +22003,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1910288617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21221,6 +22087,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1915112474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21300,6 +22171,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1917214879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21379,6 +22255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1925296313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21458,6 +22339,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1927263703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22365,6 +23251,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1943383817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22444,6 +23335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1992782704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22523,6 +23419,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &1994907603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22602,6 +23503,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2019742948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22681,6 +23587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2020691303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23166,6 +24077,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2024176828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23245,6 +24161,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2025775353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23324,6 +24245,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2035209949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23403,6 +24329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2072384234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23482,6 +24413,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2078398514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23561,6 +24497,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2079169428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23724,6 +24665,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2112237950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23803,6 +24749,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2119908547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23882,6 +24833,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2123790915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23961,6 +24917,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2130425656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24040,6 +25001,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980567646f79458488bdbfeb535d6144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  BunkaTag: Bunka
+  requiredDeleteObject: {fileID: 1495089105188658863}
 --- !u!114 &2134285893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24507,7 +25473,7 @@ Transform:
   m_GameObject: {fileID: 6916141685124551565}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.58, y: -1.2933036, z: 0}
+  m_LocalPosition: {x: 14.17, y: 5.48, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -24569,7 +25535,7 @@ Transform:
   m_GameObject: {fileID: 1495089105188658863}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 8.44, y: 0.19, z: 0}
+  m_LocalPosition: {x: 13.94, y: 2.38, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
