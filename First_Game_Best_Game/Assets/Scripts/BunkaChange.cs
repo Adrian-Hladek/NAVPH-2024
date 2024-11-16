@@ -24,6 +24,12 @@ public class BunkaChange : MonoBehaviour
         get { return IsPath; }
     }
 
+    public bool HasPathValue
+    {
+        get { return HasPath; }
+        set { HasPath = value; }
+    }
+
 
     private void Awake()
     {

@@ -63,7 +63,7 @@ public class Tile_Rotation : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("You are not holding the required object.");
+               // Debug.LogWarning("You are not holding the required object.");
             }
         }
 
