@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 public class PathCreation : MonoBehaviour
@@ -15,7 +16,7 @@ public class PathCreation : MonoBehaviour
 
     [Header("Layer Settings")]   //Editor Featurka 
 
-    [SerializeField] string targetTag = "Bunka";  // Target tag to look for
+   
     private LayerMask touchLayerMask;
     // This will store the list of game objects touching child colliders and also child objects of the rotated parent
     private List<GameObject> interactingObjects = new List<GameObject>();
@@ -83,21 +84,47 @@ public class PathCreation : MonoBehaviour
 
     private void AddPathToBunka(GameObject Bunka)
     {
-        Debug.LogWarning("Bunka klik");
+        if (Bunka == null)
+        {
+            Debug.LogError("Bunka object is null. Aborting AddPathToBunka.");
+            return;
+        }
+
+        Debug.LogWarning("Bunka clicked");
         BunkaChange bunkaChange = Bunka.GetComponent<BunkaChange>();
         if (bunkaChange != null)
         {
             Debug.Log($"Adding path to Bunka. Current HasPathValue: {bunkaChange.IsPathValue}");
             bunkaChange.HasPathValue = true; // Set the property value
-            bunkaChange.Recalculate();
+
+            GameObject[] relatedObjects = bunkaChange.GetRelatedObjects(Bunka);
+
+            if (relatedObjects == null || relatedObjects.Length == 0)
+            {
+                Debug.LogWarning("No related objects found.");
+                return;
+            }
+
+            Debug.LogWarning($"Number of related objects: {relatedObjects.Length}");
+
+            foreach (GameObject obj in relatedObjects)
+            {
+                BunkaChange objBunka = obj.GetComponent<BunkaChange>();
+                if (objBunka != null)
+                {
+                    Debug.Log($"Recalculating Bunka: {obj.name}");
+                    objBunka.Recalculate();
+                }
+                else
+                {
+                    Debug.LogWarning($"Related object {obj.name} does not have a BunkaChange component.");
+                }
+            }
         }
         else
         {
             Debug.LogError("The Bunka object does not have a BunkaChange component!");
         }
-
-
     }
-
 
 }

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class BunkaChange : MonoBehaviour
 {
+    [SerializeField] private LayerMask touchLayerMask;
+    [SerializeField] private string BunkaTag = "Bunka";
     [SerializeField] private bool HasRight;
     [SerializeField] private bool HasLeft;
     [SerializeField] private bool HasUpper;
@@ -15,7 +17,7 @@ public class BunkaChange : MonoBehaviour
     private List<GameObject> detectedObjects = new List<GameObject>();
     private const float epsilon = 0.01f;
     private SpriteRenderer spriteRenderer;
-
+    private List<GameObject> interactingObjects = new List<GameObject>();
 
 
 
@@ -302,5 +304,64 @@ private void UpdateSpriteBasedOnFlags()
 
     }
 
-   
+
+
+    public GameObject[] GetRelatedObjects(GameObject child)
+    {
+        if (child == null)
+        {
+            Debug.LogWarning("Child GameObject is null. Returning an empty array.");
+            return new GameObject[0]; // Return an empty array if input is invalid
+        }
+
+        interactingObjects.Clear();
+
+        if (!interactingObjects.Contains(child))
+        {
+            interactingObjects.Add(child);
+        }
+
+        // Process colliders for this child
+        Collider2D[] childColliders = child.GetComponents<Collider2D>();
+        if (childColliders.Length == 0)
+        {
+            Debug.LogWarning($"No colliders found on {child.name}. Returning an empty array.");
+            return new GameObject[0];
+        }
+
+        foreach (Collider2D collider in childColliders)
+        {
+            // Use OverlapBoxAll to detect colliders overlapping with this collider
+            Collider2D[] touching = Physics2D.OverlapBoxAll(
+                collider.bounds.center,
+                collider.bounds.size,
+                0f, // No rotation for 2D
+                touchLayerMask
+            );
+
+            foreach (Collider2D col in touching)
+            {
+                if (col != null &&
+                    col.gameObject != child && // Prevent adding the input object
+                    col.CompareTag(BunkaTag)) // Match specific tag
+                {
+                    if (!interactingObjects.Contains(col.gameObject))
+                    {
+                        interactingObjects.Add(col.gameObject);
+                    }
+                }
+            }
+        }
+
+        // Convert the list of interacting objects to an array and return it
+
+
+        Debug.LogWarning($"objects detected: {interactingObjects.Count} objects found.");
+        return interactingObjects.ToArray();
+    }
+
+
+
+
+
 }
