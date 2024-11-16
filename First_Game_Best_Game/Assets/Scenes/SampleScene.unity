@@ -201,7 +201,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &17586610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -226,6 +225,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -238,6 +241,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -253,6 +264,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -294,6 +309,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -306,6 +325,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -338,9 +361,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -449,6 +480,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -667,7 +702,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &37623875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -747,7 +781,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &42390010
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +904,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &76644360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -951,7 +983,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &89150601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -1031,7 +1062,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &105714128 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -1111,7 +1141,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &143787049 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -1191,7 +1220,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &152625637 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -1271,7 +1299,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &182293563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1296,6 +1323,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -1308,6 +1339,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: R3
@@ -1327,6 +1366,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -1368,6 +1411,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -1380,6 +1427,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -1416,9 +1467,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
@@ -1531,6 +1590,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -1749,7 +1812,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &195581339 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -1829,7 +1891,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &195649161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -1909,7 +1970,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &203952995 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 80527712635630731, guid: 16df6739253669a40946ff0473784064, type: 3}
@@ -1944,7 +2004,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &221699274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -2024,7 +2083,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &222124117 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -2104,7 +2162,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &228735427 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -2184,7 +2241,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &235349429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -2264,7 +2320,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &239878729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -2344,7 +2399,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &239937301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2365,6 +2419,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -2377,6 +2435,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: L2
@@ -2393,6 +2459,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -2433,6 +2503,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -2445,6 +2519,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -2472,6 +2550,14 @@ PrefabInstance:
     - target: {fileID: 5736185271993649302, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: GameObject_Policko (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -2588,6 +2674,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -2806,7 +2896,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &263955793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -2886,7 +2975,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &272738949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -2966,7 +3054,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &286316000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2987,6 +3074,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -2999,6 +3090,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -3011,6 +3110,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -3051,6 +3154,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -3063,6 +3170,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -3090,6 +3201,14 @@ PrefabInstance:
     - target: {fileID: 5736185271993649302, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: GameObject_Policko (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -3198,6 +3317,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -3416,7 +3539,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &301086181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -3496,7 +3618,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &303553176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -3576,7 +3697,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &304433229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -3656,7 +3776,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &304594938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -3736,7 +3855,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &317463921 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -3816,7 +3934,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &322302072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3841,6 +3958,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -3853,6 +3974,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -3868,6 +3997,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -3909,6 +4042,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -3921,6 +4058,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -3953,9 +4094,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -4064,6 +4213,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -4282,7 +4435,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &335195959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -4362,7 +4514,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &339110942 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -4442,7 +4593,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &345664409 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -4522,7 +4672,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &356207306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -4602,7 +4751,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &374134689 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -4682,7 +4830,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &374915991 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -4762,7 +4909,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &375146351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -4842,7 +4988,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &394758537 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -4922,7 +5067,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &418299946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -5002,7 +5146,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &441970362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5027,6 +5170,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -5039,6 +5186,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -5054,6 +5209,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -5095,6 +5254,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -5107,6 +5270,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -5139,9 +5306,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -5250,6 +5425,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -5468,7 +5647,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &450154574 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -5548,7 +5726,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &461234934 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -5628,7 +5805,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &463631318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -5708,7 +5884,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &498332140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -5788,7 +5963,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &507219326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -5868,7 +6042,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &516897855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -5948,7 +6121,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6165,7 +6337,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &530174961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -6245,7 +6416,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &530476493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -6325,7 +6495,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &533757843 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -6405,7 +6574,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &551533850 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -6485,7 +6653,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &561025134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -6565,7 +6732,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &580960204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -6645,7 +6811,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &581397284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -6725,7 +6890,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &583090445 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -6805,7 +6969,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &592052491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6817,6 +6980,10 @@ PrefabInstance:
     - target: {fileID: 80527712635630731, guid: 16df6739253669a40946ff0473784064, type: 3}
       propertyPath: m_Name
       value: Bunka
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074718836411318220, guid: 16df6739253669a40946ff0473784064, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2646604768434809640, guid: 16df6739253669a40946ff0473784064, type: 3}
       propertyPath: m_SortingOrder
@@ -6956,7 +7123,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &599792273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6977,6 +7143,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -6989,6 +7159,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -7001,6 +7179,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -7041,6 +7223,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -7053,6 +7239,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -7080,6 +7270,14 @@ PrefabInstance:
     - target: {fileID: 5736185271993649302, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: GameObject_Policko (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -7188,6 +7386,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -7406,7 +7608,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &615482518 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -7486,7 +7687,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -7648,7 +7848,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &644466184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7673,6 +7872,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -7685,6 +7888,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -7700,6 +7911,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -7741,6 +7956,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -7753,6 +7972,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -7785,9 +8008,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -7896,6 +8127,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -8114,7 +8349,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &655487606 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8194,7 +8428,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &657287499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8274,7 +8507,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &675977230 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8354,7 +8586,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &694362296 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8434,7 +8665,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &702977729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8514,7 +8744,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &740769978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8594,7 +8823,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &743267234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8674,7 +8902,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &750157191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8754,7 +8981,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &759185774 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8834,7 +9060,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &782343206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8914,7 +9139,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &801851118 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -8994,7 +9218,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &810994601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -9074,7 +9297,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &816605246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -9154,7 +9376,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &822837795 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -9234,7 +9455,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &823647718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -9314,7 +9534,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &824947280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9335,6 +9554,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -9347,6 +9570,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -9359,6 +9590,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -9399,6 +9634,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -9411,6 +9650,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -9438,6 +9681,14 @@ PrefabInstance:
     - target: {fileID: 5736185271993649302, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: GameObject_Policko (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -9546,6 +9797,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -9764,7 +10019,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &833932023 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -9844,7 +10098,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &840295517 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -9924,7 +10177,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &841571464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -10004,7 +10256,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &842093127 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -10084,7 +10335,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &845605462 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -10164,7 +10414,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &850650403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -10244,7 +10493,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &851947668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10265,6 +10513,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -10277,6 +10529,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -10289,6 +10549,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -10329,6 +10593,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -10341,6 +10609,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -10368,6 +10640,14 @@ PrefabInstance:
     - target: {fileID: 5736185271993649302, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: GameObject_Policko (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -10476,6 +10756,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -10635,6 +10919,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -10647,6 +10935,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -10662,6 +10958,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -10703,6 +11003,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -10715,6 +11019,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -10747,6 +11055,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: T2
@@ -10754,6 +11066,10 @@ PrefabInstance:
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
@@ -10870,6 +11186,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -11088,7 +11408,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &888397840 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11168,7 +11487,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &902456360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11248,7 +11566,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &909473356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11328,7 +11645,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &933668308 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11408,7 +11724,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &940950308 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11488,7 +11803,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &945870539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11568,7 +11882,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &965154308 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11648,7 +11961,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &968911895
 GameObject:
   m_ObjectHideFlags: 0
@@ -11759,7 +12071,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &978786508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11839,7 +12150,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &995004360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11919,7 +12229,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1005080999 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -11999,7 +12308,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1007331612 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12079,7 +12387,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1022619178 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12159,7 +12466,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1030622739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12239,7 +12545,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1042343298 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12319,7 +12624,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1048697893 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12399,7 +12703,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1093912036 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12479,7 +12782,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1095204412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12559,7 +12861,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1135700930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12639,7 +12940,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1174974418 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12719,7 +13019,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1176053599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -12799,7 +13098,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1177946043
 GameObject:
   m_ObjectHideFlags: 0
@@ -13012,7 +13310,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1217481650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -13092,7 +13389,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1217748679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -13172,7 +13468,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1228443132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -13252,7 +13547,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1231505909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -13332,7 +13626,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &1243706979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13353,6 +13646,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -13365,6 +13662,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: (1)
@@ -13388,6 +13693,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -13433,6 +13742,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -13445,6 +13758,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -13481,6 +13798,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: (3)
@@ -13488,6 +13809,10 @@ PrefabInstance:
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
@@ -13608,6 +13933,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
@@ -13830,7 +14159,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1262583968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -13910,7 +14238,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1272679862 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -13990,7 +14317,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1293960626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14070,7 +14396,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1319784554 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14150,7 +14475,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1321226059 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14230,7 +14554,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1339977315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14310,7 +14633,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1357625687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14390,7 +14712,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1358797705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14470,7 +14791,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1363106982 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14550,7 +14870,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1379339146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14630,7 +14949,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1393791380 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14710,7 +15028,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1395429600 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14790,7 +15107,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1412502856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14870,7 +15186,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1423735899 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -14950,7 +15265,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1425349371 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15030,7 +15344,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1431446918 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15110,7 +15423,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1433070472 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15190,7 +15502,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1440007448 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15270,7 +15581,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1458302844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15350,7 +15660,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1464958087 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15430,7 +15739,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1470158990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15510,7 +15818,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1474545184 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15590,7 +15897,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1512439819 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15670,7 +15976,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1516958818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15750,7 +16055,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1522100711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15830,7 +16134,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1545934240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -15910,7 +16213,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &1549779326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15935,6 +16237,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -15947,6 +16253,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -15962,6 +16276,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -16003,6 +16321,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -16015,6 +16337,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -16047,9 +16373,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -16158,6 +16492,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -16376,7 +16714,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1576315453 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -16456,7 +16793,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &1585510820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16481,6 +16817,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -16493,6 +16833,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -16508,6 +16856,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -16549,6 +16901,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -16561,6 +16917,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -16593,9 +16953,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -16704,6 +17072,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -16922,7 +17294,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1628145183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17002,7 +17373,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1643870871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17082,7 +17452,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1645841787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17162,7 +17531,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1646091375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17242,7 +17610,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1663616837 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17322,7 +17689,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1670755529 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17402,7 +17768,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1675801975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17482,7 +17847,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1684628456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17562,7 +17926,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1692311726 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17642,7 +18005,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1713679760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17722,7 +18084,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1726208164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -17802,7 +18163,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &1728461396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17823,6 +18183,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -17835,6 +18199,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: D1
@@ -17854,6 +18226,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -17895,6 +18271,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -17907,6 +18287,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -17939,9 +18323,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -18054,6 +18446,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
@@ -18276,7 +18672,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1732799349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -18356,7 +18751,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &1750534760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18377,6 +18771,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -18389,6 +18787,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -18404,6 +18810,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -18445,6 +18855,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -18457,6 +18871,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -18489,9 +18907,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -18604,6 +19030,10 @@ PrefabInstance:
     - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: IsPath
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -18822,7 +19252,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1764807984 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -18902,7 +19331,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1767596894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -18982,7 +19410,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1770592275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19062,7 +19489,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1781303359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19142,7 +19568,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1783940196 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19222,7 +19647,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1785228816 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19302,7 +19726,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1799237273 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19382,7 +19805,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1810188017 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19462,7 +19884,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1831919821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19542,7 +19963,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1838999263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19622,7 +20042,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1856825874 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19702,7 +20121,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1872850338 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19782,7 +20200,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1873595774 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19862,7 +20279,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1875573321 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -19942,7 +20358,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &1882082916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19963,6 +20378,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -19975,6 +20394,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -19987,6 +20414,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -20027,6 +20458,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -20039,6 +20474,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -20066,6 +20505,14 @@ PrefabInstance:
     - target: {fileID: 5736185271993649302, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: GameObject_Policko (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -20174,6 +20621,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -20392,7 +20843,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1883921584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5653856310812532811, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -20472,7 +20922,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1887915565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -20552,7 +21001,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1900441644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -20632,7 +21080,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1910288609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -20712,7 +21159,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1915112466 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -20792,7 +21238,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1917214871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7740066640831920684, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -20872,7 +21317,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1925296305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -20952,7 +21396,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1927263695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -21032,7 +21475,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &1939102401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21053,6 +21495,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -21065,6 +21511,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -21077,6 +21531,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -21117,6 +21575,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -21129,6 +21591,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -21156,6 +21622,14 @@ PrefabInstance:
     - target: {fileID: 5736185271993649302, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: GameObject_Policko (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -21264,6 +21738,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -21427,6 +21905,10 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -21439,6 +21921,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -21454,6 +21944,10 @@ PrefabInstance:
     - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -21495,6 +21989,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -21507,6 +22005,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -21539,9 +22041,17 @@ PrefabInstance:
       propertyPath: HasPath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: HasPath
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -21650,6 +22160,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -21868,7 +22382,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1992782696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1877306352184386275, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -21948,7 +22461,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &1994907595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -22028,7 +22540,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2019742940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6879937647140900313, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -22108,7 +22619,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2020691295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8179327427101369600, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -22188,7 +22698,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &2024125564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22209,6 +22718,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -22221,6 +22734,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -22233,6 +22754,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -22273,6 +22798,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -22285,6 +22814,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -22312,6 +22845,14 @@ PrefabInstance:
     - target: {fileID: 5736185271993649302, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: GameObject_Policko (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -22420,6 +22961,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
@@ -22638,7 +23183,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2025775345 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -22718,7 +23262,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2035209941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -22798,7 +23341,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2072384226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -22878,7 +23420,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2078398506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -22958,7 +23499,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2079169420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -23038,7 +23578,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2105564179
 GameObject:
   m_ObjectHideFlags: 0
@@ -23202,7 +23741,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2119908539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872645958267375674, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -23282,7 +23820,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2123790907 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6001872562949444832, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -23362,7 +23899,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2130425648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646194684139838906, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -23442,7 +23978,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1 &2134285885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3517144321940206707, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
@@ -23522,7 +24057,6 @@ MonoBehaviour:
     m_Bits: 128
   BunkaTag: Bunka
   requiredCreateObject: {fileID: 1177946043}
-  targetTag: Bunka
 --- !u!1001 &139919199760417594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23539,6 +24073,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51879928002203673, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 76820274765071075, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -23551,6 +24089,14 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 776348379507492446, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 945263662988484860, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2458926583639170188, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -23563,6 +24109,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 2853494478310815732, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2940650016420836419, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -23595,6 +24145,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3917033783640440176, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3918863701228226655, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject
       value: 
@@ -23607,6 +24161,10 @@ PrefabInstance:
       propertyPath: requiredDeleteObject
       value: 
       objectReference: {fileID: 1495089105188658863}
+    - target: {fileID: 4748184744048727363, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5207288569163219848, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -23630,6 +24188,14 @@ PrefabInstance:
     - target: {fileID: 5736185271993649302, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Name
       value: GameObject_Policko
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850764944215651169, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899237200941439224, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6023505410032458220, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.x
@@ -23718,6 +24284,10 @@ PrefabInstance:
     - target: {fileID: 8001036322660594430, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: m_Size.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128348993488379910, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
+      propertyPath: touchLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8493434449282216091, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
       propertyPath: requiredHeldObject

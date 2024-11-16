@@ -39,7 +39,9 @@ public class Hover_Highlight : MonoBehaviour
 
             if (bunkaChange != null && bunkaChange.IsPathValue)
             {
-                if (!isHovering && (ObjectPickup.heldObject == requiredDeleteObject || ObjectPickup.heldObject == requiredCreateObject || ObjectPickup.heldObject == null))
+
+                //Create
+                if (!isHovering && ( ObjectPickup.heldObject == requiredCreateObject || ObjectPickup.heldObject == null ) && !bunkaChange.HasPathValue)
                 {
                     isHovering = true;
                     if (highlightChild != null)
@@ -48,6 +50,21 @@ public class Hover_Highlight : MonoBehaviour
                     }
                     Debug.Log($"Mouse entered {gameObject.name}.");
                 }
+
+
+
+                //Delete
+                if (!isHovering && (ObjectPickup.heldObject == requiredDeleteObject || ObjectPickup.heldObject == null) && bunkaChange.HasPathValue)
+                {
+                    isHovering = true;
+                    if (highlightChild != null)
+                    {
+                        highlightChild.SetActive(true);
+                    }
+                    Debug.Log($"Mouse entered {gameObject.name}.");
+                }
+
+
             }
             else if(bunkaChange != null)
             {
