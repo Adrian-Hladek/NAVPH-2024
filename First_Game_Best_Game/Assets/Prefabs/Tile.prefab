@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 7530630992980148152}
   - component: {fileID: 8493434449282216091}
   m_Layer: 7
-  m_Name: Bunka_Main (1)
+  m_Name: Cell_5
   m_TagString: Bunka
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -650,6 +650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  BunkaTag: Bunka
   HasRight: 0
   HasLeft: 0
   HasUpper: 0
@@ -715,7 +719,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 4484203547414840352}
-  requiredHeldObject: {fileID: 0}
+  requiredDeleteObject: {fileID: 0}
+  requiredCreateObject: {fileID: 0}
   targetLayerName: Bunka_Layer
 --- !u!1 &1842191455000175076
 GameObject:
@@ -815,7 +820,7 @@ GameObject:
   - component: {fileID: 6023505410032458220}
   - component: {fileID: 3918863701228226655}
   m_Layer: 7
-  m_Name: Bunka_Main (7)
+  m_Name: Cell_0
   m_TagString: Bunka
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -905,6 +910,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  BunkaTag: Bunka
   HasRight: 0
   HasLeft: 0
   HasUpper: 0
@@ -970,7 +979,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 7114988287849446375}
-  requiredHeldObject: {fileID: 0}
+  requiredDeleteObject: {fileID: 0}
+  requiredCreateObject: {fileID: 0}
   targetLayerName: Bunka_Layer
 --- !u!1 &1928865930723860691
 GameObject:
@@ -1546,7 +1556,7 @@ GameObject:
   - component: {fileID: 3870036307689540859}
   - component: {fileID: 6388680338319704222}
   m_Layer: 7
-  m_Name: Bunka_Main
+  m_Name: Cell_4
   m_TagString: Bunka
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1636,6 +1646,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  BunkaTag: Bunka
   HasRight: 0
   HasLeft: 0
   HasUpper: 0
@@ -1701,7 +1715,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 6465489998224162112}
-  requiredHeldObject: {fileID: 0}
+  requiredDeleteObject: {fileID: 0}
+  requiredCreateObject: {fileID: 0}
   targetLayerName: Bunka_Layer
 --- !u!1 &3715009854071273819
 GameObject:
@@ -2886,7 +2901,7 @@ GameObject:
   - component: {fileID: 5207288569163219848}
   - component: {fileID: 6478822427285733080}
   m_Layer: 7
-  m_Name: Bunka_Main (4)
+  m_Name: Cell_3
   m_TagString: Bunka
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2976,6 +2991,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  BunkaTag: Bunka
   HasRight: 0
   HasLeft: 0
   HasUpper: 0
@@ -3041,7 +3060,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 2850454076206705669}
-  requiredHeldObject: {fileID: 0}
+  requiredDeleteObject: {fileID: 0}
+  requiredCreateObject: {fileID: 0}
   targetLayerName: Bunka_Layer
 --- !u!1 &5736185271993649302
 GameObject:
@@ -3056,7 +3076,7 @@ GameObject:
   - component: {fileID: 6708487968485392556}
   - component: {fileID: 2940650016420836419}
   m_Layer: 8
-  m_Name: GameObject_Policko
+  m_Name: Tile
   m_TagString: Policko
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3076,15 +3096,15 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1994048654084462389}
+  - {fileID: 8759979508662878465}
+  - {fileID: 8948339932791869053}
+  - {fileID: 8391409391000240146}
+  - {fileID: 9051080651196092473}
   - {fileID: 5542627416725574853}
   - {fileID: 4137220244807732415}
-  - {fileID: 148606916649681446}
   - {fileID: 1192790284122890061}
-  - {fileID: 8759979508662878465}
-  - {fileID: 8391409391000240146}
-  - {fileID: 8948339932791869053}
   - {fileID: 7971431071415195937}
-  - {fileID: 9051080651196092473}
+  - {fileID: 148606916649681446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &7430176680753686750
@@ -3488,7 +3508,7 @@ GameObject:
   - component: {fileID: 7386075765880168353}
   - component: {fileID: 7216643559345115082}
   m_Layer: 7
-  m_Name: Bunka_Main (3)
+  m_Name: Cell_7
   m_TagString: Bunka
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3578,6 +3598,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  BunkaTag: Bunka
   HasRight: 0
   HasLeft: 0
   HasUpper: 0
@@ -3643,7 +3667,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 1842191455000175076}
-  requiredHeldObject: {fileID: 0}
+  requiredDeleteObject: {fileID: 0}
+  requiredCreateObject: {fileID: 0}
   targetLayerName: Bunka_Layer
 --- !u!1 &5912077791743321613
 GameObject:
@@ -3743,7 +3768,7 @@ GameObject:
   - component: {fileID: 3095510191995258611}
   - component: {fileID: 5450111482051992792}
   m_Layer: 7
-  m_Name: Bunka_Main (6)
+  m_Name: Cell_6
   m_TagString: Bunka
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3833,6 +3858,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  BunkaTag: Bunka
   HasRight: 0
   HasLeft: 0
   HasUpper: 0
@@ -3898,7 +3927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 5912077791743321613}
-  requiredHeldObject: {fileID: 0}
+  requiredDeleteObject: {fileID: 0}
+  requiredCreateObject: {fileID: 0}
   targetLayerName: Bunka_Layer
 --- !u!1 &6392952579723168901
 GameObject:
@@ -4229,7 +4259,7 @@ GameObject:
   - component: {fileID: 39919768374661967}
   - component: {fileID: 2458926583639170188}
   m_Layer: 7
-  m_Name: Bunka_Main (5)
+  m_Name: Cell_8
   m_TagString: Bunka
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4319,6 +4349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  BunkaTag: Bunka
   HasRight: 0
   HasLeft: 0
   HasUpper: 0
@@ -4384,7 +4418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 2783764056902975061}
-  requiredHeldObject: {fileID: 0}
+  requiredDeleteObject: {fileID: 0}
+  requiredCreateObject: {fileID: 0}
   targetLayerName: Bunka_Layer
 --- !u!1 &7114988287849446375
 GameObject:
@@ -4561,7 +4596,7 @@ GameObject:
   - component: {fileID: 8001036322660594430}
   - component: {fileID: 3562321687970131923}
   m_Layer: 7
-  m_Name: Bunka_Main (8)
+  m_Name: Cell_2
   m_TagString: Bunka
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4651,6 +4686,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  BunkaTag: Bunka
   HasRight: 0
   HasLeft: 0
   HasUpper: 0
@@ -4716,7 +4755,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 5205304530191976637}
-  requiredHeldObject: {fileID: 0}
+  requiredDeleteObject: {fileID: 0}
+  requiredCreateObject: {fileID: 0}
   targetLayerName: Bunka_Layer
 --- !u!1 &8019572155400856595
 GameObject:
@@ -4809,7 +4849,7 @@ GameObject:
   - component: {fileID: 6074103050720713106}
   - component: {fileID: 76820274765071075}
   m_Layer: 7
-  m_Name: Bunka_Main (2)
+  m_Name: Cell_1
   m_TagString: Bunka
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4899,6 +4939,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fc115ed614fb0439c1afdc077e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  BunkaTag: Bunka
   HasRight: 0
   HasLeft: 0
   HasUpper: 0
@@ -4964,7 +5008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightChild: {fileID: 3160677923115113614}
-  requiredHeldObject: {fileID: 0}
+  requiredDeleteObject: {fileID: 0}
+  requiredCreateObject: {fileID: 0}
   targetLayerName: Bunka_Layer
 --- !u!1 &8343989743077477978
 GameObject:
