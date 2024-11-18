@@ -5,10 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Game Map
-  - Policko
+  - Touching
+  - Tile
+  - Cell
+  - Border
+  - Action
+  - Text
+  - Image
   - Bunka
   - Bordering
-  - Touching
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -17,10 +23,10 @@ TagManager:
   - Water
   - UI
   - Game_Map
-  - Bunka_Layer
-  - Policko_Layer
+  - Tile_Layer
+  - Cell_Layer
   - Touching_Layer
-  - Bordering_Layer
+  - Border_Layer
   - 
   - 
   - 
@@ -45,4 +51,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer 1
+    uniqueID: 593875511
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 3056092283
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 3722645967
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 3456629241
     locked: 0

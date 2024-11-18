@@ -1,64 +1,68 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BunkaChange : MonoBehaviour
+public class Cell_Update : MonoBehaviour
 {
-    [SerializeField] private LayerMask touchLayerMask;
-    [SerializeField] private string BunkaTag = "Bunka";
-    [SerializeField] private bool HasRight;
-    [SerializeField] private bool HasLeft;
-    [SerializeField] private bool HasUpper;
-    [SerializeField] private bool HasBottom;
+    [SerializeField] private bool canHavePath = false;
+    private bool hasPath;
+    private bool hasTurret;
 
-    [SerializeField] private bool IsPath;
-    [SerializeField] private bool HasPath;
-    [SerializeField] private bool HasTurret;
-
-    private List<GameObject> detectedObjects = new List<GameObject>();
-    private const float epsilon = 0.01f;
     private SpriteRenderer spriteRenderer;
-    private List<GameObject> interactingObjects = new List<GameObject>();
 
-
-
-    public bool IsPathValue
+    public bool possiblePath
     {
-        get { return IsPath; }
+        get { return canHavePath; }
     }
 
-    public bool HasPathValue
+    public bool pathValue
     {
-        get { return HasPath; }
-        set { HasPath = value; }
+        get { return hasPath; }
+        set { hasPath = value; }
     }
 
+    public bool turretValue
+    {
+        get { return hasPath; }
+        set { hasPath = value; }
+    }
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
         if (spriteRenderer == null)
         {
-            Debug.LogWarning("SpriteRenderer component not found on the main object.");
+            Debug.LogError($"SpriteRenderer component NOT found on {this.gameObject.name}");
+            return;
         }
+
+        // Set hasPath 
+        if (Utils.spriteEmptyTile == spriteRenderer.sprite.name) hasPath = false;
+        else hasPath = true;
+    }
+
+    private void Start()
+    {
+        Recalculate();
     }
 
     public void Recalculate()
     {
-        HasRight = false;
-        HasLeft = false;
-        HasUpper = false;
-        HasBottom = false;
-        detectedObjects.Clear();
+        bool hasRight = false;
+        bool hasLeft = false;
+        bool hasUpper = false;
+        bool hasBottom = false;
+        List<GameObject> detectedObjects = new List<GameObject>();
 
         Physics2D.SyncTransforms();
 
         // Get all colliders in children, but filter out the ones directly on this GameObject
-        Collider2D[] allColliders = GetComponentsInChildren<Collider2D>();
         List<Collider2D> childColliders = new List<Collider2D>();
 
-        foreach (Collider2D collider in allColliders)
+        // Only add colliders from child objects
+        foreach (Collider2D collider in GetComponentsInChildren<Collider2D>())
         {
-            if (collider.gameObject != gameObject)  // Only add colliders from child objects
+            if (collider.gameObject != this.gameObject)  
             {
                 childColliders.Add(collider);
             }
@@ -73,30 +77,30 @@ public class BunkaChange : MonoBehaviour
             {
                 Collider2D col = touchingObjects[i];
 
-                if (col.gameObject == gameObject)
+                if (col.gameObject == this.gameObject)
                     continue;
 
-                if (col.CompareTag("Bunka") && !detectedObjects.Contains(col.gameObject))
+                if (col.CompareTag(Utils.cellTag) && !detectedObjects.Contains(col.gameObject))
                 {
                     string position = GetRelativePosition(mainCollider, col);
-                    Debug.Log($"Detected object: {col.gameObject.name} at position: {position}");
+                    //Debug.Log($"Detected object: {col.gameObject.name} at position: {position}");
 
-                    BunkaChange bunkaProps = col.GetComponent<BunkaChange>();
-                    if (bunkaProps != null && bunkaProps.IsPath && bunkaProps.HasPath)
+                    Cell_Update bunkaProps = col.GetComponent<Cell_Update>();
+                    if (bunkaProps != null && bunkaProps.canHavePath && bunkaProps.hasPath)
                     {
                         switch (position)
                         {
                             case "Up":
-                                HasUpper = true;
+                                hasUpper = true;
                                 break;
                             case "Down":
-                                HasBottom = true;
+                                hasBottom = true;
                                 break;
                             case "Left":
-                                HasLeft = true;
+                                hasLeft = true;
                                 break;
                             case "Right":
-                                HasRight = true;
+                                hasRight = true;
                                 break;
                         }
                     }
@@ -108,10 +112,56 @@ public class BunkaChange : MonoBehaviour
 
         if (detectedObjects.Count > 4)
         {
-            Debug.LogWarning($"More than 4 objects detected: {detectedObjects.Count} objects found.");
+            Debug.LogError($"More than 4 objects detected: {detectedObjects.Count} objects found.");
         }
 
-        UpdateSpriteBasedOnFlags();
+        string spritePath = Utils.getCellSprite(hasPath, hasTurret, canHavePath, hasRight, hasLeft, hasUpper, hasBottom);
+        spriteRenderer.sprite = Resources.Load<Sprite>(spritePath);
+    }
+
+    public GameObject[] GetRelatedObjects(GameObject obj)
+    {
+        // Return an empty array if input is invalid
+        if (obj == null)
+        {
+            Debug.LogWarning($"GameObject {obj.name} is null, returning an empty array");
+            return new GameObject[0];
+        }
+
+        List<GameObject> interactingObjects = new List<GameObject>{obj};
+
+        // Process colliders for this child
+        Collider2D[] childColliders = obj.GetComponents<Collider2D>();
+       
+        foreach (Collider2D collider in childColliders)
+        {
+            // Use OverlapBoxAll to detect colliders overlapping with this collider
+            Collider2D[] collisions = Physics2D.OverlapBoxAll(
+                collider.bounds.center,
+                collider.bounds.size,
+                0f, // No rotation for 2D
+                LayerMask.GetMask(Utils.cellLayer)
+            );
+
+            foreach (Collider2D colider in collisions)
+            {
+                // Prevent adding the input object and match specific tag
+                if (
+                    colider != null 
+                    && colider.gameObject != obj 
+                    && colider.CompareTag(Utils.cellTag)
+                    && !interactingObjects.Contains(colider.gameObject)
+                )
+                {
+                    interactingObjects.Add(colider.gameObject);
+                }
+            }
+        }
+
+        Debug.LogWarning($"Pbjects detected: {interactingObjects.Count} objects found.");
+
+        // Convert the list of interacting objects to an array and return it
+        return interactingObjects.ToArray();
     }
 
     private string GetRelativePosition(Collider2D mainCollider, Collider2D detectedCollider)
@@ -119,249 +169,47 @@ public class BunkaChange : MonoBehaviour
         Vector3 mainObjectPosition = transform.position;
         Vector3 detectedPosition = detectedCollider.transform.position;
 
-        bool isYClose = Mathf.Abs(detectedPosition.y - mainObjectPosition.y) < epsilon;
-        bool isXClose = Mathf.Abs(detectedPosition.x - mainObjectPosition.x) < epsilon;
+        bool isYClose = Mathf.Abs(detectedPosition.y - mainObjectPosition.y) < Utils.epsilon;
+        bool isXClose = Mathf.Abs(detectedPosition.x - mainObjectPosition.x) < Utils.epsilon;
 
-        if (isYClose && isXClose)
-        {
-            return "Center";
-        }
+        if (isYClose && isXClose) return "Center";
+        
+        if (detectedPosition.y > mainObjectPosition.y && !isYClose) return "Up";
 
-        if (detectedPosition.y > mainObjectPosition.y && !isYClose)
-        {
-            return "Up";
-        }
-        if (detectedPosition.y < mainObjectPosition.y && !isYClose)
-        {
-            return "Down";
-        }
-        if (detectedPosition.x > mainObjectPosition.x && !isXClose)
-        {
-            return "Right";
-        }
-        if (detectedPosition.x < mainObjectPosition.x && !isXClose)
-        {
-            return "Left";
-        }
-
+        if (detectedPosition.y < mainObjectPosition.y && !isYClose) return "Down";
+        
+        if (detectedPosition.x > mainObjectPosition.x && !isXClose) return "Right";
+        
+        if (detectedPosition.x < mainObjectPosition.x && !isXClose) return "Left";
+        
         return "Center";
     }
 
-   
 
-
-private void UpdateSpriteBasedOnFlags()
+    // Calls Recalculate on all coliding cells + itself
+    public void UpdateNearbyCells()
     {
+        GameObject[] relatedObjects = GetRelatedObjects(this.gameObject);
 
-        // Update the sprite based on the boolean flags
-
-        if (!IsPath && !HasTurret)
+        if (relatedObjects.Length == 0)
         {
-            // Zelená mimo cesty
-            //Debug.Log("Green7");
-            spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_7");
+            Debug.LogError($"No related objects found for {this.gameObject.name}");
+            return;
         }
-        else if (IsPath && !HasTurret && !HasPath)
-        {
-            // zelena na ceste 
-            //Debug.Log("Green7");
-            spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_7");
-        }
-        else if (HasPath && HasUpper && HasBottom && HasLeft && HasRight)
-        {
-            // stred "+" crossroadu
-            //Debug.Log("Mid8");
-            spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_8");
-        }
-        else if (HasPath && HasUpper && HasBottom)
-        {
 
-
-
-            if (HasRight)
-            {
-                // T ktoré ma top vlavo
-                //Debug.Log("Tecko16");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_16");
-            }
-            else if (HasLeft)
-            {
-                // T ktoré ma top vpravo
-                //Debug.Log("Tecko13");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_13");
-            }
+        foreach (GameObject obj in relatedObjects)
+        {
+            Debug.Log($"UPDATING {obj.name}");
+            
+            Cell_Update otherCell = obj.GetComponent<Cell_Update>();
+            
+            if (otherCell != null) otherCell.Recalculate();
             else
             {
-                //zhora dolu Vertical
-                //Debug.Log("Straight11");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_11");
-
+                Debug.LogError($"Related object {obj.name} does NOT have Cell_Update component");
             }
         }
-        else if (HasPath && HasLeft && HasRight)
-        {
-
-
-            if (HasUpper)
-            {
-                // T ktoré ma top dolu
-                //Debug.Log("Tecko17");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_17");
-            }
-            else if (HasBottom)
-            {
-                // T ktoré ma top hore
-                //Debug.Log("Tecko12");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_12");
-            }
-            else
-            {
-                // pravo lavo horizontal
-                //Debug.Log("Straight9");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_9");
-
-            }
-
-
-        }
-        else if (HasPath && HasUpper)
-        {
-
-
-
-            if (HasRight)
-            {
-                // L ktoré ma top a pravo
-                //Debug.Log("Tecko15");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_15");
-            }
-            else if (HasLeft)
-            {
-                // L ktoré ma top a lavo
-                //Debug.Log("Tecko14");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_14");
-            }
-            else
-            {
-                // dead end Top cesta ide zhora konèi dolu
-                //Debug.Log("Dead end1");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_1");
-
-
-            }
-        }
-        else if (HasPath && HasBottom)
-        {
-
-
-            if (HasRight)
-            {
-                // L ktoré ma Bot a pravo
-                //Debug.Log("Tecko6");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_6");
-            }
-            else if (HasLeft)
-            {
-                // L ktoré ma bot a lavo
-                //Debug.Log("Tecko5");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_5");
-            }
-            else
-            {
-                // dead end bottom cesta ide zdola konèi hore
-                //Debug.Log("Dead end4");
-                spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_4");
-
-            }
-        }
-        else if (HasPath && HasLeft)
-        {
-            // dead end Left cesta ide zlava konèi pravo
-            //Debug.Log("Dead end3");
-            spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_3");
-
-        }
-        else if (HasPath && HasRight)
-        {
-            // dead end right cesta ide z prava konèi vlavo
-            //Debug.Log("Dead end2");
-            spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_2");
-        }
-        else if (HasPath && !HasUpper && !HasBottom && !HasLeft && !HasRight)
-        {
-            // sam vojak v poli
-            //Debug.Log("single10");
-            spriteRenderer.sprite = Resources.Load<Sprite>("Path_options/Sprites/Canvas_10");
-        }
-        else
-        {
-            Debug.LogWarning("Oh boy vsak cesta èo ma cesty nikde :D green");
-            //spriteRenderer.sprite = defaultSprite;
-        }
-
-        Debug.Log("Sprite updated ");  // Log the updated sprite name
-        //Debug.LogWarning("Bunka change  kolko krat?");
-
     }
-
-
-
-    public GameObject[] GetRelatedObjects(GameObject child)
-    {
-        if (child == null)
-        {
-            Debug.LogWarning("Child GameObject is null. Returning an empty array.");
-            return new GameObject[0]; // Return an empty array if input is invalid
-        }
-
-        interactingObjects.Clear();
-
-        if (!interactingObjects.Contains(child))
-        {
-            interactingObjects.Add(child);
-        }
-
-        // Process colliders for this child
-        Collider2D[] childColliders = child.GetComponents<Collider2D>();
-        if (childColliders.Length == 0)
-        {
-            Debug.LogWarning($"No colliders found on {child.name}. Returning an empty array.");
-            return new GameObject[0];
-        }
-
-        foreach (Collider2D collider in childColliders)
-        {
-            // Use OverlapBoxAll to detect colliders overlapping with this collider
-            Collider2D[] touching = Physics2D.OverlapBoxAll(
-                collider.bounds.center,
-                collider.bounds.size,
-                0f, // No rotation for 2D
-                touchLayerMask
-            );
-
-            foreach (Collider2D col in touching)
-            {
-                if (col != null &&
-                    col.gameObject != child && // Prevent adding the input object
-                    col.CompareTag(BunkaTag)) // Match specific tag
-                {
-                    if (!interactingObjects.Contains(col.gameObject))
-                    {
-                        interactingObjects.Add(col.gameObject);
-                    }
-                }
-            }
-        }
-
-        // Convert the list of interacting objects to an array and return it
-
-
-        Debug.LogWarning($"objects detected: {interactingObjects.Count} objects found.");
-        return interactingObjects.ToArray();
-    }
-
-
-
 
 
 }

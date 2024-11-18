@@ -1,78 +1,20 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class Tile_Rotation : MonoBehaviour
+public class Tile_Rotation
 {
-    [SerializeField] float rotationAmount = 90f;  // Rotation amount in degrees (fixed to 90)
-
-    [SerializeField] private LayerMask targetLayer;                                 // "EDIT" bolo by vhodnÈ meniù Ëi chceme 90-180-270 ale to nieje prio
-    [SerializeField] private string specificTag = "Policko";
-    public GameObject requiredRotateObject;  // Optional: Specify which object needs to be held for rotation
-   
+    [SerializeField] float rotationAmount = 90f;  // Rotation amount in degrees
+    [SerializeField] string rotationDirection = "left"; // TODO
 
     [Header("Layer Settings")]   //Editor Featurka 
     
-    [SerializeField] string targetTag = "Bunka";  // Target tag to look for
+    [SerializeField] string targetTag = "Cell";  // Target tag to look for
     private LayerMask touchLayerMask;
+
     // This will store the list of game objects touching child colliders and also child objects of the rotated parent
     private List<GameObject> interactingObjects = new List<GameObject>();
 
-    private void Start()
-    {
-        // Ensure this object has a 2D collider (if not, add one)
-        if (GetComponent<Collider2D>() == null)
-        {
-            Debug.LogWarning("Collider2D not found! Please add a collider to this object for mouse detection.");
-           
-        }
-
-        touchLayerMask = LayerMask.GetMask("Bunka_Layer");
-
-
-    }
-
-
-    void Update()
-    {
-        // Check for left mouse button click
-        if (Input.GetMouseButtonDown(0) )
-        {
-            
-            // Check if the required object is being held
-            if (ObjectPickup.heldObject == requiredRotateObject)
-            {
-                
-                // Perform a raycast at the mouse position
-                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, targetLayer);
-
-                if (hit.collider != null)
-                {
-                    // Check if the object has the correct tag or meets other criteria
-                    if (hit.collider.CompareTag(specificTag))
-                    {
-                        // Perform your desired action
-                        Debug.Log($"Clicked on object with specific collider: {hit.collider.gameObject.name}");
-                        this.HandleClick(hit.collider.gameObject);
-                    }
-                }
-                
-            }
-            else
-            {
-               // Debug.LogWarning("You are not holding the required object.");
-            }
-        }
-
-       
-
-    }
-
-
-
+   
 
     private void HandleClick(GameObject clickedObject)
     {
@@ -80,11 +22,9 @@ public class Tile_Rotation : MonoBehaviour
         Debug.Log($"Handling click for {clickedObject.name}");
 
         // Perform actions related to rotating and interacting with only the clicked object
-        this.RotateChildrenAroundCenter(clickedObject);
-        this.DetectInteractingObjectsForSpecificObject(clickedObject);  // Pass the clicked object to detect its specific interactions
+        RotateChildrenAroundCenter(clickedObject);
+        DetectInteractingObjectsForSpecificObject(clickedObject);  // Pass the clicked object to detect its specific interactions
     }
-
-
 
     // Method to rotate all child objects around their calculated center
     void RotateChildrenAroundCenter(GameObject clickedObject)
@@ -98,7 +38,6 @@ public class Tile_Rotation : MonoBehaviour
             RotateAroundPoint(child, center);
         }
     }
-
 
     // Method to calculate the center point by averaging the positions of all child objects
     Vector3 CalculateCenterOfChildren(GameObject clickedObject)
@@ -122,14 +61,11 @@ public class Tile_Rotation : MonoBehaviour
         return sum / count;
     }
 
-
     void RotateAroundPoint(Transform child, Vector3 center)
     {
         Vector3 direction = child.position - center;
         direction = Quaternion.Euler(0, 0, rotationAmount) * direction;
         child.position = center + direction;
-
-        
     }
 
     // Method to detect and add all colliders that are touching the child objects' side colliders, and include children of the rotated parent
@@ -140,7 +76,7 @@ public class Tile_Rotation : MonoBehaviour
         // Ensure the clicked object is valid
         if (clickedObject == null)
         {
-            Debug.LogWarning("Clicked object is null. Aborting detection.");
+            Debug.LogError("Clicked object is null. Aborting detection.");
             return;
         }
 
@@ -203,7 +139,7 @@ public class Tile_Rotation : MonoBehaviour
         interactingObjects = interacting;
 
         // Log the count of interacting objects for debugging
-        Debug.LogWarning($"Interacting objects count: {interactingObjects.Count}"); // [EDIT] toto sa vypÌöe XY kr·t podæa toho koæko kr·t je objekt s t˝mto scriptom na scÈne. Neviem preËo sa to tak robÌ ... nevadÌ to niËomu ale neviem ako to fixnuù :D 
+        Debug.LogWarning($"Interacting objects count: {interactingObjects.Count}"); // [EDIT] toto sa vypÔøΩe XY krÔøΩt podÔøΩa toho koÔøΩko krÔøΩt je objekt s tÔøΩmto scriptom na scÔøΩne. Neviem preÔøΩo sa to tak robÔøΩ ... nevadÔøΩ to niÔøΩomu ale neviem ako to fixnuÔøΩ :D 
 
 
         foreach (GameObject obj in interactingObjects)
@@ -221,14 +157,12 @@ public class Tile_Rotation : MonoBehaviour
         
         foreach (GameObject obj in interactingObjects)
         {
-           
-
-            // Check if the object has the BunkaChange component kaûd· Bunka by mala maù tento script
-            BunkaChange bunkaChange = obj.GetComponent<BunkaChange>();
+            // Check if the object has the BunkaChange component kaÔøΩdÔøΩ Bunka by mala maÔøΩ tento script
+            Cell_Update bunkaChange = obj.GetComponent<Cell_Update>();
 
             if (bunkaChange != null)
             {
-                // Sem sa menia textury pre canvas pre konkrÈtnu bunku z loopu
+                // Sem sa menia textury pre canvas pre konkrÔøΩtnu bunku z loopu
                 bunkaChange.Recalculate();
                 
             }
