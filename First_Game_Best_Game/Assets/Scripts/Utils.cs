@@ -8,6 +8,7 @@ public class Utils
     public const float epsilon = 0.01f;
 
     // Tags
+    // TODO - remove border tag, layer (NOT used anymore)
     public const string mapTag = "Game Map";
     public const string tileTag = "Tile";
     public const string cellTag = "Cell";
@@ -26,6 +27,7 @@ public class Utils
     // Helper functions
 
     // Camera main = world camera
+    // Gets all colliding objects
     public static RaycastHit2D[] HitColliders(LayerMask layers)
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

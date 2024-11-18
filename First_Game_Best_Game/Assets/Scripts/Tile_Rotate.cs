@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// TODO - remove file, but extract usefull functions to Utils.cs 
 public class Tile_Rotation
 {
     [SerializeField] float rotationAmount = 90f;  // Rotation amount in degrees

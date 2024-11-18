@@ -158,7 +158,7 @@ public class Cell_Update : MonoBehaviour
             }
         }
 
-        Debug.LogWarning($"Pbjects detected: {interactingObjects.Count} objects found.");
+        Debug.LogWarning($"Objects detected: {interactingObjects.Count} objects found.");
 
         // Convert the list of interacting objects to an array and return it
         return interactingObjects.ToArray();
