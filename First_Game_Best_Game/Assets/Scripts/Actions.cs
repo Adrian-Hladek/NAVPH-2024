@@ -196,17 +196,29 @@ public class Action
 
     private bool RotateTile(GameObject tile)
     {
-        // Perform rotation
-        Vector3 centerPoint = tile.GetComponent<BoxCollider2D>().bounds.center;
-        tile.transform.RotateAround(centerPoint, Vector3.forward, 90f);
+        // Perform rotation around center point
+        BoxCollider2D tileCollider = tile.GetComponent<BoxCollider2D>();
+
+        if (tileCollider == null)
+        {
+            Debug.LogError($"Object {tile.name} has NO BoxCollider2D");
+            return false;
+        }
+
+        tile.transform.RotateAround(tileCollider.bounds.center, Vector3.forward, 90f);
 
         Cell_Update [] tileCells = tile.GetComponentsInChildren<Cell_Update>();
 
-        foreach (Cell_Update cell in tileCells) cell.UpdateNearbyCells();
+        // Revert rotation of cells
+        foreach (Cell_Update cell in tileCells) 
+            cell.gameObject.transform.rotation = Quaternion.identity;
+
+        // Update cells 
+        foreach (Cell_Update cell in tileCells) 
+            cell.UpdateNearbyCells();
         
         return true;
     }
-
 }
 
 
