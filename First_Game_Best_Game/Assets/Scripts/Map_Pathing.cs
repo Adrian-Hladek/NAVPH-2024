@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,8 +15,8 @@ public class Map_pathing : MonoBehaviour
 {
     [SerializeField] private GameObject pathStart = null;
     [SerializeField] private GameObject pathEnd = null;
+    
     private List<PathNode> validPath = new List<PathNode>();
-
     private bool validInit = true;
 
     public List<PathNode> path
@@ -65,6 +66,8 @@ public class Map_pathing : MonoBehaviour
 
     void UpdatePath()
     {
+        this.validPath.Clear();
+
         if (!this.validInit) return;
         
         // Set start node
@@ -78,11 +81,7 @@ public class Map_pathing : MonoBehaviour
         }
 
          // Path edge does NOT connect
-        if (!start.pathValue || !end.pathValue)
-        {
-            this.validPath.Clear();
-            return;
-        }
+        if (!start.pathValue || !end.pathValue) return;
 
         // Initiate nodes
         Dictionary <Tuple<float, float>, PathNode> validNodes = new Dictionary <Tuple<float, float>, PathNode>();
@@ -105,29 +104,24 @@ public class Map_pathing : MonoBehaviour
                 currentNode.addNeighbor(neighborNode);
 
                 // Ignore visited and queued nodes
-                if (newNodes.Any(x => PathNode.CompareNodes(x, neighborNode)) 
+                if (newNodes.Any(x => PathNode.EqualNodes(x, neighborNode)) 
                     || validNodes.ContainsKey(neighborNode.GetId())
                 ) continue;
                 
                 newNodes.Enqueue(neighborNode);
             }
 
-            Debug.Log($"Current Node |{currentNode.GetId()}| - {currentNode.cellUpdate.gameObject.name} , neighbours = {currentNode.neighbors.Count}");
             validNodes.Add(currentNode.GetId(), currentNode);
         }
 
-        Debug.Log("Number of cells with path = " + validNodes.Count);
+        //Debug.Log("Number of cells with path = " + validNodes.Count);
 
         // No valid connection
-        if (!validNodes.ContainsKey(endNode.GetId()))
-        {
-            Debug.Log($"No valid connection to |{endNode.GetId()}|");
-            this.validPath.Clear();
-            return;
-        }
+        if (!validNodes.ContainsKey(endNode.GetId())) return;
 
-
-        PathNode.GetShortestPath(startNode, endNode, validNodes.Values.ToList());
+        // Set new path
+        List<PathNode> newPath = PathNode.GetShortestPath(startNode, endNode, validNodes);
+        if (newPath != null) this.validPath = newPath;
     }
 
     void Start()

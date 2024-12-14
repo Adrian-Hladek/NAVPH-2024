@@ -5,6 +5,8 @@ using Unity.VisualScripting;
 using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
+using System.Linq;
+using System.IO;
 
 
 public class PathNode
@@ -39,65 +41,104 @@ public class PathNode
         this.neighbors.Add(newNeighbor.GetId());
     }
 
-    public static bool CompareNodes(PathNode left, PathNode right)
-{
-    if (left.x == right.x && left.y == right.y) return true;
-    return false;
-}
-
-private void reconstructPath()
-{
-
-}
-
-public static void GetShortestPath(PathNode start, PathNode end, List <PathNode> validNodes)
-{
-    // Unvisited nodes
-    Dictionary <Tuple<float, float>, PathNode> unvisited = new Dictionary <Tuple<float, float>, PathNode> ();
-    foreach (PathNode node in validNodes) unvisited.Add(node.GetId(), node);
-
-    // Distance of nodes
-    Dictionary <Tuple<float, float>, int> nodeDistances = new Dictionary <Tuple<float, float>, int> ();
-    foreach (PathNode node in validNodes) nodeDistances.Add(node.GetId(), int.MaxValue);
-    nodeDistances[start.GetId()] = 0;
-
-    while (unvisited.Count > 0)
+    public static bool EqualNodes(PathNode left, PathNode right)
     {
-        PathNode best_node = null;
-        int smallest_distance = int.MaxValue;
-
-        // Find best node
-        // TODO - optimize search
-        foreach ((Tuple<float, float> id, PathNode node) in unvisited)
-        {
-            int current_distance = nodeDistances[id];
-            if (current_distance < smallest_distance) 
-            {
-                smallest_distance = current_distance;
-                best_node = node;
-            }
-        }
-
-        // No best node
-        if (best_node == null) break;
-
-        // Update neighbors distances
-        foreach (Tuple<float, float> neighborId in best_node.neighbors)
-        {
-            int new_distance = smallest_distance + 1;
-            int current_distance = nodeDistances[neighborId];
-
-            if (new_distance < current_distance) nodeDistances[neighborId] = new_distance;
-        }
-
-        unvisited.Remove(best_node.GetId());
+        if (left.x == right.x && left.y == right.y) return true;
+        return false;
     }
 
+    private static List <PathNode> ReconstructPath(Dictionary <Tuple<float, float>, PathNode> validNodes, Dictionary <Tuple<float, float>, int> nodeDistances, PathNode start, PathNode end)
+    {
+        Tuple<float, float> startId = start.GetId();
+        List <PathNode> shortestPath = new List <PathNode>();
+        bool hasStart = false;
     
-    if (nodeDistances[end.GetId()] != int.MaxValue) 
-    {
-        Debug.Log($"Shortest distance to end point = {nodeDistances[end.GetId()]}");
+        PathNode currentNode = validNodes[end.GetId()];
+        while(currentNode != null)
+        {
+            shortestPath.Add(currentNode);
+
+            // Reached start
+            if (EqualNodes(currentNode, start)) 
+            {
+                hasStart = true;
+                break;
+            }
+
+            int smallestDistance = nodeDistances[currentNode.GetId()];
+            PathNode newNode = null;
+
+            foreach (Tuple<float, float> nodeId in currentNode.neighbors)
+            {
+                int currentDistance = nodeDistances[nodeId];
+
+                if (currentDistance < smallestDistance)
+                {
+                    newNode = validNodes[nodeId];
+                    break;
+                }
+            }
+
+            currentNode = newNode;
+        }
+
+        if (hasStart)
+        {
+            shortestPath.Reverse();
+            return shortestPath;
+        }
+        
+        return null;
     }
-}
+
+    public static List <PathNode> GetShortestPath(PathNode start, PathNode end, Dictionary <Tuple<float, float>, PathNode> validNodes)
+    {
+        // Unvisited nodes
+        Dictionary <Tuple<float, float>, PathNode> unvisited = new Dictionary <Tuple<float, float>, PathNode> (validNodes);
+
+        // Distance of nodes
+        Dictionary <Tuple<float, float>, int> nodeDistances = new Dictionary <Tuple<float, float>, int> ();
+        foreach (PathNode node in validNodes.Values) nodeDistances.Add(node.GetId(), int.MaxValue);
+        nodeDistances[start.GetId()] = 0;
+
+        while (unvisited.Count > 0)
+        {
+            PathNode bestNode = null;
+            int smallestDistance = int.MaxValue;
+
+            // Find best node
+            foreach ((Tuple<float, float> id, PathNode node) in unvisited)
+            {
+                int currentDistance = nodeDistances[id];
+                if (currentDistance < smallestDistance) 
+                {
+                    smallestDistance = currentDistance;
+                    bestNode = node;
+                }
+            }
+
+            // No best node
+            if (bestNode == null) break;
+
+            // Update neighbors distances
+            foreach (Tuple<float, float> neighborId in bestNode.neighbors)
+            {
+                int newDistance = smallestDistance + 1;
+                int currentDistance = nodeDistances[neighborId];
+
+                if (newDistance < currentDistance) nodeDistances[neighborId] = newDistance;
+            }
+
+            unvisited.Remove(bestNode.GetId());
+        }
+
+        if (nodeDistances[end.GetId()] != int.MaxValue) 
+        {
+            //Debug.Log($"Shortest distance to end point = {nodeDistances[end.GetId()]}");
+            return ReconstructPath(validNodes, nodeDistances, start, end);
+        }
+
+        return null;
+    }
 }
 
