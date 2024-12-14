@@ -15,6 +15,7 @@ TagManager:
   - Bunka
   - Bordering
   - Button
+  - Path
   layers:
   - Default
   - TransparentFX

@@ -166,6 +166,8 @@ public class Action
         // Cannot add path - exisitng path or path not possible
         if (cellComponent.pathValue || !cellComponent.possiblePath) return false;
 
+        Physics2D.SyncTransforms();
+
         // Set the property value
         cellComponent.pathValue = true; 
         cellComponent.UpdateNearbyCells();
@@ -186,6 +188,8 @@ public class Action
 
         // Cannot remove path - exisitng doenst exist or path not possible
         if (!cellComponent.pathValue || !cellComponent.possiblePath) return false;
+
+        Physics2D.SyncTransforms();
 
         // Set the property value
         cellComponent.pathValue = false; 
@@ -212,6 +216,9 @@ public class Action
         // Revert rotation of cells
         foreach (Cell_Update cell in tileCells) 
             cell.gameObject.transform.rotation = Quaternion.identity;
+
+
+        Physics2D.SyncTransforms();
 
         // Update cells 
         foreach (Cell_Update cell in tileCells) 

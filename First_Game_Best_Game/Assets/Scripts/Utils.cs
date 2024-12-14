@@ -8,10 +8,10 @@ public class Utils
     public const float epsilon = 0.01f;
 
     // Tags
-    // TODO - remove border tag, layer (NOT used anymore)
     public const string mapTag = "Game Map";
     public const string tileTag = "Tile";
     public const string cellTag = "Cell";
+    public const string pathTag = "Path";
 
     public const string actionTag = "Action";
 

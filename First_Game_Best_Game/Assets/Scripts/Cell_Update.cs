@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SearchService;
 
 public class Cell_Update : MonoBehaviour
 {
@@ -46,47 +47,43 @@ public class Cell_Update : MonoBehaviour
         Recalculate();
     }
 
+    public List<Collider2D> getChildColliders()
+    {
+        List<Collider2D> childColliders = new List<Collider2D>();
+
+        foreach (Collider2D collider in GetComponentsInChildren<Collider2D>())
+            if (collider.gameObject != this.gameObject) childColliders.Add(collider);
+       
+        return childColliders;
+    }
+
     public void Recalculate()
     {
         bool hasRight = false;
         bool hasLeft = false;
         bool hasUpper = false;
         bool hasBottom = false;
+
         List<GameObject> detectedObjects = new List<GameObject>();
+        List<Collider2D> childColliders = this.getChildColliders();
 
-        Physics2D.SyncTransforms();
-
-        // Get all colliders in children, but filter out the ones directly on this GameObject
-        List<Collider2D> childColliders = new List<Collider2D>();
-
-        // Only add colliders from child objects
-        foreach (Collider2D collider in GetComponentsInChildren<Collider2D>())
-        {
-            if (collider.gameObject != this.gameObject)  
-            {
-                childColliders.Add(collider);
-            }
-        }
-
-        foreach (Collider2D mainCollider in childColliders)
+        foreach (Collider2D collider in childColliders)
         {
             Collider2D[] touchingObjects = new Collider2D[10];
-            int overlapCount = Physics2D.OverlapCollider(mainCollider, new ContactFilter2D().NoFilter(), touchingObjects);
+            int overlapCount = Physics2D.OverlapCollider(collider, new ContactFilter2D().NoFilter(), touchingObjects);
 
             for (int i = 0; i < overlapCount; i++)
             {
-                Collider2D col = touchingObjects[i];
+                Collider2D collision = touchingObjects[i];
+                
+                if (collision.gameObject == this.gameObject) continue;
 
-                if (col.gameObject == this.gameObject)
-                    continue;
-
-                if (col.CompareTag(Utils.cellTag) && !detectedObjects.Contains(col.gameObject))
+                if (collision.CompareTag(Utils.cellTag) && !detectedObjects.Contains(collision.gameObject))
                 {
-                    string position = GetRelativePosition(mainCollider, col);
-                    //Debug.Log($"Detected object: {col.gameObject.name} at position: {position}");
+                    string position = GetRelativePosition(collision);
 
-                    Cell_Update bunkaProps = col.GetComponent<Cell_Update>();
-                    if (bunkaProps != null && bunkaProps.canHavePath && bunkaProps.hasPath)
+                    Cell_Update foundCell = collision.GetComponent<Cell_Update>();
+                    if (foundCell != null && foundCell.canHavePath && foundCell.hasPath)
                     {
                         switch (position)
                         {
@@ -105,26 +102,46 @@ public class Cell_Update : MonoBehaviour
                         }
                     }
 
-                    detectedObjects.Add(col.gameObject);
+                    detectedObjects.Add(collision.gameObject);
+                }
+                else if (collision.CompareTag(Utils.pathTag))
+                {
+                    string position = GetRelativePosition(collision);
+
+                    switch (position)
+                    {
+                        case "Up":
+                            hasUpper = true;
+                            break;
+                        case "Down":
+                            hasBottom = true;
+                            break;
+                        case "Left":
+                            hasLeft = true;
+                            break;
+                        case "Right":
+                            hasRight = true;
+                            break;
+                    }
                 }
             }
         }
-
-        if (detectedObjects.Count > 4)
-        {
+        
+        if (detectedObjects.Count > 4) 
             Debug.LogError($"More than 4 objects detected: {detectedObjects.Count} objects found.");
-        }
 
+        // Set sprite
         string spritePath = Utils.getCellSprite(hasPath, hasTurret, canHavePath, hasRight, hasLeft, hasUpper, hasBottom);
         spriteRenderer.sprite = Resources.Load<Sprite>(spritePath);
     }
 
+    // Get all related objects
     public GameObject[] GetRelatedObjects(GameObject obj)
     {
         // Return an empty array if input is invalid
         if (obj == null)
         {
-            Debug.LogWarning($"GameObject {obj.name} is null, returning an empty array");
+            Debug.LogError($"GameObject {obj.name} is null, returning an empty array");
             return new GameObject[0];
         }
 
@@ -146,25 +163,25 @@ public class Cell_Update : MonoBehaviour
             foreach (Collider2D colider in collisions)
             {
                 // Prevent adding the input object and match specific tag
-                if (
-                    colider != null 
-                    && colider.gameObject != obj 
+                if ( colider != null 
+                    //&& colider.gameObject != obj 
                     && colider.CompareTag(Utils.cellTag)
                     && !interactingObjects.Contains(colider.gameObject)
-                )
+                ) 
                 {
                     interactingObjects.Add(colider.gameObject);
                 }
             }
         }
 
-        Debug.LogWarning($"Objects detected: {interactingObjects.Count} objects found.");
+        Debug.Log($"Objects detected: {interactingObjects.Count} objects found.");
 
         // Convert the list of interacting objects to an array and return it
         return interactingObjects.ToArray();
     }
 
-    private string GetRelativePosition(Collider2D mainCollider, Collider2D detectedCollider)
+    // Get relative position of 
+    private string GetRelativePosition(Collider2D detectedCollider)
     {
         Vector3 mainObjectPosition = transform.position;
         Vector3 detectedPosition = detectedCollider.transform.position;
@@ -185,7 +202,6 @@ public class Cell_Update : MonoBehaviour
         return "Center";
     }
 
-
     // Calls Recalculate on all coliding cells + itself
     public void UpdateNearbyCells()
     {
@@ -199,8 +215,6 @@ public class Cell_Update : MonoBehaviour
 
         foreach (GameObject obj in relatedObjects)
         {
-            Debug.Log($"UPDATING {obj.name}");
-            
             Cell_Update otherCell = obj.GetComponent<Cell_Update>();
             
             if (otherCell != null) otherCell.Recalculate();
@@ -209,6 +223,32 @@ public class Cell_Update : MonoBehaviour
                 Debug.LogError($"Related object {obj.name} does NOT have Cell_Update component");
             }
         }
+    }
+
+    // Find all neighboring cells that have path
+    public List<Cell_Update> findNeighborCells()
+    {
+        List <Cell_Update> detectedCells = new List <Cell_Update>();
+        List<Collider2D> childColliders = this.getChildColliders();
+
+        foreach (Collider2D collider in childColliders)
+        {
+            Collider2D[] touchingObjects = new Collider2D[10];
+
+            int overlapCount = Physics2D.OverlapCollider(collider, new ContactFilter2D().NoFilter(), touchingObjects);
+
+            for (int i = 0; i < overlapCount; i++)
+            {
+                Collider2D col = touchingObjects[i];
+
+                if (!col.CompareTag(Utils.cellTag) || col.gameObject == this.gameObject) continue;
+
+                Cell_Update newCell = col.GetComponent<Cell_Update>();
+                if (newCell != null && newCell.hasPath) detectedCells.Add(newCell);
+            }
+        }
+
+        return detectedCells;
     }
 
 
