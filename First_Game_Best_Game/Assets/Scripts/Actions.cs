@@ -1,7 +1,6 @@
 using Unity;
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEditor.UI;
 
 // When adding new actions, specify action 
 public enum ActionType

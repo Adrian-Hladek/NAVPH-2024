@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -47,7 +46,7 @@ public class Map_Controller : MonoBehaviour
             // Drop action
             else if (Input.GetButtonDown("Fire2")) 
             {
-                Debug.Log($"Action {inventory.actionHolder.actionValue} droped");
+                //Debug.Log($"Action {inventory.actionHolder.actionValue} droped");
                 inventory.ClearPickedAction();
             }
         }

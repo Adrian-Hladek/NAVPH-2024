@@ -1,21 +1,13 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.UI;
 using UnityEngine;
-using UnityEngine.UIElements;
-
 
 public class Map_pathing : MonoBehaviour
 {
     [SerializeField] private GameObject pathStart = null;
     [SerializeField] private GameObject pathEnd = null;
-    
+
     private List<PathNode> validPath = new List<PathNode>();
     private bool validInit = true;
 
@@ -114,8 +106,6 @@ public class Map_pathing : MonoBehaviour
             validNodes.Add(currentNode.GetId(), currentNode);
         }
 
-        //Debug.Log("Number of cells with path = " + validNodes.Count);
-
         // No valid connection
         if (!validNodes.ContainsKey(endNode.GetId())) return;
 
@@ -126,7 +116,26 @@ public class Map_pathing : MonoBehaviour
 
     void Start()
     {
-       this.UpdatePath();
+        this.UpdatePath();
+
+        // Find Map_Controller 
+        Map_Controller controller = FindObjectOfType<Map_Controller>();
+        if (controller == null)
+        {
+            Debug.LogError("Cound NOT find Map_Controller");
+            return;
+        }
+
+        // Find Action_Inventory
+        Action_Inventory inventory = controller.GetComponentInChildren<Action_Inventory>();
+        if (inventory == null)
+        {
+            Debug.LogError("Cound NOT find Action_Inventory");
+            return;
+        }
+
+        // Add listeners to any performed action
+        inventory.actionPerformed.AddListener(UpdatePath);
     }
 
 }

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SearchService;
 
 public class Cell_Update : MonoBehaviour
 {
@@ -127,8 +126,7 @@ public class Cell_Update : MonoBehaviour
             }
         }
         
-        if (detectedObjects.Count > 4) 
-            Debug.LogError($"More than 4 objects detected: {detectedObjects.Count} objects found.");
+        if (detectedObjects.Count > 4) Debug.LogError($"More than 4 objects detected: {detectedObjects.Count} objects found.");
 
         // Set sprite
         string spritePath = Utils.getCellSprite(hasPath, hasTurret, canHavePath, hasRight, hasLeft, hasUpper, hasBottom);
@@ -174,7 +172,7 @@ public class Cell_Update : MonoBehaviour
             }
         }
 
-        Debug.Log($"Objects detected: {interactingObjects.Count} objects found.");
+        //Debug.Log($"Objects detected: {interactingObjects.Count} objects found.");
 
         // Convert the list of interacting objects to an array and return it
         return interactingObjects.ToArray();
@@ -250,6 +248,4 @@ public class Cell_Update : MonoBehaviour
 
         return detectedCells;
     }
-
-
 }

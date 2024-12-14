@@ -1,13 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
-using Unity.VisualScripting;
-using System.Runtime.InteropServices.WindowsRuntime;
-using TMPro;
-using UnityEditor.Experimental.GraphView;
-using System.Linq;
-using System.IO;
-
 
 public class PathNode
 {
@@ -134,7 +127,7 @@ public class PathNode
 
         if (nodeDistances[end.GetId()] != int.MaxValue) 
         {
-            //Debug.Log($"Shortest distance to end point = {nodeDistances[end.GetId()]}");
+            Debug.Log($"Shortest distance to end point = {nodeDistances[end.GetId()]}");
             return ReconstructPath(validNodes, nodeDistances, start, end);
         }
 

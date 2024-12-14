@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-
 
 // Utils class for global methods
 public class Utils

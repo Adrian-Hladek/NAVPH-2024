@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class Action_Inventory : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Action_Inventory : MonoBehaviour
 
     // Optional field (initlializes itself if null)
     [SerializeField] public Object_Holder actionHolder = null;
+
+    [HideInInspector] public UnityEvent actionPerformed = new UnityEvent();
 
     private List<Action> actions = new List<Action>();
 
@@ -65,8 +68,6 @@ public class Action_Inventory : MonoBehaviour
     {
         foreach (Action action in actions) 
             action.selectAction(action.type == selectedType);
-
-
     }
 
     // Returns true if object holder should drop action, otherwise false
@@ -115,10 +116,15 @@ public class Action_Inventory : MonoBehaviour
         // Perform action
         if (target != null) 
         {
-            performing_action.executeAction(target);
+            bool success = performing_action.executeAction(target);
 
-            // Clear action if it isnt executable
-            if (!performing_action.isExecutable()) ClearPickedAction();
+            // Action was a success
+            if (success)
+            {
+                // Clear action if it isnt executable
+                if (!performing_action.isExecutable()) ClearPickedAction();
+                actionPerformed.Invoke();
+            }
         }
     }
 
