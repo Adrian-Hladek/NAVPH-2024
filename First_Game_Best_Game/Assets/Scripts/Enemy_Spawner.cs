@@ -51,7 +51,11 @@ public class Enemy_Spawner : MonoBehaviour
         {
             float smallestTime = enemyQueue.Peek().Item2;
 
-            if (smallestTime <= elapsedTime) enemiesToSpawn.Add(enemyQueue.Dequeue().Item1);
+            if (smallestTime <= elapsedTime) 
+            {
+                GameObject enemyObject = enemyQueue.Dequeue().Item1;
+                enemiesToSpawn.Add(Instantiate(enemyObject));
+            }
             else break;
         }
 
@@ -60,6 +64,9 @@ public class Enemy_Spawner : MonoBehaviour
 
     public void RemoveDefeatedEnemies()
     {
+        foreach (Enemy_Health enemy in activeEnemies)
+            if (enemy.EnemyIsDefeated()) Debug.Log($"ENEMY DEAD = {enemy.gameObject.name}");
+
         // Destroy defeated enemies
         foreach (Enemy_Health enemy in activeEnemies)
             if (enemy.EnemyIsDefeated()) Destroy(enemy.gameObject);

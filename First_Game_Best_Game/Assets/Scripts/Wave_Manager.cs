@@ -27,11 +27,21 @@ public class Wave_Manager : MonoBehaviour
             Debug.LogError("Map has NO path");
             enabled = false;
         }
+
+        // TODO remove
+        ActivateNextWave();
+    }
+
+    public bool LevelComplete()
+    {
+        return waves.Count == 0;
     }
 
     public void ActivateNextWave()
     {
+        if (HasActiveWave() || LevelComplete()) return;
 
+        currentWave = waves.Dequeue();
     }
 
     public bool HasActiveWave()
