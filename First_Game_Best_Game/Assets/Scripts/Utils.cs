@@ -10,6 +10,7 @@ public class Utils
     public const string tileTag = "Tile";
     public const string cellTag = "Cell";
     public const string pathTag = "Path";
+    public const string enemyTag = "Enemy";
 
     public const string actionTag = "Action";
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Map_pathing : MonoBehaviour
+public class Map_Pathing : MonoBehaviour
 {
     [SerializeField] private GameObject pathStart = null;
     [SerializeField] private GameObject pathEnd = null;
@@ -58,10 +58,10 @@ public class Map_pathing : MonoBehaviour
 
     private void UpdatePath()
     {
+        if (!validInit) return;
+
         validPath.Clear();
 
-        if (!validInit) return;
-        
         // Get first and last cell
         Cell_Update start = getEdgeCell(pathStart);
         Cell_Update end = getEdgeCell(pathEnd);
@@ -131,10 +131,10 @@ public class Map_pathing : MonoBehaviour
         UpdatePath();
 
         // Find Map_Controller 
-        Map_Controller controller = FindObjectOfType<Map_Controller>();
+        Map_Controller controller = this.gameObject.GetComponentInChildren<Map_Controller>();
         if (controller == null)
         {
-            Debug.LogError("Cound NOT find Map_Controller");
+            Debug.LogError("Cound NOT find Map_Controller, path will NOT be updated");
             return;
         }
 
@@ -142,7 +142,7 @@ public class Map_pathing : MonoBehaviour
         Action_Inventory inventory = controller.GetComponentInChildren<Action_Inventory>();
         if (inventory == null)
         {
-            Debug.LogError("Cound NOT find Action_Inventory");
+            Debug.LogError("Cound NOT find Action_Inventory, path will NOT be updated");
             return;
         }
 

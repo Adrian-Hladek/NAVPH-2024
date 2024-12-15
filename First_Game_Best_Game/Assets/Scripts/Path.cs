@@ -47,7 +47,6 @@ public class PathNode
 
     private static List <PathNode> ReconstructPath(Dictionary <Tuple<float, float>, PathNode> validNodes, Dictionary <Tuple<float, float>, int> nodeDistances, PathNode start, PathNode end)
     {
-        Tuple<float, float> startId = start.GetId();
         List <PathNode> shortestPath = new List <PathNode>();
         bool hasStart = false;
     

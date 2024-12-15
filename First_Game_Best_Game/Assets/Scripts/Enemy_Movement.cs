@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
 public class Enemy_Movement : MonoBehaviour
@@ -12,7 +11,7 @@ public class Enemy_Movement : MonoBehaviour
     private float offset;
     
     Queue <PathNode> path = new Queue <PathNode>();
-    Tuple <UnityEngine.Vector2, PathNode> nextPoint = null;
+    Tuple <Vector2, PathNode> nextPoint = null;
 
     public bool CanMove()
     {
@@ -26,11 +25,8 @@ public class Enemy_Movement : MonoBehaviour
 
         offset = UnityEngine.Random.Range(offsetMinMax.Item1, offsetMinMax.Item2);
         offset = MathF.Round(offset, 4);
-    }
 
-    public void Spawn()
-    {
-
+        enabled = false;
     }
 
     public void PlaceOnMap(List <PathNode> newPath)
@@ -55,22 +51,21 @@ public class Enemy_Movement : MonoBehaviour
         PathNode newNode = path.Dequeue();
 
         // TODO offset
-        UnityEngine.Vector2 newPos = newNode.GetLocalPoint();
+        Vector2 newPos = newNode.GetLocalPoint();
 
         nextPoint = Tuple.Create(newPos, newNode);
     }
 
-    public void MoveEnemy()
+    // Parent of enemy has to be Map
+    void FixedUpdate()
     {
-        Debug.Log(Time.fixedDeltaTime);
-
         if (!CanMove()) return;
 
-        UnityEngine.Vector2 currentPosition = this.gameObject.transform.localPosition;
+        Vector2 currentPosition = this.gameObject.transform.localPosition;
 
         // Calculate step and distance
         float step = speedCurrent * Time.fixedDeltaTime;
-        float dist = UnityEngine.Vector2.Distance(nextPoint.Item1, currentPosition);
+        float dist = Vector2.Distance(nextPoint.Item1, currentPosition);
 
         if (dist < step + Utils.epsilon)
         {
@@ -88,7 +83,7 @@ public class Enemy_Movement : MonoBehaviour
         }
 
         // Calculate new position
-        UnityEngine.Vector2 newPos = UnityEngine.Vector2.MoveTowards(currentPosition, nextPoint.Item1, step);
+        Vector2 newPos = Vector2.MoveTowards(currentPosition, nextPoint.Item1, step);
 
         // Move towards new position
         this.gameObject.transform.localPosition = newPos;
