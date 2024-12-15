@@ -10,9 +10,9 @@ public class PathNode
 
     private Cell_Update cell;
 
-    public PathNode(Cell_Update cell, Vector3 center_point)
+    public PathNode(GameObject obj, Vector3 center_point, Cell_Update cell = null)
     {
-        Vector3 vec = cell.gameObject.transform.InverseTransformPoint(center_point);
+        Vector3 vec = obj.transform.InverseTransformPoint(center_point);
 
         this.x = MathF.Round(vec.x, 2);
         this.y = MathF.Round(vec.y, 2);
@@ -22,6 +22,11 @@ public class PathNode
     public Cell_Update cellUpdate
     {
         get {return this.cell;}
+    }
+
+    public Vector2 GetLocalPoint()
+    {
+        return new Vector2(x,y);
     }
 
     public Tuple<float, float> GetId()

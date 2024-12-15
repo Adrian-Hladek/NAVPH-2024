@@ -18,7 +18,7 @@ public class Map_pathing : MonoBehaviour
     
     public bool hasValidPath()
     {
-        return this.validPath.Count > 0;
+        return validPath.Count > 0;
     }
 
     void Awake()
@@ -26,13 +26,13 @@ public class Map_pathing : MonoBehaviour
         if (pathStart == null || !pathStart.CompareTag(Utils.pathTag))
         {
             Debug.LogError("Path START point is INVALID");
-            this.validInit = false;
+            validInit = false;
         }
 
         if (pathEnd == null || !pathEnd.CompareTag(Utils.pathTag))
         {
             Debug.LogError("Path END point is INVALID");
-            this.validInit = false;
+            validInit = false;
         }
     }
 
@@ -56,33 +56,35 @@ public class Map_pathing : MonoBehaviour
         return null;
     }
 
-    void UpdatePath()
+    private void UpdatePath()
     {
-        this.validPath.Clear();
+        validPath.Clear();
 
-        if (!this.validInit) return;
+        if (!validInit) return;
         
-        // Set start node
-        Cell_Update start = getEdgeCell(this.pathStart);
-        Cell_Update end = getEdgeCell(this.pathEnd);
-
+        // Get first and last cell
+        Cell_Update start = getEdgeCell(pathStart);
+        Cell_Update end = getEdgeCell(pathEnd);
         if (start == null || end == null )
         {
             Debug.LogError("Could not FIND valid path START");
             return;
         }
 
-         // Path edge does NOT connect
+        // Path edge does NOT connect
         if (!start.pathValue || !end.pathValue) return;
+
+        Vector3 currentPosition = this.gameObject.transform.position;
 
         // Initiate nodes
         Dictionary <Tuple<float, float>, PathNode> validNodes = new Dictionary <Tuple<float, float>, PathNode>();
         Queue <PathNode> newNodes = new Queue<PathNode> ();
-        PathNode startNode = new PathNode(start, this.gameObject.transform.position);
-        PathNode endNode = new PathNode(end, this.gameObject.transform.position);
+        
+        PathNode startNode = new PathNode(start.gameObject, currentPosition, start);
+        PathNode endNode = new PathNode(end.gameObject, currentPosition, end);
 
         // Get valid paths
-        newNodes.Enqueue(new PathNode(start, this.gameObject.transform.position));
+        newNodes.Enqueue(startNode);
         while (newNodes.Count != 0)
         {
             PathNode currentNode = newNodes.Dequeue();
@@ -90,7 +92,7 @@ public class Map_pathing : MonoBehaviour
 
             foreach (Cell_Update cell in neighborCells)
             {
-                PathNode neighborNode = new PathNode(cell, this.gameObject.transform.position);
+                PathNode neighborNode = new PathNode(cell.gameObject, currentPosition, cell);
 
                 // Add neighbor
                 currentNode.addNeighbor(neighborNode);
@@ -111,12 +113,22 @@ public class Map_pathing : MonoBehaviour
 
         // Set new path
         List<PathNode> newPath = PathNode.GetShortestPath(startNode, endNode, validNodes);
-        if (newPath != null) this.validPath = newPath;
+        if (newPath != null) 
+        {
+            PathNode spawn = new PathNode(pathStart, currentPosition);
+            PathNode despawn = new PathNode(pathEnd, currentPosition);
+
+            newPath.Insert(0, spawn);
+            newPath.Add(despawn);
+
+            validPath = newPath;
+        }
+        else Debug.LogError("Pathfinding failed");
     }
 
     void Start()
     {
-        this.UpdatePath();
+        UpdatePath();
 
         // Find Map_Controller 
         Map_Controller controller = FindObjectOfType<Map_Controller>();
@@ -134,7 +146,7 @@ public class Map_pathing : MonoBehaviour
             return;
         }
 
-        // Add listeners to any performed action
+        // Add listeners to ANY performed action
         inventory.actionPerformed.AddListener(UpdatePath);
     }
 

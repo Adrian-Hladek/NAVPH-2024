@@ -3,7 +3,7 @@ using UnityEngine;
 // Utils class for global methods
 public class Utils
 {
-    public const float epsilon = 0.01f;
+    public const float epsilon = 0.001f;
 
     // Tags
     public const string mapTag = "Game Map";
