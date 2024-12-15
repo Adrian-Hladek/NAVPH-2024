@@ -1715,6 +1715,7 @@ GameObject:
   - component: {fileID: 1162099970}
   - component: {fileID: 1162099971}
   - component: {fileID: 1162099972}
+  - component: {fileID: 1162099973}
   m_Layer: 6
   m_Name: Map
   m_TagString: Game Map
@@ -1917,6 +1918,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathStart: {fileID: 1009064641}
   pathEnd: {fileID: 905891057}
+--- !u!114 &1162099973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162099961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f1fdd62082f4a47b63613c7fe36428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1234265980 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8558008678196779453, guid: 0642114a0bd531948806d7fbadc3439b, type: 3}
