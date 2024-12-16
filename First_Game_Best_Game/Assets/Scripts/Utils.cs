@@ -11,6 +11,7 @@ public class Utils
     public const string cellTag = "Cell";
     public const string pathTag = "Path";
     public const string enemyTag = "Enemy";
+    public const string turretTag = "Turret";
 
     public const string actionTag = "Action";
 
@@ -22,6 +23,7 @@ public class Utils
     public const string mapLayer = "Game_Map";
     public const string tileLayer = "Tile_Layer";
     public const string cellLayer = "Cell_Layer";
+    public const string turretLayer = "Turret_Layer";
 
     // Helper functions
 
@@ -40,6 +42,7 @@ public class Utils
         if (type == ActionType.Rotate) return "Actions/Circle-Arrow";
         else if (type == ActionType.Create) return "Actions/Pickaxe";
         else if (type == ActionType.Delete) return "Actions/Pickaxe";
+        else if (type == ActionType.Turret_Basic) return "Actions/Pickaxe";
 
         Debug.LogError($"Wrong action type {type}");
         return "";
@@ -58,6 +61,8 @@ public class Utils
             //Debug.Log("Green7");
             return "Path_options/Sprites/Canvas_7";
         }
+
+        
         // zelena na ceste 
         else if (canHavePath && !hasTurret && !hasPath)
         {
@@ -174,7 +179,16 @@ public class Utils
             //Debug.Log("single10");
             return "Path_options/Sprites/Canvas_10";
         }
-       
+        else if (!hasPath && hasTurret)
+        {
+
+            // tu nejak zistiť ID typu turrety a podľa toho setupnuť spravny sprite
+
+            // Zelen� mimo cesty
+            //Debug.Log("Green7");
+            return "Towers/Basic_tower";
+        }
+
         Debug.LogError("Cell sprite NOT found");
         
         // TODO - placeholder

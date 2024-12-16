@@ -5,7 +5,9 @@ public class Cell_Update : MonoBehaviour
 {
     [SerializeField] private bool canHavePath = false;
     private bool hasPath;
-    private bool hasTurret;
+
+    // odstraniù serialized je to iba aby som videl zmenu v editore
+    [SerializeField] private bool hasTurret;
 
     private SpriteRenderer spriteRenderer;
 
@@ -22,8 +24,8 @@ public class Cell_Update : MonoBehaviour
 
     public bool turretValue
     {
-        get { return hasPath; }
-        set { hasPath = value; }
+        get { return hasTurret; }
+        set { hasTurret = value; }
     }
 
     private void Awake()

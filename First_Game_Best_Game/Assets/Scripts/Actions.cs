@@ -9,6 +9,7 @@ public enum ActionType
     Rotate = 1,
     Create = 2, 
     Delete = 3,
+    Turret_Basic = 4,
 }
 
 public class Action
@@ -70,6 +71,10 @@ public class Action
                 success = RemovePathFromCell(target);
                 break;
 
+            case ActionType.Turret_Basic:
+                success = AddBasicTower(target);
+                break;
+
             default:
                 success = false;
                 break;
@@ -115,6 +120,10 @@ public class Action
                 tag = Utils.cellTag;
                 break;
 
+            case ActionType.Turret_Basic:
+                tag = Utils.cellTag;
+                break;
+
             default:
                 tag = ""; 
                 break;
@@ -141,6 +150,10 @@ public class Action
                 layerNames.Add(Utils.cellLayer);
                 break;
 
+            case ActionType.Turret_Basic:
+                layerNames.Add(Utils.cellLayer);
+                break;
+
             case ActionType.None:
                 layerNames.Add(Utils.tileLayer);
                 layerNames.Add(Utils.cellLayer);
@@ -163,7 +176,7 @@ public class Action
         }
 
         // Cannot add path - exisitng path or path not possible
-        if (cellComponent.pathValue || !cellComponent.possiblePath) return false;
+        if (cellComponent.pathValue || !cellComponent.possiblePath || cellComponent.turretValue) return false;
 
         Physics2D.SyncTransforms();
 
@@ -225,6 +238,38 @@ public class Action
         
         return true;
     }
+
+
+    private bool AddBasicTower(GameObject cell)
+    {
+
+
+
+        Cell_Update cellComponent = cell.GetComponent<Cell_Update>();
+
+        // NO Cell_Update component
+        if (cellComponent == null)
+        {
+            Debug.LogError($"Object {cell.name} does NOT have Cell_Update");
+            return false;
+        }
+
+        // Cannot add path - exisitng path or path not possible
+        if (cellComponent.pathValue  || cellComponent.turretValue) return false;
+
+        Physics2D.SyncTransforms();
+
+        // Set the property value
+        cellComponent.turretValue = true;
+        
+
+
+
+
+
+        return true;
+    }
+
 }
 
 
