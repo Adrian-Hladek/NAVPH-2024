@@ -17,6 +17,7 @@ TagManager:
   - Button
   - Path
   - Enemy
+  - HPbar
   layers:
   - Default
   - TransparentFX

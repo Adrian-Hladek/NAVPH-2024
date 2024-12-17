@@ -6,12 +6,8 @@ public class Highlight : MonoBehaviour
 
     private void Awake()
     {
-        if (border == null)
-        {
-            Debug.LogWarning($"Highlight object for {this.gameObject.name} is NOT set");
-        }
-        
-        Activate();
+        if (border == null) Debug.LogWarning($"Highlight object for {this.gameObject.name} is NOT set");
+        Deactivate();
     }
 
     public void Activate()
@@ -21,6 +17,6 @@ public class Highlight : MonoBehaviour
 
     public void Deactivate()
     {
-         if (border != null) border.enabled = false;
+        if (border != null) border.enabled = false;
     }
 }

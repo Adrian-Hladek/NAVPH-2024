@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy_Update : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class Enemy_Update : MonoBehaviour
     Tuple <Vector2, PathNode> nextPoint = null;
 
     SpriteRenderer sprite;
+
+    [HideInInspector] public UnityEvent despawn = new UnityEvent();
+    [HideInInspector] public UnityEvent spawn = new UnityEvent();
+    [HideInInspector] public UnityEvent<float> hit = new UnityEvent<float>();
 
     void Awake()
     {
@@ -68,16 +73,19 @@ public class Enemy_Update : MonoBehaviour
         this.enabled = true;
         sprite.enabled = true;
         delayCurrent = 0;
+
+        spawn.Invoke();
     }
 
     void SetNextPoint()
     {
-        // Reached END of road
+        // Reached END of road (despawn)
         if (path.Count == 0)
         {
             nextPoint = null;
             sprite.enabled = false;
             delayCurrent = respawnDelay;
+            despawn.Invoke();
             return;
         }
 
@@ -124,12 +132,13 @@ public class Enemy_Update : MonoBehaviour
     {
         healthCurrent -= damage;
 
+        float healthPercantage = (healthCurrent * 100) / healthTotal;
+        hit.Invoke(healthPercantage);
     }
 
     public void Collide()
     {
         // TODO Colisions
-
     }
 
     void FixedUpdate()
