@@ -17,7 +17,7 @@ public class Action
     public ActionType type;
     public int actionCount;
 
-    private Action_Controller controller;
+    Action_Controller controller;
 
     public Action(ActionType actionType, int count, Action_Controller control)
     {
@@ -26,34 +26,34 @@ public class Action
         controller = control;
     }
 
-    public bool isExecutable()
+    public bool IsExecutable()
     {
         return actionCount > 0;
     }
 
-    private void updateController()
+    void UpdateController()
     {
-        if (isExecutable()) controller.pickValue = true;
+        if (IsExecutable()) controller.PickValue = true;
         else 
         {
-            controller.pickValue = false;
-            controller.selectValue = false;
+            controller.PickValue = false;
+            controller.SelectValue = false;
         }
 
-        controller.updateCount(actionCount);
-        controller.updateVisuals();
+        controller.UpdateCount(actionCount);
+        controller.UpdateVisuals();
     }
 
-    public void selectAction(bool select)
+    public void SelectAction(bool select)
     {
-        controller.selectValue = select;
+        controller.SelectValue = select;
 
-        updateController();
+        UpdateController();
     }
 
-    public bool executeAction(GameObject target)
+    public bool ExecuteAction(GameObject target)
     {
-        if (!isExecutable()) return false;
+        if (!IsExecutable()) return false;
 
         bool success;
 
@@ -80,26 +80,26 @@ public class Action
                 break;
         }
 
-        if (success) useAction();
+        if (success) UseAction();
         return success;
     }
     
-    private void useAction()
+    void UseAction()
     {
-        if (!isExecutable())
+        if (!IsExecutable())
         {
             Debug.LogError($"Action {type} with 0 count was executed");
             return;
         }
 
         actionCount -= 1;
-        updateController();
+        UpdateController();
     }
 
-    public void addAction (int countAdded)
+    public void AddAction (int countAdded)
     {
         actionCount += countAdded;
-        updateController();
+        UpdateController();
     }
 
     public string GetActionTarget()
@@ -163,8 +163,7 @@ public class Action
         return LayerMask.GetMask(layerNames.ToArray());
     }
 
-
-    private bool AddPathToCell(GameObject cell)
+    bool AddPathToCell(GameObject cell)
     {
         Cell_Update cellComponent = cell.GetComponent<Cell_Update>();
 
@@ -187,7 +186,7 @@ public class Action
         return true;
     }
 
-    private bool RemovePathFromCell(GameObject cell)
+    bool RemovePathFromCell(GameObject cell)
     {
         Cell_Update cellComponent = cell.GetComponent<Cell_Update>();
 
@@ -210,7 +209,7 @@ public class Action
         return true;
     }
 
-    private bool RotateTile(GameObject tile)
+    bool RotateTile(GameObject tile)
     {
         // Perform rotation around center point
         BoxCollider2D tileCollider = tile.GetComponent<BoxCollider2D>();
@@ -240,11 +239,8 @@ public class Action
     }
 
 
-    private bool AddBasicTower(GameObject cell)
+    bool AddBasicTower(GameObject cell)
     {
-
-
-
         Cell_Update cellComponent = cell.GetComponent<Cell_Update>();
 
         // NO Cell_Update component
@@ -262,10 +258,6 @@ public class Action
         // Set the property value
         cellComponent.turretValue = true;
         cellComponent.UpdateNearbyCells();
-
-
-
-
 
         return true;
     }

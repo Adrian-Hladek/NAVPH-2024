@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Map_Controller : MonoBehaviour
 {
-    private Action_Inventory inventory = null;
-    private List <Highlight> activeHighLights = new List <Highlight>();
+    Action_Inventory inventory = null;
+    List <Highlight> activeHighLights = new List <Highlight>();
 
     void Awake()
     {
@@ -16,21 +16,24 @@ public class Map_Controller : MonoBehaviour
         }
     }
 
-    private void DeativateHightlights()
+    void DeativateHightlights()
     {
-        foreach (Highlight highlight in activeHighLights) highlight.deactivate();
+        foreach (Highlight highlight in activeHighLights) highlight.Deactivate();
 
         activeHighLights.Clear();
     }
 
-    private void ActivateHightlights()
+    void ActivateHightlights()
     {
-        foreach (Highlight highlight in activeHighLights) highlight.activate();
+        foreach (Highlight highlight in activeHighLights) highlight.Activate();
     }
 
     void Update()
     {
         DeativateHightlights();
+
+        // Time.timeScale = 4;
+        // TODO
 
         // Holding action - get input
         if (inventory.actionHolder.HoldingAction())

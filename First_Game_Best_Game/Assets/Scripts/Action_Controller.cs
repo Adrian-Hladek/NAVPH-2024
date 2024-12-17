@@ -8,24 +8,24 @@ public class Action_Controller : MonoBehaviour
     [SerializeField] public ActionType actionType;
 
     // UI 
-    private TMP_Text textField = null;
-    private SpriteRenderer actionImage = null;
-    private Button actionButton = null;
+    TMP_Text textField = null;
+    SpriteRenderer actionImage = null;
+    Button actionButton = null;
 
     // Event
     [HideInInspector] public UnityEvent<ActionType> selectedNewAction = new UnityEvent<ActionType>();
     [HideInInspector] public UnityEvent selectedOldAction = new UnityEvent();
     
-    private bool selected = false;
-    private bool pickable = true;
+    bool selected = false;
+    bool pickable = true;
 
-    public bool selectValue
+    public bool SelectValue
     {
         get { return selected; }
         set { selected = value; }
     }
 
-    public bool pickValue
+    public bool PickValue
     {
         get { return pickable; }
         set { pickable = value; }
@@ -46,26 +46,26 @@ public class Action_Controller : MonoBehaviour
         else actionImage.sprite = Resources.Load<Sprite>(Utils.getActionSprite(actionType));
 
         if (actionButton == null) Debug.LogError($"Could not find button with tag {Utils.buttonTag}");
-        else actionButton.onClick.AddListener(actionClicked);
+        else actionButton.onClick.AddListener(ActionClicked);
 
         if (textField == null) Debug.LogError($"Could not find text with tag {Utils.textTag}");
 
-        updateVisuals();
+        UpdateVisuals();
     }
 
-    public void updateCount(int actionCount)
+    public void UpdateCount(int actionCount)
     {
         textField.text = actionCount.ToString();
         actionButton.interactable = pickable;
     }
 
-    public void updateVisuals()
+    public void UpdateVisuals()
     {
         if (selected) actionImage.color = Color.black;
         else actionImage.color = Color.white;
     }
 
-    private void actionClicked()
+    void ActionClicked()
     {
         if (!pickable) return;
 

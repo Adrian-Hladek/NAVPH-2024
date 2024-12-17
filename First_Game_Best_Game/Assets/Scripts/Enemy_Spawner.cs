@@ -5,23 +5,23 @@ using UnityEngine;
 
 public class Enemy_Spawner : MonoBehaviour
 {
-    [SerializeField] int order = -1;
+    [SerializeField] private int order = -1;
 
-    [SerializeField] List <GameObject> enemies = new List <GameObject>();
-    [SerializeField] List <float> spawnTimes = new List <float>();
+    [SerializeField] private List <GameObject> enemies = new List <GameObject>();
+    [SerializeField] private List <float> spawnTimes = new List <float>();
 
-    private Queue <Tuple<GameObject, float>> enemyQueue = new Queue <Tuple<GameObject, float>>();
-    private List <Enemy_Health> activeEnemies = new List <Enemy_Health>();
-    private float elapsedTime = 0;
+    Queue <Tuple<GameObject, float>> enemyQueue = new Queue <Tuple<GameObject, float>>();
+    List <Enemy_Update> spawnedEnemies = new List <Enemy_Update>();
+    float elapsedTime = 0;
 
     public int WaveOrder
     {
         get{return order;}
     }
 
-    public bool IsCompleted()
+    public bool FinishedSpawning()
     {
-        return (enemyQueue.Count == 0) && (activeEnemies.Count == 0);
+        return (enemyQueue.Count == 0) && (spawnedEnemies.Count == 0);
     }
 
     void Awake()
@@ -64,30 +64,40 @@ public class Enemy_Spawner : MonoBehaviour
 
     public void RemoveDefeatedEnemies()
     {
-        foreach (Enemy_Health enemy in activeEnemies)
-            if (enemy.EnemyIsDefeated()) Debug.Log($"ENEMY DEAD = {enemy.gameObject.name}");
+        List <Enemy_Update> killedEnemies = new List<Enemy_Update>();
 
-        // Destroy defeated enemies
-        foreach (Enemy_Health enemy in activeEnemies)
-            if (enemy.EnemyIsDefeated()) Destroy(enemy.gameObject);
+        // Remove defeated enemies
+        spawnedEnemies.RemoveAll(enemy => 
+        {
+            if (enemy.IsDefeated()) 
+            {
+                Debug.Log($"ENEMY DEAD = {enemy.gameObject.name}");
+                killedEnemies.Add(enemy);
+                return true;
+            }
+            else return false;
+        });
 
-        // Remove enemies from active list
-        activeEnemies.RemoveAll(enemy => enemy.EnemyIsDefeated());
+        // Destroy gameObjects of defeated enemies
+        foreach (Enemy_Update enemy in killedEnemies) Destroy(enemy.gameObject);
+    }
+
+    public void RespawnEnemies(List<PathNode> enemyPath)
+    {
+        foreach (Enemy_Update enemy in spawnedEnemies)
+        {
+            if (!enemy.CanMove() && !enemy.Respawning()) enemy.PlaceOnMap(enemyPath);
+        }
     }
 
     public void ActivateEnemy(GameObject enemy, List<PathNode> enemyPath)
     {
         if (!enemy.CompareTag(Utils.enemyTag)) return;
 
-        Enemy_Movement movement = enemy.GetComponentInChildren<Enemy_Movement>();
-        Enemy_Health health = enemy.GetComponentInChildren<Enemy_Health>();
+        Enemy_Update enemyComponent = enemy.GetComponentInChildren<Enemy_Update>();
+        if (enemyComponent == null) return;
 
-        if (movement == null || health == null) return;
-
-        movement.enabled = true;
-        health.enabled = true;
-
-        movement.PlaceOnMap(enemyPath);
-        activeEnemies.Add(health);
+        enemyComponent.PlaceOnMap(enemyPath);
+        spawnedEnemies.Add(enemyComponent);
     }
 }

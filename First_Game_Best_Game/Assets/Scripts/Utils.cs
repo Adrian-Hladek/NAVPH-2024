@@ -27,8 +27,7 @@ public class Utils
 
     // Helper functions
 
-    // Camera main = world camera
-    // Gets all colliding objects
+    // Gets all colliding objects (Camera main = world camera)
     public static RaycastHit2D[] HitColliders(LayerMask layers)
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

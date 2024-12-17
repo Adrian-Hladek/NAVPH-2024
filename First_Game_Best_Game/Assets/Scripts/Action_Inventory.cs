@@ -9,15 +9,13 @@ public class Action_Inventory : MonoBehaviour
 
     // Optional field (initlializes itself if null)
     [SerializeField] public Object_Holder actionHolder = null;
-
     [HideInInspector] public UnityEvent actionPerformed = new UnityEvent();
 
-    private List<Action> actions = new List<Action>();
+    List<Action> actions = new List<Action>();
 
     void Awake()
     {
         if (actionHolder == null) actionHolder = FindObjectOfType<Object_Holder>();
-
         if (actionHolder == null)
         {
             Debug.LogError("Cound NOT find Object_Holder");
@@ -26,10 +24,11 @@ public class Action_Inventory : MonoBehaviour
         
         if (inventoryUses.Length != inventoryActions.Length)
         {
-            Debug.LogError("WRONG number of actions and couns");
+            Debug.LogError("WRONG number of action types and uses");
             return;
         }
 
+        // Add listeners to action controllers
         foreach (Action_Controller controller in FindObjectsOfType<Action_Controller>())
         {
             int actionCount = -1;
@@ -48,7 +47,7 @@ public class Action_Inventory : MonoBehaviour
             Action act = new Action(controller.actionType, actionCount, controller);
             actions.Add(act);
 
-            controller.selectedNewAction.AddListener(updateActionControllers);
+            controller.selectedNewAction.AddListener(UpdateActionControllers);
             controller.selectedOldAction.AddListener(ClearPickedAction);
         }
     }
@@ -61,16 +60,15 @@ public class Action_Inventory : MonoBehaviour
     public void ClearPickedAction()
     {
         actionHolder.DropAction();
-        updateActionControllers(ActionType.None);
+        UpdateActionControllers(ActionType.None);
     }
     
-    public void updateActionControllers(ActionType selectedType)
+    void UpdateActionControllers(ActionType selectedType)
     {
         foreach (Action action in actions) 
-            action.selectAction(action.type == selectedType);
+            action.SelectAction(action.type == selectedType);
     }
 
-    // Returns true if object holder should drop action, otherwise false
     public void TryPerformAction()
     {
         if (!actionHolder.HoldingAction())
@@ -79,7 +77,7 @@ public class Action_Inventory : MonoBehaviour
             return;
         }
 
-        // Find action in inventory - better use dicionary TODO
+        // Find action in inventory - better use dictionary TODO
         Action performing_action = null; 
         foreach (Action action in actions)
         {
@@ -116,13 +114,13 @@ public class Action_Inventory : MonoBehaviour
         // Perform action
         if (target != null) 
         {
-            bool success = performing_action.executeAction(target);
+            bool success = performing_action.ExecuteAction(target);
 
             // Action was a success
             if (success)
             {
                 // Clear action if it isnt executable
-                if (!performing_action.isExecutable()) ClearPickedAction();
+                if (!performing_action.IsExecutable()) ClearPickedAction();
                 actionPerformed.Invoke();
             }
         }
