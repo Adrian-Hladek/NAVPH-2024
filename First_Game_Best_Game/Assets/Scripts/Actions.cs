@@ -257,7 +257,7 @@ public class Action
 
         // Set the property value
         cellComponent.turretValue = true;
-        
+        cellComponent.UpdateNearbyCells();
 
         return true;
     }
