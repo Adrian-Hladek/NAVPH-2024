@@ -17,7 +17,6 @@ public class Tile_Rotation
     private List<GameObject> interactingObjects = new List<GameObject>();
 
    
-
     private void HandleClick(GameObject clickedObject)
     {
         // Log the name of the clicked object
@@ -102,7 +101,6 @@ public class Tile_Rotation
                     interacting.Add(child.gameObject);
                     
                 }
-
 
                 // Process colliders for this child
                 Collider2D[] childColliders = child.GetComponents<Collider2D>();

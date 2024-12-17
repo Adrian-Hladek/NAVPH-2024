@@ -8,8 +8,8 @@ public class Map_Pathing : MonoBehaviour
     [SerializeField] private GameObject pathStart = null;
     [SerializeField] private GameObject pathEnd = null;
 
-    private List<PathNode> validPath = new List<PathNode>();
-    private bool validInit = true;
+    List<PathNode> validPath = new List<PathNode>();
+    bool validInit = true;
 
     public List<PathNode> path
     {
@@ -56,7 +56,7 @@ public class Map_Pathing : MonoBehaviour
         return null;
     }
 
-    private void UpdatePath()
+    void UpdatePath()
     {
         if (!validInit) return;
 
@@ -146,7 +146,7 @@ public class Map_Pathing : MonoBehaviour
             return;
         }
 
-        // Add listeners to ANY performed action
+        // Add listener to performed action
         inventory.actionPerformed.AddListener(UpdatePath);
     }
 

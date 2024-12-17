@@ -4,12 +4,12 @@ using UnityEngine;
 public class Cell_Update : MonoBehaviour
 {
     [SerializeField] private bool canHavePath = false;
-    private bool hasPath;
+    bool hasPath;
 
-    // odstraniù serialized je to iba aby som videl zmenu v editore
+    // odstraniÔøΩ serialized je to iba aby som videl zmenu v editore
     [SerializeField] private bool hasTurret;
 
-    private SpriteRenderer spriteRenderer;
+    SpriteRenderer spriteRenderer;
 
     public bool possiblePath
     {
@@ -43,7 +43,7 @@ public class Cell_Update : MonoBehaviour
         else hasPath = true;
     }
 
-    private void Start()
+    void Start()
     {
         Recalculate();
     }

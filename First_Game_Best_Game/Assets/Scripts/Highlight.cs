@@ -11,15 +11,15 @@ public class Highlight : MonoBehaviour
             Debug.LogWarning($"Highlight object for {this.gameObject.name} is NOT set");
         }
         
-        deactivate();
+        Activate();
     }
 
-    public void activate()
+    public void Activate()
     {
         if (border != null) border.enabled = true;
     }
 
-    public void deactivate()
+    public void Deactivate()
     {
          if (border != null) border.enabled = false;
     }

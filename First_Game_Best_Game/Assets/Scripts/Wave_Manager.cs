@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Wave_Manager : MonoBehaviour
 {
-    private Queue <Enemy_Spawner> waves;
-    private Enemy_Spawner currentWave = null;
-    private Map_Pathing pathing;
+    Queue <Enemy_Spawner> waves;
+    Enemy_Spawner currentWave = null;
+    Map_Pathing pathing;
 
     void Awake()
     {
@@ -32,16 +32,9 @@ public class Wave_Manager : MonoBehaviour
         ActivateNextWave();
     }
 
-    public bool LevelComplete()
+    public bool LevelCompleted()
     {
         return waves.Count == 0;
-    }
-
-    public void ActivateNextWave()
-    {
-        if (HasActiveWave() || LevelComplete()) return;
-
-        currentWave = waves.Dequeue();
     }
 
     public bool HasActiveWave()
@@ -49,18 +42,26 @@ public class Wave_Manager : MonoBehaviour
         return currentWave != null;
     }
 
+    public void ActivateNextWave()
+    {
+        if (HasActiveWave() || LevelCompleted()) return;
+
+        currentWave = waves.Dequeue();
+    }
+
     void FixedUpdate()
     {
         if (HasActiveWave())
         {
-            if (!currentWave.IsCompleted()) 
+            if (!currentWave.FinishedSpawning()) 
             {
                 // Spawn new enemies
                 List<GameObject> enemiesToSpawn = currentWave.UpdateTime(Time.fixedDeltaTime);
                 foreach (GameObject enemy in enemiesToSpawn) currentWave.ActivateEnemy(enemy, pathing.path); 
 
-                // Update active enemy list
+                // Update enemy list
                 currentWave.RemoveDefeatedEnemies();
+                currentWave.RespawnEnemies(pathing.path);
             }
             // Deactivate wave
             else currentWave = null;
