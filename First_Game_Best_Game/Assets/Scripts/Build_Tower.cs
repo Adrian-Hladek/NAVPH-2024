@@ -7,7 +7,7 @@ public class BuildTower : Action
 {
     public BuildTower(int count, Action_Controller control)
     {
-        type = ActionType.Turret_Basic;
+        type = ActionType.Tower_Basic;
         target = null;
 
         actionCount = count;
@@ -34,13 +34,14 @@ public class BuildTower : Action
             return false;
         }
 
-        if (cellComponent.HasPath || cellComponent.CanHaveTower) return false;
+        if (cellComponent.HasPath || cellComponent.HasTower) return false;
 
         return base.IsExecutable(cell);
     }
 
     public override void ExecuteAction()
     {
+
         base.ExecuteAction();
         
         Cell_Update cellComponent = target.GetComponent<Cell_Update>();
@@ -48,8 +49,8 @@ public class BuildTower : Action
         //Physics2D.SyncTransforms();
 
         // Set the property value
-        cellComponent.CanHaveTower = true;
-        cellComponent.AddTurret("Turret", Resources.Load<Sprite>("Towers/Basic_Tower_transparent"),Vector2.zero,3);
+        cellComponent.HasTower = true;
+        cellComponent.AddTower("Tower", Resources.Load<Sprite>("Towers/Basic_Tower_transparent"),Vector2.zero,3);
 
         // AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
         //cellComponent.UpdateNearbyCells();

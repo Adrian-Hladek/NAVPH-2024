@@ -735,7 +735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHavePath: 1
-  hasTurret: 0
+  hasTower: 0
+  towerPrefab: {fileID: 5819644202007490826, guid: d34d82929784bc942bb9ca23c08fce7e, type: 3}
 --- !u!61 &7530630992980148152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1041,7 +1042,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHavePath: 0
-  hasTurret: 0
+  hasTower: 0
+  towerPrefab: {fileID: 5819644202007490826, guid: d34d82929784bc942bb9ca23c08fce7e, type: 3}
 --- !u!1 &1928865930723860691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,7 +1625,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHavePath: 1
-  hasTurret: 0
+  hasTower: 0
+  towerPrefab: {fileID: 5819644202007490826, guid: d34d82929784bc942bb9ca23c08fce7e, type: 3}
 --- !u!61 &3870036307689540859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2956,7 +2959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHavePath: 1
-  hasTurret: 0
+  hasTower: 0
+  towerPrefab: {fileID: 5819644202007490826, guid: d34d82929784bc942bb9ca23c08fce7e, type: 3}
 --- !u!61 &5207288569163219848
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3529,7 +3533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHavePath: 1
-  hasTurret: 0
+  hasTower: 0
+  towerPrefab: {fileID: 5819644202007490826, guid: d34d82929784bc942bb9ca23c08fce7e, type: 3}
 --- !u!61 &7386075765880168353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3693,7 +3698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHavePath: 0
-  hasTurret: 0
+  hasTower: 0
+  towerPrefab: {fileID: 5819644202007490826, guid: d34d82929784bc942bb9ca23c08fce7e, type: 3}
 --- !u!61 &3095510191995258611
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4172,7 +4178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHavePath: 0
-  hasTurret: 0
+  hasTower: 0
+  towerPrefab: {fileID: 5819644202007490826, guid: d34d82929784bc942bb9ca23c08fce7e, type: 3}
 --- !u!61 &39919768374661967
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4555,7 +4562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHavePath: 0
-  hasTurret: 0
+  hasTower: 0
+  towerPrefab: {fileID: 5819644202007490826, guid: d34d82929784bc942bb9ca23c08fce7e, type: 3}
 --- !u!1 &8019572155400856595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4880,7 +4888,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHavePath: 1
-  hasTurret: 0
+  hasTower: 0
+  towerPrefab: {fileID: 5819644202007490826, guid: d34d82929784bc942bb9ca23c08fce7e, type: 3}
 --- !u!1 &8343989743077477978
 GameObject:
   m_ObjectHideFlags: 0

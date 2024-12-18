@@ -43,7 +43,7 @@ public class Utils
         if (type == ActionType.Rotate) return "Actions/Circle-Arrow";
         else if (type == ActionType.Create) return "Actions/Pickaxe";
         else if (type == ActionType.Delete) return "Actions/Pickaxe";
-        else if (type == ActionType.Turret_Basic) return "Actions/Pickaxe";
+        else if (type == ActionType.Tower_Basic) return "Actions/Pickaxe";
 
         Debug.LogError($"Wrong action type {type}");
         return "";

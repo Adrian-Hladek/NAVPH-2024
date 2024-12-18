@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8835694768145889448}
-  - component: {fileID: 3724221621982886283}
+  - component: {fileID: 6600963296520420556}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5819644202007490826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.69, y: 3.7600002, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 954811694150714958}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3724221621982886283
+--- !u!114 &6600963296520420556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,14 +43,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5819644202007490826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38c00e41faea3ee4aaa5b5df4cd9d819, type: 3}
+  m_Script: {fileID: 11500000, guid: 06d4cc8b12799fa40a4ead96462a4896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRotationPoint: {fileID: 954811694150714958}
+  towerRotationPoint: {fileID: 954811694150714958}
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
-  targetingRange: 3
+  targetingRange: 5
   rotationSpeed: 200
 --- !u!1 &6053762941940015810
 GameObject:

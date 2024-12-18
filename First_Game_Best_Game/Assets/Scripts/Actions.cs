@@ -7,7 +7,7 @@ public enum ActionType
     Rotate = 1,
     Create = 2, 
     Delete = 3,
-    Turret_Basic = 4,
+    Tower_Basic = 4,
 }
 
 public abstract class Action
@@ -81,7 +81,7 @@ public abstract class Action
             case ActionType.Delete:
                 return new DeletePath(count, controller);
 
-            case ActionType.Turret_Basic:
+            case ActionType.Tower_Basic:
                 return new BuildTower(count, controller);
         }
 
@@ -100,13 +100,13 @@ public abstract class Action
         }
 
         // Cannot add path - exisitng path or path not possible
-        if (cellComponent.HasPath  || cellComponent.CanHaveTower) return false;
+        if (cellComponent.HasPath  || cellComponent.HasTower) return false;
 
         Physics2D.SyncTransforms();
 
         // Set the property value
-        cellComponent.CanHaveTower = true;
-        cellComponent.AddTurret("Turret", Resources.Load<Sprite>("Towers/Basic_Tower_transparent"),Vector2.zero,3);
+        cellComponent.HasTower = true;
+        cellComponent.AddTower("Turret", Resources.Load<Sprite>("Towers/Basic_Tower_transparent"),Vector2.zero,3);
             // AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
         //cellComponent.UpdateNearbyCells();
 

@@ -34,7 +34,7 @@ public class CreatePath : Action
             return false;
         }
 
-        if (cellComponent.HasPath || !cellComponent.CanHavePath || cellComponent.CanHaveTower) return false;
+        if (cellComponent.HasPath || !cellComponent.CanHavePath || cellComponent.HasTower) return false;
 
         return base.IsExecutable(cell);
     }

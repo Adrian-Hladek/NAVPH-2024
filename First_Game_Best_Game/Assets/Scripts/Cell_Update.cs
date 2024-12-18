@@ -7,8 +7,9 @@ public class Cell_Update : MonoBehaviour
     bool hasPath;
 
     // odstrani� serialized je to iba aby som videl zmenu v editore
-    [SerializeField] private bool hasTurret;
-    int turretOrder = 20;
+    [SerializeField] private bool hasTower;
+    [SerializeField] private GameObject towerPrefab;
+    int towerOrder = 20;
     SpriteRenderer spriteRenderer;
 
     public bool CanHavePath
@@ -22,10 +23,10 @@ public class Cell_Update : MonoBehaviour
         set { hasPath = value; }
     }
 
-    public bool CanHaveTower
+    public bool HasTower
     {
-        get { return hasTurret; }
-        set { hasTurret = value; }
+        get { return hasTower; }
+        set { hasTower = value; }
     }
 
     private void Awake()
@@ -131,7 +132,7 @@ public class Cell_Update : MonoBehaviour
         if (detectedObjects.Count > 4) Debug.LogError($"More than 4 objects detected: {detectedObjects.Count} objects found.");
 
         // Set sprite
-        string spritePath = Utils.getCellSprite(hasPath, hasTurret, canHavePath, hasRight, hasLeft, hasUpper, hasBottom);
+        string spritePath = Utils.getCellSprite(hasPath, hasTower, canHavePath, hasRight, hasLeft, hasUpper, hasBottom);
         spriteRenderer.sprite = Resources.Load<Sprite>(spritePath);
     }
 
@@ -251,27 +252,21 @@ public class Cell_Update : MonoBehaviour
         return detectedCells;
     }
 
-    public void AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
+    public void AddTower(string childName, Sprite sprite, Vector2 position, float radius)
     {
-        // Create a new GameObject
-        GameObject child = new GameObject(childName);
 
-        // Set the new GameObject as a child of the current object
-        child.transform.parent = transform;
 
-        // Set the position of the child relative to the parent
-        child.transform.localPosition = position;
 
-        // Add a SpriteRenderer component to the child and assign the sprite
-        SpriteRenderer spriteRenderer = child.AddComponent<SpriteRenderer>();
-        spriteRenderer.sprite = sprite;
-        spriteRenderer.sortingOrder = turretOrder;
+        if (towerPrefab == null)
+        {
+            Debug.LogError("Tower prefab is not assigned in the Inspector.");
+            return;
+        }
 
-        // Add a CircleCollider2D component to the child and set its radius
-       // CircleCollider2D circleCollider = child.AddComponent<CircleCollider2D>();
-        //circleCollider.radius = radius;
+        GameObject child = Instantiate(towerPrefab, transform);
 
-        Debug.Log($"Child object '{childName}' added with SpriteRenderer and CircleCollider2D.");
+        // Optionally, log the successful addition
+        Debug.Log($"Prefab '{towerPrefab.name}' instantiated as a child.");
     }
 
 }
