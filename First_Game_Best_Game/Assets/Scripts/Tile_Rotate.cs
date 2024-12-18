@@ -175,5 +175,35 @@ public class Tile_Rotation
         }
     }
 
+    public string GetActionTarget()
+    {
+        string tag;
 
+        switch (ActionType.None)
+        {
+            case ActionType.Rotate:
+                tag = Utils.tileTag;
+                break;
+
+            case ActionType.Create:
+                tag = Utils.cellTag;
+                break;
+
+            case ActionType.Delete:
+                tag = Utils.cellTag;
+                break;
+
+            case ActionType.Turret_Basic:
+                tag = Utils.cellTag;
+                break;
+
+            default:
+                tag = ""; 
+                break;
+        }
+
+        return tag;
+    }
 }
+
+

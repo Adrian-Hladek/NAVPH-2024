@@ -1,8 +1,7 @@
-using Unity;
 using UnityEngine;
 using System.Collections.Generic;
 
-// When adding new actions, specify action 
+// When adding new actions, specify new action 
 public enum ActionType
 {
     None = 0, 
@@ -12,28 +11,42 @@ public enum ActionType
     Turret_Basic = 4,
 }
 
-public class Action
+public abstract class Action
 {
     public ActionType type;
     public int actionCount;
 
-    Action_Controller controller;
+    protected Action_Controller controller;
 
-    public Action(ActionType actionType, int count, Action_Controller control)
+    // Override methods
+    public abstract string GetActionTarget();
+    public abstract bool IsExecutable(GameObject target);
+    public virtual void ExecuteAction(GameObject target)
     {
-        type = actionType;
-        actionCount = count;
-        controller = control;
+        actionCount -= 1;
+        UpdateController();
     }
 
-    public bool IsExecutable()
+    public bool IsUsable()
     {
         return actionCount > 0;
     }
 
+    public void SelectAction(bool select)
+    {
+        controller.SelectValue = select;
+        UpdateController();
+    }
+
+    public void AddAction (int countAdded)
+    {
+        actionCount += countAdded;
+        UpdateController();
+    }
+
     void UpdateController()
     {
-        if (IsExecutable()) controller.PickValue = true;
+        if (IsUsable()) controller.PickValue = true;
         else 
         {
             controller.PickValue = false;
@@ -44,95 +57,28 @@ public class Action
         controller.UpdateVisuals();
     }
 
-    public void SelectAction(bool select)
+    public static Action MapActionType(ActionType type, int count, Action_Controller controller)
     {
-        controller.SelectValue = select;
-
-        UpdateController();
-    }
-
-    public bool ExecuteAction(GameObject target)
-    {
-        if (!IsExecutable()) return false;
-
-        bool success;
-
         switch (type)
         {
             case ActionType.Rotate:
-                success = RotateTile(target);
-                break;
+                return new RotateTile(count, controller);
 
             case ActionType.Create:
-                success = AddPathToCell(target);
-                break;
+                return null;
 
             case ActionType.Delete:
-                success = RemovePathFromCell(target);
-                break;
+                return null;
 
             case ActionType.Turret_Basic:
-                success = AddBasicTower(target);
-                break;
+                return null;
 
             default:
-                success = false;
-                break;
+                return null;
         }
-
-        if (success) UseAction();
-        return success;
-    }
-    
-    void UseAction()
-    {
-        if (!IsExecutable())
-        {
-            Debug.LogError($"Action {type} with 0 count was executed");
-            return;
-        }
-
-        actionCount -= 1;
-        UpdateController();
     }
 
-    public void AddAction (int countAdded)
-    {
-        actionCount += countAdded;
-        UpdateController();
-    }
-
-    public string GetActionTarget()
-    {
-        string tag;
-
-        switch (type)
-        {
-            case ActionType.Rotate:
-                tag = Utils.tileTag;
-                break;
-
-            case ActionType.Create:
-                tag = Utils.cellTag;
-                break;
-
-            case ActionType.Delete:
-                tag = Utils.cellTag;
-                break;
-
-            case ActionType.Turret_Basic:
-                tag = Utils.cellTag;
-                break;
-
-            default:
-                tag = ""; 
-                break;
-        }
-
-        return tag;
-    }
-
-    public static LayerMask GetActionLayers(ActionType type)
+    public static LayerMask GetActionTargetLayers(ActionType type)
     {
         List <string> layerNames = new List <string>();
 

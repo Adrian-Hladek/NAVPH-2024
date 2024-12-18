@@ -6,11 +6,11 @@ public class Object_Holder : MonoBehaviour
     [SerializeField] private Vector2 cursorOffset = Vector2.zero;
 
     private ActionType currentAction;
+
     private SpriteRenderer actionImage = null;
-    
     private Camera mainCamera = null; 
 
-    public ActionType actionValue
+    public ActionType ActionType
     {
         get { return currentAction; }
     }

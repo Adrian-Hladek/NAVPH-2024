@@ -7,15 +7,14 @@ public class Action_Inventory : MonoBehaviour
     [SerializeField] private ActionType [] inventoryActions;
     [SerializeField] private int [] inventoryUses;
 
-    // Optional field (initlializes itself if null)
-    [SerializeField] public Object_Holder actionHolder = null;
+    [HideInInspector] public Object_Holder actionHolder = null;
     [HideInInspector] public UnityEvent actionPerformed = new UnityEvent();
-
-    List<Action> actions = new List<Action>();
+    
+    Dictionary<ActionType, Action> actions = new Dictionary<ActionType, Action>();
 
     void Awake()
     {
-        if (actionHolder == null) actionHolder = FindObjectOfType<Object_Holder>();
+        actionHolder = FindObjectOfType<Object_Holder>();
         if (actionHolder == null)
         {
             Debug.LogError("Cound NOT find Object_Holder");
@@ -44,8 +43,8 @@ public class Action_Inventory : MonoBehaviour
                 continue;
             }
 
-            Action act = new Action(controller.actionType, actionCount, controller);
-            actions.Add(act);
+            Action act = Action.MapActionType(controller.actionType, actionCount, controller);
+            actions[controller.actionType] = act;
 
             controller.selectedNewAction.AddListener(UpdateActionControllers);
             controller.selectedOldAction.AddListener(ClearPickedAction);
@@ -65,8 +64,16 @@ public class Action_Inventory : MonoBehaviour
     
     void UpdateActionControllers(ActionType selectedType)
     {
-        foreach (Action action in actions) 
-            action.SelectAction(action.type == selectedType);
+        foreach ((ActionType type, Action action) in actions) 
+            action.SelectAction(type == selectedType);
+    }
+
+    public Action GetHoldingAction(ActionType selectedType)
+    {
+        Action holdingAction;
+
+        if (!actions.TryGetValue(selectedType, out holdingAction)) return null;
+        return holdingAction;
     }
 
     public void TryPerformAction()
@@ -78,32 +85,22 @@ public class Action_Inventory : MonoBehaviour
         }
 
         // Find action in inventory - better use dictionary TODO
-        Action performing_action = null; 
-        foreach (Action action in actions)
-        {
-            if (action.type == actionHolder.actionValue) 
-            {
-                performing_action = action;
-                break;
-            }
-        }
+        Action performing_action = GetHoldingAction(actionHolder.ActionType); 
 
         if (performing_action == null)
         {
-            Debug.LogError($"Cound not find action {actionHolder.actionValue} in inventory");
+            Debug.LogError($"Cound not find action {actionHolder.ActionType} in inventory");
             ClearPickedAction();
             return;
         }
 
-        string actionTag = performing_action.GetActionTarget();
-
         // Find object to perform action on
         GameObject target = null;
-        RaycastHit2D[] possibleTargets = Utils.HitColliders(Action.GetActionLayers(performing_action.type));
+        RaycastHit2D[] possibleTargets = Utils.HitColliders(Action.GetActionTargetLayers(actionHolder.ActionType));
 
         foreach(RaycastHit2D targ in possibleTargets)
         {
-            if (targ.collider.CompareTag(actionTag))
+            if (targ.collider.CompareTag(performing_action.GetActionTarget()))
             {
                 target = targ.transform.gameObject;
                 // Only one target 
@@ -114,13 +111,13 @@ public class Action_Inventory : MonoBehaviour
         // Perform action
         if (target != null) 
         {
-            bool success = performing_action.ExecuteAction(target);
+            performing_action.ExecuteAction(target);
 
             // Action was a success
-            if (success)
+            if (true)
             {
                 // Clear action if it isnt executable
-                if (!performing_action.IsExecutable()) ClearPickedAction();
+                if (!performing_action.IsUsable()) ClearPickedAction();
                 actionPerformed.Invoke();
             }
         }

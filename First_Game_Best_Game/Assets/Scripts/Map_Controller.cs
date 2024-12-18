@@ -55,7 +55,7 @@ public class Map_Controller : MonoBehaviour
         }
 
         // Highlight stuff
-        RaycastHit2D [] collisions = Utils.HitColliders(Action.GetActionLayers(inventory.actionHolder.actionValue));
+        RaycastHit2D [] collisions = Utils.HitColliders(Action.GetActionTargetLayers(inventory.actionHolder.ActionType));
 
         foreach (RaycastHit2D collision in collisions)
         {
