@@ -130,16 +130,8 @@ public class Map_Pathing : MonoBehaviour
     {
         UpdatePath();
 
-        // Find Map_Controller 
-        Map_Controller controller = this.gameObject.GetComponentInChildren<Map_Controller>();
-        if (controller == null)
-        {
-            Debug.LogError("Cound NOT find Map_Controller, path will NOT be updated");
-            return;
-        }
-
         // Find Action_Inventory
-        Action_Inventory inventory = controller.GetComponentInChildren<Action_Inventory>();
+        Action_Inventory inventory = FindObjectOfType<Action_Inventory>();
         if (inventory == null)
         {
             Debug.LogError("Cound NOT find Action_Inventory, path will NOT be updated");
