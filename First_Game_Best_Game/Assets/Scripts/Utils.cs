@@ -25,6 +25,7 @@ public class Utils
     public const string tileLayer = "Tile_Layer";
     public const string cellLayer = "Cell_Layer";
     public const string turretLayer = "Turret_Layer";
+    public const string enemyLayer = "Enemy_Layer";
 
     // Helper functions
 

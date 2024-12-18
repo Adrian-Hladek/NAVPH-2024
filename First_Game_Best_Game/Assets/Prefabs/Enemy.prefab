@@ -14,9 +14,13 @@ GameObject:
 <<<<<<< Updated upstream
   - component: {fileID: 7043109257565163106}
   - component: {fileID: 5202045416414237839}
+<<<<<<< Updated upstream
 =======
 >>>>>>> Stashed changes
   m_Layer: 0
+=======
+  m_Layer: 11
+>>>>>>> Stashed changes
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -180,6 +184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6411187857738971433}
     m_Modifications:
+    - target: {fileID: 267997779110612597, guid: d9baf04d47c1879409a17a93916488e6, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3514780118952868470, guid: d9baf04d47c1879409a17a93916488e6, type: 3}
       propertyPath: m_FillAmount
       value: 1
@@ -187,6 +195,10 @@ PrefabInstance:
     - target: {fileID: 4147297031604973225, guid: d9baf04d47c1879409a17a93916488e6, type: 3}
       propertyPath: m_Name
       value: HPbar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147297031604973225, guid: d9baf04d47c1879409a17a93916488e6, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5347930723791809236, guid: d9baf04d47c1879409a17a93916488e6, type: 3}
       propertyPath: m_Pivot.x
