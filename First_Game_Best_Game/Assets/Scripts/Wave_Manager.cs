@@ -17,18 +17,18 @@ public class Wave_Manager : MonoBehaviour
         waves = new Queue <Enemy_Spawner>(waveList);
         if (waves.Count == 0) 
         {
-            Debug.LogError("Map has NO waves");
+            Debug.LogError("Level has NO waves");
             enabled = false;
         }
 
-        pathing = this.gameObject.GetComponentInChildren<Map_Pathing>();
+        pathing = FindObjectOfType<Map_Pathing>();
         if (pathing == null) 
         {
             Debug.LogError("Map has NO path");
             enabled = false;
         }
 
-        // TODO remove
+        // TODO - remove
         ActivateNextWave();
     }
 

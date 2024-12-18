@@ -6,18 +6,13 @@ public class Object_Holder : MonoBehaviour
     [SerializeField] private Vector2 cursorOffset = Vector2.zero;
 
     private ActionType currentAction;
+
     private SpriteRenderer actionImage = null;
-    
     private Camera mainCamera = null; 
 
-    public ActionType actionValue
+    public ActionType ActionType
     {
         get { return currentAction; }
-    }
-
-    public bool HoldingAction()
-    {
-        return currentAction != ActionType.None;
     }
 
     void Awake()
@@ -60,7 +55,7 @@ public class Object_Holder : MonoBehaviour
     void Update()
     {
         // Move the object with the cursor while it is picked up
-        if (HoldingAction()) MoveObjectWithCursor();
+        if (currentAction != ActionType.None) MoveObjectWithCursor();
     }
 
 

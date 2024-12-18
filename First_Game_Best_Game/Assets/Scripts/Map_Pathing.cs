@@ -72,7 +72,7 @@ public class Map_Pathing : MonoBehaviour
         }
 
         // Path edge does NOT connect
-        if (!start.pathValue || !end.pathValue) return;
+        if (!start.HasPath || !end.HasPath) return;
 
         Vector3 currentPosition = this.gameObject.transform.position;
 

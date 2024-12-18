@@ -19,13 +19,13 @@ public class Action_Controller : MonoBehaviour
     bool selected = false;
     bool pickable = true;
 
-    public bool SelectValue
+    public bool IsSelected
     {
         get { return selected; }
         set { selected = value; }
     }
 
-    public bool PickValue
+    public bool CanBePicked
     {
         get { return pickable; }
         set { pickable = value; }

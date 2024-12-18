@@ -7,15 +7,15 @@ public class Action_Inventory : MonoBehaviour
     [SerializeField] private ActionType [] inventoryActions;
     [SerializeField] private int [] inventoryUses;
 
-    // Optional field (initlializes itself if null)
-    [SerializeField] public Object_Holder actionHolder = null;
+    [HideInInspector] public Object_Holder actionHolder = null;
     [HideInInspector] public UnityEvent actionPerformed = new UnityEvent();
-
-    List<Action> actions = new List<Action>();
+    
+    Dictionary<ActionType, Action> actions = new Dictionary<ActionType, Action>();
+    Action emptyAction = new EmptyAction();
 
     void Awake()
     {
-        if (actionHolder == null) actionHolder = FindObjectOfType<Object_Holder>();
+        actionHolder = FindObjectOfType<Object_Holder>();
         if (actionHolder == null)
         {
             Debug.LogError("Cound NOT find Object_Holder");
@@ -44,11 +44,14 @@ public class Action_Inventory : MonoBehaviour
                 continue;
             }
 
-            Action act = new Action(controller.actionType, actionCount, controller);
-            actions.Add(act);
-
-            controller.selectedNewAction.AddListener(UpdateActionControllers);
-            controller.selectedOldAction.AddListener(ClearPickedAction);
+            Action act = Action.MapActionType(controller.actionType, actionCount, controller);
+            if (act != null)
+            {
+                actions[controller.actionType] = act;
+                controller.selectedNewAction.AddListener(UpdateActionControllers);
+                controller.selectedOldAction.AddListener(ClearPickedAction);
+            }
+            else Debug.LogError($"Action {controller.actionType} is NOT defined");
         }
     }
 
@@ -65,45 +68,39 @@ public class Action_Inventory : MonoBehaviour
     
     void UpdateActionControllers(ActionType selectedType)
     {
-        foreach (Action action in actions) 
-            action.SelectAction(action.type == selectedType);
+        foreach ((ActionType type, Action action) in actions) action.SelectAction(type == selectedType);
+    }
+
+    public Action GetCurrentAction()
+    {
+        Action holdingAction;
+
+        if (actionHolder.ActionType == ActionType.None) return emptyAction;
+        else if (!actions.TryGetValue(actionHolder.ActionType, out holdingAction)) return null;
+        return holdingAction;
     }
 
     public void TryPerformAction()
     {
-        if (!actionHolder.HoldingAction())
-        {
-            Debug.LogError("Action type None cannot be performed");
-            return;
-        }
-
-        // Find action in inventory - better use dictionary TODO
-        Action performing_action = null; 
-        foreach (Action action in actions)
-        {
-            if (action.type == actionHolder.actionValue) 
-            {
-                performing_action = action;
-                break;
-            }
-        }
-
+        // Find action in inventory
+        Action performing_action = GetCurrentAction(); 
+        
         if (performing_action == null)
         {
-            Debug.LogError($"Cound not find action {actionHolder.actionValue} in inventory");
+            Debug.LogError($"Action {actionHolder.ActionType} does NOT exist in inventory");
             ClearPickedAction();
             return;
         }
-
-        string actionTag = performing_action.GetActionTarget();
+        // No action selected
+        else if (performing_action.type == ActionType.None) return;
 
         // Find object to perform action on
         GameObject target = null;
-        RaycastHit2D[] possibleTargets = Utils.HitColliders(Action.GetActionLayers(performing_action.type));
+        RaycastHit2D[] possibleTargets = Utils.HitColliders(performing_action.GetTargetLayers());
 
         foreach(RaycastHit2D targ in possibleTargets)
         {
-            if (targ.collider.CompareTag(actionTag))
+            if (targ.collider.CompareTag(performing_action.GetActionTarget()))
             {
                 target = targ.transform.gameObject;
                 // Only one target 
@@ -112,17 +109,13 @@ public class Action_Inventory : MonoBehaviour
         }
 
         // Perform action
-        if (target != null) 
+        if (target != null && performing_action.IsExecutable(target)) 
         {
-            bool success = performing_action.ExecuteAction(target);
+            performing_action.ExecuteAction();
 
-            // Action was a success
-            if (success)
-            {
-                // Clear action if it isnt executable
-                if (!performing_action.IsExecutable()) ClearPickedAction();
-                actionPerformed.Invoke();
-            }
+            // Clear action if it isnt executable
+            if (!performing_action.IsUsable()) ClearPickedAction();
+            actionPerformed.Invoke();
         }
     }
 

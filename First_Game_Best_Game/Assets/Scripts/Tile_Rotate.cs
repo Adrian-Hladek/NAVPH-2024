@@ -170,10 +170,8 @@ public class Tile_Rotation
             {
                 Debug.LogWarning("No BunkaChange component found on object: " + obj.name);
             }
-
-            
         }
     }
-
-
 }
+
+

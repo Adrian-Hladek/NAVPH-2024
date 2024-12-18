@@ -15,6 +15,8 @@ public class Enemy_Update : MonoBehaviour
 
     [SerializeField] private float respawnDelay = 1f;
     float delayCurrent = 0f;
+
+    [SerializeField] private int livesTaken = 1;
     
     // Path
     Queue <PathNode> path = new Queue <PathNode>();
@@ -22,8 +24,9 @@ public class Enemy_Update : MonoBehaviour
 
     SpriteRenderer sprite;
 
-    [HideInInspector] public UnityEvent despawn = new UnityEvent();
+    // Events
     [HideInInspector] public UnityEvent spawn = new UnityEvent();
+    [HideInInspector] public UnityEvent<int> despawn = new UnityEvent<int>();
     [HideInInspector] public UnityEvent<float> hit = new UnityEvent<float>();
 
     void Awake()
@@ -34,6 +37,12 @@ public class Enemy_Update : MonoBehaviour
         if (healthTotal <= 0) Debug.LogError($"Enemy {this.gameObject.name} has ZERO health");
         else healthCurrent = healthTotal;
 
+        if (livesTaken < 1) 
+        {
+            Debug.LogWarning($"Enemy {this.gameObject.name} does NOT cause harm");
+            livesTaken = 0;
+        }
+        
         sprite = this.gameObject.GetComponentInChildren<SpriteRenderer>();
         if (sprite == null)  Debug.LogError($"Enemy {this.gameObject.name} has NO sprite");
         else sprite.enabled = false;
@@ -85,7 +94,7 @@ public class Enemy_Update : MonoBehaviour
             nextPoint = null;
             sprite.enabled = false;
             delayCurrent = respawnDelay;
-            despawn.Invoke();
+            despawn.Invoke(livesTaken);
             return;
         }
 
