@@ -9,12 +9,15 @@ public class Tower_Update : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform towerRotationPoint;
     [SerializeField] private LayerMask enemyMask;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firingPoint;
+
     [Header("Atribute")]
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 200f;
+    [SerializeField] private float bps = 1f; //bullets per second
 
-
-
+    private float timeUntilFire;
     private Transform target;
 
     private void Update()
@@ -31,8 +34,30 @@ public class Tower_Update : MonoBehaviour
         {
             target = null;
         }
+        else
+        {
+            timeUntilFire += Time.deltaTime;
+
+            if (timeUntilFire >= 1f / bps)
+            {
+
+                Shoot();
+                timeUntilFire = 0f;
+            }
+        }
+
+    }
 
 
+
+
+
+
+    private void Shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        Bullet bulletScript = bullet.GetComponent<Bullet>();
+        bulletScript.SetTarget(target);
     }
 
 
