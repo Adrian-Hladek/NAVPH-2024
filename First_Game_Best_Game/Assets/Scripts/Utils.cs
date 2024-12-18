@@ -182,11 +182,12 @@ public class Utils
         else if (!hasPath && hasTurret)
         {
 
-            // tu nejak zistiť ID typu turrety a podľa toho setupnuť spravny sprite
+            // tu nejak zistiť ID typu turrety a podľa toho setupnuť spravny sprite sprite pre turret s abude riešiť inde
 
-            // Zelen� mimo cesty
+            // Zelen� mimo cesty kde je veža
             //Debug.Log("Green7");
-            return "Towers/Basic_tower";
+            return "Path_options/Sprites/Canvas_7";
+            //return "Towers/Basic_tower";
         }
 
         Debug.LogError("Cell sprite NOT found");

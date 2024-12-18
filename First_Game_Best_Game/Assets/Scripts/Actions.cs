@@ -257,7 +257,9 @@ public class Action
 
         // Set the property value
         cellComponent.turretValue = true;
-        cellComponent.UpdateNearbyCells();
+        cellComponent.AddTurret("Turret", Resources.Load<Sprite>("Towers/Basic_Tower_transparent"),Vector2.zero,3);
+            // AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
+        //cellComponent.UpdateNearbyCells();
 
         return true;
     }

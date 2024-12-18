@@ -8,7 +8,7 @@ public class Cell_Update : MonoBehaviour
 
     // odstrani� serialized je to iba aby som videl zmenu v editore
     [SerializeField] private bool hasTurret;
-
+    private int turretOrder = 20;
     SpriteRenderer spriteRenderer;
 
     public bool possiblePath
@@ -250,4 +250,31 @@ public class Cell_Update : MonoBehaviour
 
         return detectedCells;
     }
+
+
+    public void AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
+    {
+        // Create a new GameObject
+        GameObject child = new GameObject(childName);
+
+        // Set the new GameObject as a child of the current object
+        child.transform.parent = transform;
+
+        // Set the position of the child relative to the parent
+        child.transform.localPosition = position;
+
+        // Add a SpriteRenderer component to the child and assign the sprite
+        SpriteRenderer spriteRenderer = child.AddComponent<SpriteRenderer>();
+        spriteRenderer.sprite = sprite;
+        spriteRenderer.sortingOrder = turretOrder;
+
+        // Add a CircleCollider2D component to the child and set its radius
+       // CircleCollider2D circleCollider = child.AddComponent<CircleCollider2D>();
+        //circleCollider.radius = radius;
+
+        Debug.Log($"Child object '{childName}' added with SpriteRenderer and CircleCollider2D.");
+    }
+
+
+
 }
