@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 6411187857738971433}
   - component: {fileID: 2105417045002401365}
   - component: {fileID: 7942144465061853638}
+<<<<<<< Updated upstream
   - component: {fileID: 7043109257565163106}
   - component: {fileID: 5202045416414237839}
+=======
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -30,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 3.6, z: 0}
-  m_LocalScale: {x: 4.5, y: 4.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2429164172309809586}
@@ -77,12 +80,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 1899884883, guid: 44ffaaaf2dfff064f88009a881a6ece6, type: 3}
+  m_Sprite: {fileID: -449636172, guid: 44ffaaaf2dfff064f88009a881a6ece6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9, y: 9}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -112,6 +115,7 @@ MonoBehaviour:
   hit:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< Updated upstream
 --- !u!95 &7043109257565163106
 Animator:
   serializedVersion: 5
