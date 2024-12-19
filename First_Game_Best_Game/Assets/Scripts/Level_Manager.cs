@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum LevelState
 {
@@ -18,6 +19,8 @@ public class Level_Manager : MonoBehaviour
     LevelState currentState;
 
     [SerializeField] private int playerHealth = 0;
+
+    [HideInInspector] public UnityEvent<LevelState> changedLevelState = new UnityEvent<LevelState>();
 
     void Awake()
     {
@@ -50,6 +53,7 @@ public class Level_Manager : MonoBehaviour
         currentWave = null;
         currentState = LevelState.Editing;
 
+        // TODO - remove
         ActivateNextWave();
     }
 
@@ -71,20 +75,24 @@ public class Level_Manager : MonoBehaviour
         Time.timeScale = speed;
     }
 
-    public void ReducePlayerHealth(int livesLost)
-    {
-        playerHealth -= livesLost;
-        if (playerHealth <= 0) currentState = LevelState.GameOver;
-    }
-
     public void ActivateNextWave()
     {
         if (currentState != LevelState.Editing || waves.Count == 0) return;
 
         currentWave = waves.Dequeue();
         currentState = LevelState.Fighting;
+        changedLevelState.Invoke(currentState);
     }
 
+    void ReducePlayerHealth(int livesLost)
+    {
+        playerHealth -= livesLost;
+        if (playerHealth <= 0) 
+        {
+            currentState = LevelState.GameOver;
+            changedLevelState.Invoke(currentState);
+        }
+    }
 
     void FixedUpdate()
     {
@@ -115,10 +123,15 @@ public class Level_Manager : MonoBehaviour
             {
                 currentWave = null;
                 currentState = LevelState.Editing;
+                changedLevelState.Invoke(currentState);
             }
         }
 
         // Level won
-        else if (waves.Count == 0) currentState = LevelState.Finished;
+        else if (waves.Count == 0) 
+        {
+            currentState = LevelState.Finished;
+            changedLevelState.Invoke(currentState);
+        }
     }
 }

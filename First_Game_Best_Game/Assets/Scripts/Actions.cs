@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 // When adding new actions, specify new action 
 public enum ActionType
 {

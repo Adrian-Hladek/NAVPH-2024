@@ -12,7 +12,7 @@ public class Action_Controller : MonoBehaviour
     SpriteRenderer actionImage = null;
     Button actionButton = null;
 
-    // Event
+    // Events
     [HideInInspector] public UnityEvent<ActionType> selectedNewAction = new UnityEvent<ActionType>();
     [HideInInspector] public UnityEvent selectedOldAction = new UnityEvent();
     

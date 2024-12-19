@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.iOS;
+
 
 public class Map_Controller : MonoBehaviour
 {
-    Action_Inventory inventory = null;
+    Action_Inventory inventory;
+    Map_Pathing pathing;
     List <Highlight> activeHighLights = new List <Highlight>();
 
     void Awake()
@@ -14,6 +15,16 @@ public class Map_Controller : MonoBehaviour
         if (inventory == null)
         {
             Debug.LogError("Cound NOT find Action_Inventory");
+            enabled = false;
+            return;
+        }
+
+        pathing = FindObjectOfType<Map_Pathing>();
+        if (pathing == null) 
+        {
+            Debug.LogError("Cound NOT find Map_Pathing");
+            enabled = false;
+            return;
         }
     }
 
@@ -29,8 +40,6 @@ public class Map_Controller : MonoBehaviour
         foreach (Highlight highlight in activeHighLights) highlight.Activate();
     }
 
-    // Time.timeScale = 4;
-    // TODO
     void Update()
     {
         DeativateHightlights();
@@ -47,7 +56,15 @@ public class Map_Controller : MonoBehaviour
             if (Input.GetButtonDown("Fire1")) 
             {
                 bool mouseOnMap = Utils.HitColliders(LayerMask.GetMask(Utils.mapLayer)).Length > 0;
-                if (mouseOnMap) inventory.TryPerformAction();
+                if (mouseOnMap) 
+                {
+                    ActionType performedAction = inventory.TryPerformAction();
+
+                    if (performedAction == ActionType.Rotate 
+                        || performedAction == ActionType.Create 
+                        || performedAction == ActionType.Delete
+                    ) pathing.UpdatePath();
+                }
             }
 
             // Drop action

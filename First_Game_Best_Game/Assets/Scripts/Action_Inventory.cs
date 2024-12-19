@@ -2,13 +2,13 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Events;
 
+
 public class Action_Inventory : MonoBehaviour
 {
     [SerializeField] private ActionType [] inventoryActions;
     [SerializeField] private int [] inventoryUses;
 
     [HideInInspector] public Object_Holder actionHolder = null;
-    [HideInInspector] public UnityEvent actionPerformed = new UnityEvent();
     
     Dictionary<ActionType, Action> actions = new Dictionary<ActionType, Action>();
     Action emptyAction = new EmptyAction();
@@ -80,7 +80,8 @@ public class Action_Inventory : MonoBehaviour
         return holdingAction;
     }
 
-    public void TryPerformAction()
+
+    public ActionType TryPerformAction()
     {
         // Find action in inventory
         Action performing_action = GetCurrentAction(); 
@@ -89,10 +90,10 @@ public class Action_Inventory : MonoBehaviour
         {
             Debug.LogError($"Action {actionHolder.ActionType} does NOT exist in inventory");
             ClearPickedAction();
-            return;
+            return ActionType.None;
         }
         // No action selected
-        else if (performing_action.type == ActionType.None) return;
+        else if (performing_action.type == ActionType.None) return ActionType.None;
 
         // Find object to perform action on
         GameObject target = null;
@@ -115,8 +116,10 @@ public class Action_Inventory : MonoBehaviour
 
             // Clear action if it isnt executable
             if (!performing_action.IsUsable()) ClearPickedAction();
-            actionPerformed.Invoke();
+            return performing_action.type;
         }
+
+        return ActionType.None;
     }
 
 }

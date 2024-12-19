@@ -77,28 +77,27 @@ public class Cell_Update : MonoBehaviour
             for (int i = 0; i < overlapCount; i++)
             {
                 Collider2D collision = touchingObjects[i];
-                
-                if (collision.gameObject == this.gameObject) continue;
+                if (collision.gameObject == this.gameObject || detectedObjects.Contains(collision.gameObject)) continue;
 
-                if (collision.CompareTag(Utils.cellTag) && !detectedObjects.Contains(collision.gameObject))
+                if (collision.CompareTag(Utils.cellTag) || collision.CompareTag(Utils.pathTag))
                 {
-                    string position = GetRelativePosition(collision);
+                    Direction direction = Utils.DirectionBetweenPoints(this.transform.position, collision.transform.position);
 
                     Cell_Update foundCell = collision.GetComponent<Cell_Update>();
-                    if (foundCell != null && foundCell.canHavePath && foundCell.hasPath)
+                    if (collision.CompareTag(Utils.pathTag) || (foundCell != null && foundCell.canHavePath && foundCell.hasPath))
                     {
-                        switch (position)
+                        switch (direction)
                         {
-                            case "Up":
+                            case Direction.Up:
                                 hasUpper = true;
                                 break;
-                            case "Down":
+                            case Direction.Down:
                                 hasBottom = true;
                                 break;
-                            case "Left":
+                            case Direction.Left:
                                 hasLeft = true;
                                 break;
-                            case "Right":
+                            case Direction.Right:
                                 hasRight = true;
                                 break;
                         }
@@ -106,30 +105,10 @@ public class Cell_Update : MonoBehaviour
 
                     detectedObjects.Add(collision.gameObject);
                 }
-                else if (collision.CompareTag(Utils.pathTag))
-                {
-                    string position = GetRelativePosition(collision);
-
-                    switch (position)
-                    {
-                        case "Up":
-                            hasUpper = true;
-                            break;
-                        case "Down":
-                            hasBottom = true;
-                            break;
-                        case "Left":
-                            hasLeft = true;
-                            break;
-                        case "Right":
-                            hasRight = true;
-                            break;
-                    }
-                }
             }
         }
         
-        if (detectedObjects.Count > 4) Debug.LogError($"More than 4 objects detected: {detectedObjects.Count} objects found.");
+        if (detectedObjects.Count > 5) Debug.LogError($"More than 5 objects detected: {detectedObjects.Count} objects found.");
 
         // Set sprite
         string spritePath = Utils.getCellSprite(hasPath, hasTower, canHavePath, hasRight, hasLeft, hasUpper, hasBottom);
@@ -179,28 +158,6 @@ public class Cell_Update : MonoBehaviour
 
         // Convert the list of interacting objects to an array and return it
         return interactingObjects.ToArray();
-    }
-
-    // Get relative position of 
-    private string GetRelativePosition(Collider2D detectedCollider)
-    {
-        Vector3 mainObjectPosition = transform.position;
-        Vector3 detectedPosition = detectedCollider.transform.position;
-
-        bool isYClose = Mathf.Abs(detectedPosition.y - mainObjectPosition.y) < Utils.epsilon;
-        bool isXClose = Mathf.Abs(detectedPosition.x - mainObjectPosition.x) < Utils.epsilon;
-
-        if (isYClose && isXClose) return "Center";
-        
-        if (detectedPosition.y > mainObjectPosition.y && !isYClose) return "Up";
-
-        if (detectedPosition.y < mainObjectPosition.y && !isYClose) return "Down";
-        
-        if (detectedPosition.x > mainObjectPosition.x && !isXClose) return "Right";
-        
-        if (detectedPosition.x < mainObjectPosition.x && !isXClose) return "Left";
-        
-        return "Center";
     }
 
     // Calls Recalculate on all coliding cells + itself

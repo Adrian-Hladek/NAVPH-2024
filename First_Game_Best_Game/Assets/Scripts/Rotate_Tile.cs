@@ -1,6 +1,4 @@
-using Unity;
 using UnityEngine;
-using System.Collections.Generic;
 
 
 public class RotateTile : Action
@@ -51,9 +49,8 @@ public class RotateTile : Action
         foreach (Cell_Update cell in tileCells) 
             cell.gameObject.transform.rotation = Quaternion.identity;
 
-        Physics2D.SyncTransforms();
-
         // Update cells 
+        Physics2D.SyncTransforms();
         foreach (Cell_Update cell in tileCells) cell.UpdateNearbyCells();
     }
 }

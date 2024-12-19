@@ -58,7 +58,6 @@ public class Object_Holder : MonoBehaviour
         if (currentAction != ActionType.None) MoveObjectWithCursor();
     }
 
-
     public void PickAction(ActionType type)
     {
         Cursor.visible = false;

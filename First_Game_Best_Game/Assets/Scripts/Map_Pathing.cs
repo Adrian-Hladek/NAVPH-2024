@@ -56,7 +56,7 @@ public class Map_Pathing : MonoBehaviour
         return null;
     }
 
-    void UpdatePath()
+    public void UpdatePath()
     {
         if (!validInit) return;
 
@@ -129,17 +129,6 @@ public class Map_Pathing : MonoBehaviour
     void Start()
     {
         UpdatePath();
-
-        // Find Action_Inventory
-        Action_Inventory inventory = FindObjectOfType<Action_Inventory>();
-        if (inventory == null)
-        {
-            Debug.LogError("Cound NOT find Action_Inventory, path will NOT be updated");
-            return;
-        }
-
-        // Add listener to performed action
-        inventory.actionPerformed.AddListener(UpdatePath);
     }
 
 }

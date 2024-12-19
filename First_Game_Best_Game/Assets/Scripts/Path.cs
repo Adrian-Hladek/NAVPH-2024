@@ -13,7 +13,7 @@ public class PathNode
     public PathNode(GameObject obj, Vector3 center_point, Cell_Update cell = null)
     {
         Vector3 vec = obj.transform.position; 
-        //Vector3 vec = obj.transform.InverseTransformPoint(center_point); for debugging
+        //Vector3 vec = obj.transform.InverseTransformPoint(center_point); // FOR debugging
 
         this.x = MathF.Round(vec.x, 2);
         this.y = MathF.Round(vec.y, 2);

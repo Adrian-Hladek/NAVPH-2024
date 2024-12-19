@@ -1,6 +1,4 @@
-using Unity;
 using UnityEngine;
-using System.Collections.Generic;
 
 
 public class DeletePath : Action
