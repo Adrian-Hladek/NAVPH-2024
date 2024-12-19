@@ -4,12 +4,16 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+
 public class Enemy_Update : MonoBehaviour
 {
-    // Health
+    [Header("Atributes")]
     [SerializeField] private int healthTotal = 0;
-    int healthCurrent = 0;
+    [SerializeField ]int healthCurrent = 0;
 
+
+    
     // Movement Speed
     [SerializeField] private float speedTotal = 0f;
     float speedCurrent = 0f;
@@ -188,12 +192,14 @@ public class Enemy_Update : MonoBehaviour
         this.gameObject.transform.position = newPos;
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         healthCurrent -= damage;
 
         float healthPercantage = (healthCurrent * 100) / healthTotal;
         hit.Invoke(healthPercantage);
+
+        
     }
 
     public void Collide()

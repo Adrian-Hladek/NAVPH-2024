@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Bullet : MonoBehaviour
 {
     [Header("References")]
@@ -9,7 +11,7 @@ public class Bullet : MonoBehaviour
 
     [Header("Atributes")]
     [SerializeField] private float bulletSpeed = 5f;
-
+    [SerializeField] private int bulletDamage = 1;
     private Transform target;
 
 
@@ -21,7 +23,12 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!target) return;
+        if (!target)
+        {
+            Destroy(gameObject);
+            return;
+        }
+           
 
         Vector2 direction = (target.position - transform.position).normalized;
 
@@ -33,7 +40,7 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
 
-        // ubraù healths
+        other.gameObject.GetComponent<Enemy_Update>().TakeDamage(bulletDamage);
         Destroy(gameObject);
 
 
