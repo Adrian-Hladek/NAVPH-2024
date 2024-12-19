@@ -10,7 +10,7 @@ public class Enemy_Update : MonoBehaviour
 {
     [Header("Atributes")]
     [SerializeField] private int healthTotal = 0;
-    [SerializeField ]int healthCurrent = 0;
+    int healthCurrent = 0;
 
     // Movement Speed
     [SerializeField] private float speedTotal = 0f;

@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AssasinRed_0
+      name: Assasin_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86839b84dbc63424aaf2d8168c44eeae
-      internalID: 1275105495
+      spriteID: e8dda38499e94484d92a685b743f916d
+      internalID: -769136991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_1
+      name: Assasin_1
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21945bff30d42cd469e77e6c583528bd
-      internalID: -494679582
+      spriteID: 1287390b71867b649b97e755e1eb0041
+      internalID: 1728202577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_2
+      name: Assasin_2
       rect:
         serializedVersion: 2
         x: 32
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52d023ecc4ec5754db85023d66021850
-      internalID: 1369282690
+      spriteID: d0d0b2b3807c28e488189e0ae4ce5cb2
+      internalID: -1085997137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_3
+      name: Assasin_3
       rect:
         serializedVersion: 2
         x: 48
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 700f4326d00c50b448f80f265452947b
-      internalID: 2098426071
+      spriteID: b1d98b0ab94989c4ba72fd1062e4b79c
+      internalID: -1690429451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_4
+      name: Assasin_4
       rect:
         serializedVersion: 2
         x: 64
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97e01bc9e30c5bb49bf1aae0619f51f3
-      internalID: 804575160
+      spriteID: e73da38dec7a36948be2129a2ff21703
+      internalID: -1102647678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_5
+      name: Assasin_5
       rect:
         serializedVersion: 2
         x: 0
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3cff57d1dc377847927ce4b15758d16
-      internalID: 72032344
+      spriteID: dc54fd904a43cd44b9a90f4874522c18
+      internalID: 1435163405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_6
+      name: Assasin_6
       rect:
         serializedVersion: 2
         x: 16
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e582e469de2e8f548913a2a8bdd2c6c4
-      internalID: -1725175664
+      spriteID: 31eb6c7d61a87e7489fc4a19c50a27ae
+      internalID: 47255469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_7
+      name: Assasin_7
       rect:
         serializedVersion: 2
         x: 32
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e25818c41bfc6ce4ebdbaeaea139de17
-      internalID: -1692776101
+      spriteID: 802d204bc36694e4ab37e212dcccef06
+      internalID: 1273248299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_8
+      name: Assasin_8
       rect:
         serializedVersion: 2
         x: 48
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49ee3e51b0b185048b90a8545fb71e9e
-      internalID: -1246881462
+      spriteID: 4004d6992fde97246abaa264b0d38b26
+      internalID: 269321347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_9
+      name: Assasin_9
       rect:
         serializedVersion: 2
         x: 64
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59f4c4116ca8d9446937084fdfa358a5
-      internalID: 1448801444
+      spriteID: b2ae0260a5574f5478f7180f2e4a1a03
+      internalID: 1163318556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_10
+      name: Assasin_10
       rect:
         serializedVersion: 2
         x: 0
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fc0d531df4c52a44a805be20c4cc99a
-      internalID: 1838714894
+      spriteID: 98c950171400b5d40a4cf6d9f560cd22
+      internalID: 2132659307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_11
+      name: Assasin_11
       rect:
         serializedVersion: 2
         x: 16
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a140482e69a60684e9847b03b6b3ec30
-      internalID: 517193225
+      spriteID: e6737c46bd4569c489ab269f61ada039
+      internalID: 112370091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_12
+      name: Assasin_12
       rect:
         serializedVersion: 2
         x: 32
@@ -376,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f08f6413d044b14ebb53f075718c5fa
-      internalID: -1557554744
+      spriteID: 78cf3b759cd2d404193e22d434426be6
+      internalID: 1738122876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_13
+      name: Assasin_13
       rect:
         serializedVersion: 2
         x: 48
@@ -397,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb3f95314375c94ba5bed13e1f358cd
-      internalID: -1150293463
+      spriteID: bc99d7b6252f09742a33a6a476abd58d
+      internalID: 1452346616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_14
+      name: Assasin_14
       rect:
         serializedVersion: 2
         x: 64
@@ -418,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14c2196f0e0d66e4ba6ebde8eb878613
-      internalID: 805140036
+      spriteID: c80f1438784b4634e9e3b0142839dc17
+      internalID: 1990518223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_15
+      name: Assasin_15
       rect:
         serializedVersion: 2
         x: 0
@@ -439,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd439b8c75a7c04469dddd0ea3657855
-      internalID: -572631878
+      spriteID: b4446f44d1c3cdd48b2b2697908c9934
+      internalID: -1518250141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_16
+      name: Assasin_16
       rect:
         serializedVersion: 2
         x: 16
@@ -460,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 398d9607a283a9d4dab649cec55fc984
-      internalID: 970336344
+      spriteID: 40de3d5b277374d41b7d4a3bc201ccec
+      internalID: -1002452833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_17
+      name: Assasin_17
       rect:
         serializedVersion: 2
         x: 32
@@ -481,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcdde0ae4cb0b0e41b49d794d166695d
-      internalID: 547969541
+      spriteID: 7dde057a582c31649a96573220c2f5c4
+      internalID: 1635366961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_18
+      name: Assasin_18
       rect:
         serializedVersion: 2
         x: 48
@@ -502,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98e303572238a7d47a94b477632cc2d7
-      internalID: -1559908886
+      spriteID: 232fec9101f9d7d48ad35f83ddfd0148
+      internalID: -1136757777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_19
+      name: Assasin_19
       rect:
         serializedVersion: 2
         x: 64
@@ -523,14 +523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6921c57e0a47fed478524a50b87dbc38
-      internalID: 934199078
+      spriteID: 302ac26113806474a86d317b6a907ba3
+      internalID: 1425065634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_20
+      name: Assasin_20
       rect:
         serializedVersion: 2
         x: 0
@@ -544,14 +544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f22057900ec88a4bac74323b7f2f6ae
-      internalID: -1698751732
+      spriteID: 57ed1d7f45cf73c43bb4c06dc13a8a64
+      internalID: -1849607242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_21
+      name: Assasin_21
       rect:
         serializedVersion: 2
         x: 16
@@ -565,14 +565,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e61e09bf76a3307418f5deaf38ddf1f7
-      internalID: 470587279
+      spriteID: 7d2c26ca648528a4ca6283eeb33ff4d4
+      internalID: -909258342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_22
+      name: Assasin_22
       rect:
         serializedVersion: 2
         x: 32
@@ -586,14 +586,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a4efaee125a7a7488b38877f95b7365
-      internalID: 1331868858
+      spriteID: 82609d009d97aaf41a7f8ef01be216f6
+      internalID: 1752421181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_23
+      name: Assasin_23
       rect:
         serializedVersion: 2
         x: 48
@@ -607,14 +607,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 705b2e60e9990fe4f95281a3cf352a6b
-      internalID: -2132171014
+      spriteID: 2b87c4e1f9428c54c9766acca2801c66
+      internalID: 831384195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_24
+      name: Assasin_24
       rect:
         serializedVersion: 2
         x: 0
@@ -628,14 +628,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb08b0ba1a15c824e817415ba5730d8c
-      internalID: -836015886
+      spriteID: 3ba9dbbe249ee2d43868062a0e07dc01
+      internalID: 1790927690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_25
+      name: Assasin_25
       rect:
         serializedVersion: 2
         x: 16
@@ -649,14 +649,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dab14fdb83e73114280f3397edcf3638
-      internalID: 1063347437
+      spriteID: 31e46ed623110d5479c86f207af76152
+      internalID: -1716477383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_26
+      name: Assasin_26
       rect:
         serializedVersion: 2
         x: 32
@@ -670,14 +670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 225bab85626f325418859fec98b64ef7
-      internalID: 2053730944
+      spriteID: 09ba35c47db481a4d8df0aad88d820d1
+      internalID: -1269259434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_27
+      name: Assasin_27
       rect:
         serializedVersion: 2
         x: 48
@@ -691,14 +691,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa39afdc86e8224b8b41f240830df27
-      internalID: 1824513483
+      spriteID: 11007c75107163b48aa4ad69b46ab097
+      internalID: -1712785025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_28
+      name: Assasin_28
       rect:
         serializedVersion: 2
         x: 0
@@ -712,14 +712,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7713e9d07603d154f9d78cc00a599fca
-      internalID: 585123111
+      spriteID: 87f1bb84403329f439790f36cf9662bc
+      internalID: 2125344911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_29
+      name: Assasin_29
       rect:
         serializedVersion: 2
         x: 16
@@ -733,14 +733,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32eb1b33853272049a37d21fe5baca89
-      internalID: -226419924
+      spriteID: 48b4cc2bfb073cc4b8be4cb72d951d2f
+      internalID: 1449157222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_30
+      name: Assasin_30
       rect:
         serializedVersion: 2
         x: 32
@@ -754,14 +754,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fbeeb2404f580d48a53342d92ad059f
-      internalID: 1787222629
+      spriteID: 04039d71cf834014491625aacb9066ed
+      internalID: 1047065988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_31
+      name: Assasin_31
       rect:
         serializedVersion: 2
         x: 48
@@ -775,14 +775,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7ebc650e2fe9e44089ab979ae84111f
-      internalID: -859075870
+      spriteID: 76f5aa96da95dc446bbfd4e78aa73aad
+      internalID: 497540128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_32
+      name: Assasin_32
       rect:
         serializedVersion: 2
         x: 0
@@ -796,14 +796,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e3a23414afd8fb4eba37c9462d18ff7
-      internalID: 1543660004
+      spriteID: 7abf9c4e6c1837d458a494848ab94ff0
+      internalID: 1192621252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_33
+      name: Assasin_33
       rect:
         serializedVersion: 2
         x: 16
@@ -817,14 +817,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 545742dccc9f57642a836518d15fe09a
-      internalID: 1293883218
+      spriteID: 1af8391906dba53438a9b5e796ad7e26
+      internalID: -2006618613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_34
+      name: Assasin_34
       rect:
         serializedVersion: 2
         x: 32
@@ -838,14 +838,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aadee019c3949b142b7c3836b6f84e06
-      internalID: 252034895
+      spriteID: 5e94fe821eef6cf409ec37a3bcd20ddf
+      internalID: -534844197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_35
+      name: Assasin_35
       rect:
         serializedVersion: 2
         x: 48
@@ -859,14 +859,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c646d5779ecef4f42bde24f3ca9f1524
-      internalID: 1340561003
+      spriteID: 73e9076ca83cc2b4fa91405cfa448985
+      internalID: -1480698667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_36
+      name: Assasin_36
       rect:
         serializedVersion: 2
         x: 0
@@ -880,14 +880,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53d864946a7e0194f9cb7fc5bb8088db
-      internalID: 898298271
+      spriteID: d5c01855aba074244bdacd0eb1054eda
+      internalID: 715503596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_37
+      name: Assasin_37
       rect:
         serializedVersion: 2
         x: 16
@@ -901,14 +901,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce2ec84222f92894db8269664db249f6
-      internalID: 957601515
+      spriteID: 54cef342567bb8c4dac7ab0f92a4b709
+      internalID: 1319125964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_38
+      name: Assasin_38
       rect:
         serializedVersion: 2
         x: 32
@@ -922,14 +922,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dfc1c6536fdcb440bd2103e463569f0
-      internalID: 1702365663
+      spriteID: 9e9f6b453cb8b624ea31f9fa5f68842a
+      internalID: 337197701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_39
+      name: Assasin_39
       rect:
         serializedVersion: 2
         x: 48
@@ -943,14 +943,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4598abce389cdf4fbfb605424103e5b
-      internalID: -1387997690
+      spriteID: 77d13eedb21e78c4a9745c9cb54357fc
+      internalID: -1897031895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_40
+      name: Assasin_40
       rect:
         serializedVersion: 2
         x: 0
@@ -964,14 +964,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 250b7bee40b710e44aeb987e5ec23274
-      internalID: -952548177
+      spriteID: 17acd6e3cd7a49b48b89e0496683fb68
+      internalID: -785906249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_41
+      name: Assasin_41
       rect:
         serializedVersion: 2
         x: 16
@@ -985,14 +985,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9750f679d4fc3d4fadfdb063662450d
-      internalID: 783730223
+      spriteID: e2ccc1fd8434feb488815d0d5cc605b8
+      internalID: 1879039859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_42
+      name: Assasin_42
       rect:
         serializedVersion: 2
         x: 32
@@ -1006,14 +1006,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2314d86a4e4a25846b6ca5bc844803de
-      internalID: -1385346072
+      spriteID: 39666e4ae575151428f7c302f0281480
+      internalID: 1674566436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_43
+      name: Assasin_43
       rect:
         serializedVersion: 2
         x: 48
@@ -1027,14 +1027,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f89394b80009c8343a63b56b1c95d865
-      internalID: -1015276491
+      spriteID: cf3285759eb0f994381c26e7a1e3fa4e
+      internalID: -139390368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_44
+      name: Assasin_44
       rect:
         serializedVersion: 2
         x: 0
@@ -1048,14 +1048,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99c544dd26915774891b369a7a0f26e0
-      internalID: -210601568
+      spriteID: a2f081575cd9fce43bc68cb723596c76
+      internalID: 1904769242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_45
+      name: Assasin_45
       rect:
         serializedVersion: 2
         x: 16
@@ -1069,14 +1069,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bad134f2434f9a247941d42863f0afb5
-      internalID: 2037385630
+      spriteID: 5f8f185d641372445825eada9667d03c
+      internalID: 440771999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_46
+      name: Assasin_46
       rect:
         serializedVersion: 2
         x: 32
@@ -1090,14 +1090,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a309eeabd8cf5e7429759aa1b2cc7046
-      internalID: 1887550534
+      spriteID: 9769ba1f8503e7646ad6ca55c340abd2
+      internalID: -2079588529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_47
+      name: Assasin_47
       rect:
         serializedVersion: 2
         x: 48
@@ -1111,14 +1111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e507447c358b2ad46bfdbee5df36b965
-      internalID: -376743418
+      spriteID: e13bd3b7cf2002245b16defbe947c0de
+      internalID: 1663779525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_48
+      name: Assasin_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1132,14 +1132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42e0b4c38e105874d87dbd54b377f976
-      internalID: 885229878
+      spriteID: 0fa7fd7664b4eae4f9d90a6cac5b0436
+      internalID: 593651111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_49
+      name: Assasin_49
       rect:
         serializedVersion: 2
         x: 16
@@ -1153,14 +1153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d411d2376485e0147baa753f3d79a2be
-      internalID: -1906675817
+      spriteID: 752d54908585a9c47a28b66cfa9d1aed
+      internalID: 661374175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_50
+      name: Assasin_50
       rect:
         serializedVersion: 2
         x: 32
@@ -1174,14 +1174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 059301ca9e909fc49ac94b633069f55c
-      internalID: 529080607
+      spriteID: 5af24524ce5348b4a9769a2f5498f930
+      internalID: -1760901934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssasinRed_51
+      name: Assasin_51
       rect:
         serializedVersion: 2
         x: 48
@@ -1195,8 +1195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c6e897c39c26f14eb77480b3259f917
-      internalID: -620693832
+      spriteID: 9701642bce896d64d9dbbde66e30d761
+      internalID: 334288494
       vertices: []
       indices: 
       edges: []
@@ -1212,58 +1212,58 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AssasinRed_0: 1275105495
-      AssasinRed_1: -494679582
-      AssasinRed_10: 1838714894
-      AssasinRed_11: 517193225
-      AssasinRed_12: -1557554744
-      AssasinRed_13: -1150293463
-      AssasinRed_14: 805140036
-      AssasinRed_15: -572631878
-      AssasinRed_16: 970336344
-      AssasinRed_17: 547969541
-      AssasinRed_18: -1559908886
-      AssasinRed_19: 934199078
-      AssasinRed_2: 1369282690
-      AssasinRed_20: -1698751732
-      AssasinRed_21: 470587279
-      AssasinRed_22: 1331868858
-      AssasinRed_23: -2132171014
-      AssasinRed_24: -836015886
-      AssasinRed_25: 1063347437
-      AssasinRed_26: 2053730944
-      AssasinRed_27: 1824513483
-      AssasinRed_28: 585123111
-      AssasinRed_29: -226419924
-      AssasinRed_3: 2098426071
-      AssasinRed_30: 1787222629
-      AssasinRed_31: -859075870
-      AssasinRed_32: 1543660004
-      AssasinRed_33: 1293883218
-      AssasinRed_34: 252034895
-      AssasinRed_35: 1340561003
-      AssasinRed_36: 898298271
-      AssasinRed_37: 957601515
-      AssasinRed_38: 1702365663
-      AssasinRed_39: -1387997690
-      AssasinRed_4: 804575160
-      AssasinRed_40: -952548177
-      AssasinRed_41: 783730223
-      AssasinRed_42: -1385346072
-      AssasinRed_43: -1015276491
-      AssasinRed_44: -210601568
-      AssasinRed_45: 2037385630
-      AssasinRed_46: 1887550534
-      AssasinRed_47: -376743418
-      AssasinRed_48: 885229878
-      AssasinRed_49: -1906675817
-      AssasinRed_5: 72032344
-      AssasinRed_50: 529080607
-      AssasinRed_51: -620693832
-      AssasinRed_6: -1725175664
-      AssasinRed_7: -1692776101
-      AssasinRed_8: -1246881462
-      AssasinRed_9: 1448801444
+      Assasin_0: -769136991
+      Assasin_1: 1728202577
+      Assasin_10: 2132659307
+      Assasin_11: 112370091
+      Assasin_12: 1738122876
+      Assasin_13: 1452346616
+      Assasin_14: 1990518223
+      Assasin_15: -1518250141
+      Assasin_16: -1002452833
+      Assasin_17: 1635366961
+      Assasin_18: -1136757777
+      Assasin_19: 1425065634
+      Assasin_2: -1085997137
+      Assasin_20: -1849607242
+      Assasin_21: -909258342
+      Assasin_22: 1752421181
+      Assasin_23: 831384195
+      Assasin_24: 1790927690
+      Assasin_25: -1716477383
+      Assasin_26: -1269259434
+      Assasin_27: -1712785025
+      Assasin_28: 2125344911
+      Assasin_29: 1449157222
+      Assasin_3: -1690429451
+      Assasin_30: 1047065988
+      Assasin_31: 497540128
+      Assasin_32: 1192621252
+      Assasin_33: -2006618613
+      Assasin_34: -534844197
+      Assasin_35: -1480698667
+      Assasin_36: 715503596
+      Assasin_37: 1319125964
+      Assasin_38: 337197701
+      Assasin_39: -1897031895
+      Assasin_4: -1102647678
+      Assasin_40: -785906249
+      Assasin_41: 1879039859
+      Assasin_42: 1674566436
+      Assasin_43: -139390368
+      Assasin_44: 1904769242
+      Assasin_45: 440771999
+      Assasin_46: -2079588529
+      Assasin_47: 1663779525
+      Assasin_48: 593651111
+      Assasin_49: 661374175
+      Assasin_5: 1435163405
+      Assasin_50: -1760901934
+      Assasin_51: 334288494
+      Assasin_6: 47255469
+      Assasin_7: 1273248299
+      Assasin_8: 269321347
+      Assasin_9: 1163318556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
