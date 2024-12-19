@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6411187857738971433}
   - component: {fileID: 2105417045002401365}
-  - component: {fileID: 7942144465061853638}
   - component: {fileID: 5202045416414237839}
+  - component: {fileID: 7942144465061853638}
+  - component: {fileID: 5022839155190579807}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: -449636172, guid: 44ffaaaf2dfff064f88009a881a6ece6, type: 3}
+  m_Sprite: {fileID: 1275105495, guid: 44ffaaaf2dfff064f88009a881a6ece6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,31 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7942144465061853638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492914727027865052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cdf33f84f71bc4cb7b040f41f5d1a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthTotal: 50
-  speedTotal: 4
-  respawnDelay: 1
-  livesTaken: 1
-  spawn:
-    m_PersistentCalls:
-      m_Calls: []
-  despawn:
-    m_PersistentCalls:
-      m_Calls: []
-  hit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!58 &5202045416414237839
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -147,6 +123,52 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.01}
   serializedVersion: 2
   m_Radius: 0.07
+--- !u!114 &7942144465061853638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492914727027865052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1cdf33f84f71bc4cb7b040f41f5d1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthTotal: 50
+  speedTotal: 4
+  respawnDelay: 1
+  livesTaken: 1
+  spawn:
+    m_PersistentCalls:
+      m_Calls: []
+  despawn:
+    m_PersistentCalls:
+      m_Calls: []
+  hit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!95 &5022839155190579807
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492914727027865052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 4de81e685298e344f967c8ad04213a06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &7746672229599142758
 PrefabInstance:
   m_ObjectHideFlags: 0

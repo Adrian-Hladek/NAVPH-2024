@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,16 +14,20 @@ public class Enemy_Update : MonoBehaviour
     [SerializeField] private float speedTotal = 0f;
     float speedCurrent = 0f;
 
+    // Respawn delay
     [SerializeField] private float respawnDelay = 1f;
     float delayCurrent = 0f;
 
+    // Lives taken at the nd of road
     [SerializeField] private int livesTaken = 1;
-    
+
     // Path
     Queue <PathNode> path = new Queue <PathNode>();
     Tuple <Vector2, PathNode> nextPoint = null;
 
+    // UI
     SpriteRenderer sprite;
+    Animator animator = null;
 
     // Events
     [HideInInspector] public UnityEvent spawn = new UnityEvent();
@@ -31,6 +36,9 @@ public class Enemy_Update : MonoBehaviour
 
     void Awake()
     {
+        this.enabled = false;
+
+        // Parameters
         if (speedTotal <= 0) Debug.LogError($"Enemy {this.gameObject.name} has ZERO movement");
         else speedCurrent = speedTotal;
 
@@ -43,11 +51,14 @@ public class Enemy_Update : MonoBehaviour
             livesTaken = 0;
         }
         
+        // Sprite
         sprite = this.gameObject.GetComponentInChildren<SpriteRenderer>();
-        if (sprite == null)  Debug.LogError($"Enemy {this.gameObject.name} has NO sprite");
+        if (sprite == null) Debug.LogError($"Enemy {this.gameObject.name} has NO sprite");
         else sprite.enabled = false;
 
-        this.enabled = false;
+        // Animation
+        animator = this.gameObject.GetComponentInChildren<Animator>();
+        if (animator == null) Debug.LogError($"Enemy {this.gameObject.name} has NO animation");
     }
 
     public bool CanMove()
@@ -86,6 +97,44 @@ public class Enemy_Update : MonoBehaviour
         spawn.Invoke();
     }
 
+    void UpdateAnimation(Vector2 currentPosition, Vector2 nextPosition)
+    {
+        if (animator == null) return;
+
+        Direction direction = Utils.DirectionBetweenPoints(currentPosition, nextPosition);
+
+        switch(direction)
+        {
+            case Direction.Left:
+                animator.SetBool("FacingLeft", true);
+                animator.SetBool("FacingRight", false);
+                animator.SetBool("FacingUp", false);
+                animator.SetBool("FacingDown", false);
+                break;
+
+            case Direction.Right:
+                animator.SetBool("FacingLeft", false);
+                animator.SetBool("FacingRight", true);
+                animator.SetBool("FacingUp", false);
+                animator.SetBool("FacingDown", false);
+                break;
+
+            case Direction.Up:
+                animator.SetBool("FacingLeft", false);
+                animator.SetBool("FacingRight", false);
+                animator.SetBool("FacingUp", true);
+                animator.SetBool("FacingDown", false);
+                break;
+
+            case Direction.Down:
+                animator.SetBool("FacingLeft", false);
+                animator.SetBool("FacingRight", false);
+                animator.SetBool("FacingUp", false);
+                animator.SetBool("FacingDown", true);
+                break;
+        }
+    }
+
     void SetNextPoint()
     {
         // Reached END of road (despawn)
@@ -103,6 +152,8 @@ public class Enemy_Update : MonoBehaviour
 
         Vector2 newPos = newNode.GetLocalPoint();
         nextPoint = Tuple.Create(newPos, newNode);
+
+        UpdateAnimation(this.gameObject.transform.position, newPos);
     }
 
     void Move()

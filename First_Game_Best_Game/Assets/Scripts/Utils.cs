@@ -1,5 +1,14 @@
 using UnityEngine;
 
+public enum Direction
+{
+    Center = 0, 
+    Left = 1,
+    Right = 2, 
+    Up = 3,
+    Down = 4,
+}
+
 // Utils class for global methods
 public class Utils
 {
@@ -28,6 +37,20 @@ public class Utils
     public const string enemyLayer = "Enemy_Layer";
 
     // Helper functions
+    public static Direction DirectionBetweenPoints(Vector2 currentPoint, Vector2 otherPoint) 
+    {
+        bool isYClose = Mathf.Abs(otherPoint.y - currentPoint.y) < epsilon;
+        bool isXClose = Mathf.Abs(otherPoint.x - currentPoint.x) < epsilon;
+
+        if (isYClose && isXClose) return Direction.Center;
+        
+        if (otherPoint.y > currentPoint.y && !isYClose) return Direction.Up; 
+        if (otherPoint.y < currentPoint.y && !isYClose) return Direction.Down; 
+        if (otherPoint.x > currentPoint.x && !isXClose) return Direction.Right; 
+        if (otherPoint.x < currentPoint.x && !isXClose) return Direction.Left; 
+
+        return Direction.Center;
+    }
 
     // Gets all colliding objects (Camera main = world camera)
     public static RaycastHit2D[] HitColliders(LayerMask layers)
