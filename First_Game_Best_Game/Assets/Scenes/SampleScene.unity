@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 210828055}
   - component: {fileID: 210828054}
   m_Layer: 0
-  m_Name: Waves
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f1fdd62082f4a47b63613c7fe36428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 5
 --- !u!4 &210828055
 Transform:
   m_ObjectHideFlags: 0
