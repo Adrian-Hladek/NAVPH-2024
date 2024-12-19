@@ -250,6 +250,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 5
+  changedLevelState:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &210828055
 Transform:
   m_ObjectHideFlags: 0
@@ -411,7 +414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
       propertyPath: enemies.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
       propertyPath: enemies.Array.data[0]
@@ -420,14 +423,26 @@ PrefabInstance:
     - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
       propertyPath: enemies.Array.data[1]
       value: 
-      objectReference: {fileID: 6492914727027865052, guid: bfab9b449a495bd4e8c2b87564c1ea59, type: 3}
+      objectReference: {fileID: 6492914727027865052, guid: 2a520887c59c9c243bc972fa1ab1db05, type: 3}
     - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
       propertyPath: enemies.Array.data[2]
       value: 
-      objectReference: {fileID: 6492914727027865052, guid: bfab9b449a495bd4e8c2b87564c1ea59, type: 3}
+      objectReference: {fileID: 6492914727027865052, guid: c81843c0a87ee6348b686b95a06d2c21, type: 3}
+    - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
+      propertyPath: enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 6492914727027865052, guid: 19836824a6a59aa40888705b6063a197, type: 3}
+    - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
+      propertyPath: enemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 6492914727027865052, guid: 71ac383a25a1c0f46a0d86675ad87fd2, type: 3}
+    - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
+      propertyPath: enemies.Array.data[5]
+      value: 
+      objectReference: {fileID: 6492914727027865052, guid: edf67f0821a12cf41860490e6dc4977b, type: 3}
     - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
       propertyPath: spawnTimes.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
       propertyPath: spawnTimes.Array.data[1]
@@ -436,6 +451,18 @@ PrefabInstance:
     - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
       propertyPath: spawnTimes.Array.data[2]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
+      propertyPath: spawnTimes.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
+      propertyPath: spawnTimes.Array.data[4]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967386079228654258, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
+      propertyPath: spawnTimes.Array.data[5]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6509629469585436437, guid: d3419b8c00d876b4198a7345fadf825a, type: 3}
       propertyPath: m_LocalPosition.x

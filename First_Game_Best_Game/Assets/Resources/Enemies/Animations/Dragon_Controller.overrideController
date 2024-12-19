@@ -7,5 +7,13 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Dragon_Controller
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 87efd9da268887348be50b965c2eb090, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 4598d79b86b12744cb1bbee472535155, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d6310686108c47843bea32c8e7410959, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fcf512c586eb2b94fba913804830ecf4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5614d9deb5a71ea4ab7356d7a79fd2af, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 665cfe1a379649647bb7f61b8095ddf4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 306fc897a87c2d648bbbd61afa5d9adc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6cad574c50c8c9f44b59e5fbb43e8e56, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a00f0abf1eda1e247920178094f924aa, type: 2}

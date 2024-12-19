@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2429164172309809586}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthTotal: 10
   speedTotal: 2
-  respawnDelay: 1
+  respawnDelay: 2
   livesTaken: 3
   spawn:
     m_PersistentCalls:
@@ -177,7 +177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.145, y: 0.155}
+  m_Size: {x: 0.14, y: 0.155}
   m_EdgeRadius: 0
 --- !u!1001 &7746672229599142758
 PrefabInstance:
@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5347930723791809236, guid: d9baf04d47c1879409a17a93916488e6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0985
+      value: -0.0921
       objectReference: {fileID: 0}
     - target: {fileID: 5347930723791809236, guid: d9baf04d47c1879409a17a93916488e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

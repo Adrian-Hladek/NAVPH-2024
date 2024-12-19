@@ -7,5 +7,13 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Spearman_Controller
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 87efd9da268887348be50b965c2eb090, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: fcf512c586eb2b94fba913804830ecf4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 09f3e2ce4054b2b478e859660913918c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4598d79b86b12744cb1bbee472535155, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 95677723e889d4f4fb3e896d358d287f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6cad574c50c8c9f44b59e5fbb43e8e56, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b968392c669eb0841905a9e9c80c9738, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 665cfe1a379649647bb7f61b8095ddf4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8742697fb005aa04cab2c172a714cf19, type: 2}
