@@ -68,6 +68,7 @@ public class Utils
         else if (type == ActionType.Create) return "Actions/Pickaxe";
         else if (type == ActionType.Delete) return "Actions/Pickaxe";
         else if (type == ActionType.Tower_Basic) return "Actions/Pickaxe";
+        else if (type == ActionType.Tower_Move) return "Actions/Basic_Tower_transparent";
 
         Debug.LogError($"Wrong action type {type}");
         return "";

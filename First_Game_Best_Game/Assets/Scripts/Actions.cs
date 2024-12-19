@@ -9,6 +9,7 @@ public enum ActionType
     Create = 2, 
     Delete = 3,
     Tower_Basic = 4,
+    Tower_Move = 5,
 }
 
 public abstract class Action
@@ -84,6 +85,9 @@ public abstract class Action
 
             case ActionType.Tower_Basic:
                 return new BuildTower(count, controller);
+
+            case ActionType.Tower_Move:
+                return new MoveTower(count, controller);
         }
 
         return null;
