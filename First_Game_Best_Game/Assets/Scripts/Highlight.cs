@@ -2,21 +2,21 @@ using UnityEngine;
 
 public class Highlight : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer border = null;
+    [SerializeField] SpriteRenderer hoverImage = null;
 
     private void Awake()
     {
-        if (border == null) Debug.LogWarning($"Highlight object for {this.gameObject.name} is NOT set");
-        Deactivate();
+        if (hoverImage == null) Debug.LogWarning($"Highlight object for {this.gameObject.name} is NOT set");
+        else Deactivate();
     }
 
     public void Activate()
     {
-        if (border != null) border.enabled = true;
+        if (hoverImage != null) hoverImage.enabled = true;
     }
 
     public void Deactivate()
     {
-        if (border != null) border.enabled = false;
+        if (hoverImage != null) hoverImage.enabled = false;
     }
 }

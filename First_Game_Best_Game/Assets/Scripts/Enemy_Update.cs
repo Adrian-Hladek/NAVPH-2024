@@ -12,8 +12,6 @@ public class Enemy_Update : MonoBehaviour
     [SerializeField] private int healthTotal = 0;
     [SerializeField ]int healthCurrent = 0;
 
-
-    
     // Movement Speed
     [SerializeField] private float speedTotal = 0f;
     float speedCurrent = 0f;
@@ -33,10 +31,16 @@ public class Enemy_Update : MonoBehaviour
     SpriteRenderer sprite;
     Animator animator = null;
 
-    // Events
+    // UI Events
     [HideInInspector] public UnityEvent spawn = new UnityEvent();
-    [HideInInspector] public UnityEvent<int> despawn = new UnityEvent<int>();
+    [HideInInspector] public UnityEvent despawn = new UnityEvent();
     [HideInInspector] public UnityEvent<float> hit = new UnityEvent<float>();
+
+
+    public int GetLivesCost
+    {
+        get {return livesTaken;}
+    }
 
     void Awake()
     {
@@ -73,6 +77,11 @@ public class Enemy_Update : MonoBehaviour
     public bool Respawning()
     {
         return delayCurrent > 0;
+    }
+
+    public bool StarterRespawning()
+    {
+        return respawnDelay == delayCurrent;
     }
 
     public bool IsDefeated()
@@ -147,7 +156,7 @@ public class Enemy_Update : MonoBehaviour
             nextPoint = null;
             sprite.enabled = false;
             delayCurrent = respawnDelay;
-            despawn.Invoke(livesTaken);
+            despawn.Invoke();
             return;
         }
 
@@ -198,13 +207,6 @@ public class Enemy_Update : MonoBehaviour
 
         float healthPercantage = (healthCurrent * 100) / healthTotal;
         hit.Invoke(healthPercantage);
-
-        
-    }
-
-    public void Collide()
-    {
-        // TODO Colisions
     }
 
     void FixedUpdate()
@@ -214,10 +216,6 @@ public class Enemy_Update : MonoBehaviour
             delayCurrent -= Time.fixedDeltaTime;
             if (delayCurrent <= 0) delayCurrent = 0;
         }
-        else
-        {
-            Move();
-            Collide();
-        }
+        else Move();
     }
 }

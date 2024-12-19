@@ -34,10 +34,10 @@ public class HP_Controller : MonoBehaviour
         enemy.spawn.AddListener(Activate);
         enemy.hit.AddListener(UpdateBar);
 
-        Deactivate(0);
+        Deactivate();
     }
 
-    void Deactivate(int livesTaken)
+    void Deactivate()
     {
         healthbar.enabled = false;
         foreach (Image img in components) img.enabled = false;

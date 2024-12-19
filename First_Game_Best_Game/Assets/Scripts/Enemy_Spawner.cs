@@ -11,7 +11,7 @@ public class Enemy_Spawner : MonoBehaviour
     [SerializeField] private List <float> spawnTimes = new List <float>();
 
     Queue <Tuple<GameObject, float>> enemyQueue = new Queue <Tuple<GameObject, float>>();
-    List <Enemy_Update> spawnedEnemies = new List <Enemy_Update>();
+    List <Enemy_Update> aliveEnemies = new List <Enemy_Update>();
     float elapsedTime = 0;
 
     public int WaveOrder
@@ -19,9 +19,9 @@ public class Enemy_Spawner : MonoBehaviour
         get{return order;}
     }
 
-    public bool FinishedSpawning()
+    public bool FinishedFighting()
     {
-        return (enemyQueue.Count == 0) && (spawnedEnemies.Count == 0);
+        return (enemyQueue.Count == 0) && (aliveEnemies.Count == 0);
     }
 
     void Awake()
@@ -67,7 +67,7 @@ public class Enemy_Spawner : MonoBehaviour
         List <Enemy_Update> killedEnemies = new List<Enemy_Update>();
 
         // Remove defeated enemies
-        spawnedEnemies.RemoveAll(enemy => 
+        aliveEnemies.RemoveAll(enemy => 
         {
             if (enemy.IsDefeated()) 
             {
@@ -79,15 +79,32 @@ public class Enemy_Spawner : MonoBehaviour
         });
 
         // Destroy gameObjects of defeated enemies
-        foreach (Enemy_Update enemy in killedEnemies) Destroy(enemy.gameObject);
+        foreach (Enemy_Update enemy in killedEnemies) 
+        {
+            enemy.spawn.RemoveAllListeners();
+            enemy.despawn.RemoveAllListeners();
+            enemy.hit.RemoveAllListeners();
+
+            Destroy(enemy.gameObject);
+        }
     }
 
-    public void RespawnEnemies(List<PathNode> enemyPath)
+    public int RespawnEnemies(List<PathNode> enemyPath)
     {
-        foreach (Enemy_Update enemy in spawnedEnemies)
+        int livesTaken = 0;
+
+        foreach (Enemy_Update enemy in aliveEnemies)
         {
-            if (!enemy.CanMove() && !enemy.Respawning()) enemy.PlaceOnMap(enemyPath);
+            if (!enemy.CanMove())
+            {
+                // Respawn enemy
+                if (!enemy.Respawning()) enemy.PlaceOnMap(enemyPath);
+                // Reduce player lives
+                else if (enemy.StarterRespawning()) livesTaken += enemy.GetLivesCost;
+            }
         }
+
+        return livesTaken;
     }
 
     public void ActivateEnemy(GameObject enemy, List<PathNode> enemyPath)
@@ -98,6 +115,6 @@ public class Enemy_Spawner : MonoBehaviour
         if (enemyComponent == null) return;
 
         enemyComponent.PlaceOnMap(enemyPath);
-        spawnedEnemies.Add(enemyComponent);
+        aliveEnemies.Add(enemyComponent);
     }
 }
