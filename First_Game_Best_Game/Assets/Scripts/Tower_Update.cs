@@ -21,6 +21,7 @@ public class Tower_Update : MonoBehaviour
     private float timeUntilFire;
     private Transform target;
 
+    private const string CanonTransformPath = "RotatePoint/Canon";
 
 
 
@@ -69,26 +70,65 @@ public class Tower_Update : MonoBehaviour
 
     }
 
+    public void ChangeSprite(string spritePath, string objectPath)
+    {
 
+        Transform targetTransform = transform.Find(objectPath);
+        if (targetTransform == null)
+        {
+            Debug.LogError($"Object at path '{objectPath}' could not be found.");
+            return;
+        }
+
+        // Get the SpriteRenderer component
+        SpriteRenderer spriteRenderer = targetTransform.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            Debug.LogError($"SpriteRenderer component not found on {targetTransform.name}.");
+            return;
+        }
+
+        // Load the new sprite dynamically from Resources
+        Sprite newSprite = Resources.Load<Sprite>(spritePath);
+        if (newSprite == null)
+        {
+            Debug.LogError($"Sprite at path '{spritePath}' could not be loaded.");
+            return;
+        }
+
+        // Assign the new sprite to the SpriteRenderer
+        spriteRenderer.sprite = newSprite;
+        Debug.Log($"Sprite updated successfully for {targetTransform.name}!");
+    }
+
+
+    private void SetupBullet(string prefabPath)
+    {
+        // Load the bullet prefab from the Resources folder
+        GameObject loadedPrefab = Resources.Load<GameObject>(prefabPath);
+
+        if (loadedPrefab != null)
+        {
+            // Assign the loaded prefab to bulletPrefab
+            bulletPrefab = loadedPrefab;
+            Debug.Log($"Bullet prefab loaded successfully from '{prefabPath}'.");
+        }
+        else
+        {
+            // Log an error if the prefab could not be found
+            Debug.LogError($"Bullet prefab could not be loaded from path '{prefabPath}'.");
+        }
+    }
 
     public void TowerSetup(int typeOfTower)
     {
         
         GameObject loadedPrefab = Resources.Load<GameObject>("Prefabs/Bullet");
+        
 
         switch (typeOfTower)
         {
             case 0: // Example: Basic Tower
-
-                if (loadedPrefab != null)
-                {
-                    bulletPrefab = loadedPrefab; // Correct way to set the property
-                    Debug.Log("Basic Tower prefab");
-                }
-                else
-                {
-                    Debug.LogError("Bullet prefab could not be loaded from Resources.");
-                }
 
                 targetingRange = 5f;
                 //rotationSpeed = 200f;
@@ -97,16 +137,10 @@ public class Tower_Update : MonoBehaviour
                 break;
 
             case 1: // Example: Advanced Tower
-                loadedPrefab = Resources.Load<GameObject>("Prefabs/Small_Bullet");
-                if (loadedPrefab != null)
-                {
-                    bulletPrefab = loadedPrefab; // Correct way to set the property
-                    Debug.Log("Basic Tower prefab");
-                }
-                else
-                {
-                    Debug.LogError("Bullet prefab could not be loaded from Resources.");
-                }
+
+                SetupBullet("Prefabs/Small_Bullet");
+                ChangeSprite("Towers/120blue", CanonTransformPath);
+
                 targetingRange = 7f;
                 //rotationSpeed = 200f;
                 bps = 5f;
