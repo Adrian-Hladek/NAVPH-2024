@@ -8,8 +8,8 @@ public enum ActionType
     Rotate = 1,
     Create = 2, 
     Delete = 3,
-    Tower_Basic = 4,
-    Tower_Move = 5,
+    Tower_Move = 4,
+    Tower_Basic = 5, 
     Tower_Fast = 6,
 }
 
@@ -97,7 +97,7 @@ public abstract class Action
         return null;
     }
 
-
+    
 
 }
 

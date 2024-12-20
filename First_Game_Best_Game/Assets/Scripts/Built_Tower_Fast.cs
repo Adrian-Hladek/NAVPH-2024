@@ -50,7 +50,7 @@ public class BuildTowerFast : Action
 
         // Set the property value
         cellComponent.HasTower = true;
-        cellComponent.AddTower(1);
+        cellComponent.AddTower(1, this);
 
         // AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
         //cellComponent.UpdateNearbyCells();
