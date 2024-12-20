@@ -39,10 +39,10 @@ public class Tower_Update : MonoBehaviour
 
     }
 
-
-
     private void FixedUpdate()
     {
+        timeUntilFire += Time.fixedDeltaTime;    
+
         if (target == null)
         {
             FindTarget();
@@ -58,11 +58,8 @@ public class Tower_Update : MonoBehaviour
         }
         else
         {
-        timeUntilFire += Time.fixedDeltaTime;    
-
             if (timeUntilFire >= 1f / bps)
             {
-
                 Shoot();
                 timeUntilFire = 0f;
             }
