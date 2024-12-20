@@ -8,9 +8,10 @@ public class Action_Controller : MonoBehaviour
     [SerializeField] public ActionType actionType;
 
     // UI 
-    TMP_Text textField = null;
-    SpriteRenderer actionImage = null;
-    Button actionButton = null;
+    TMP_Text textField;
+    SpriteRenderer actionImage;
+    Button actionButton;
+    Image selection;
 
     // Events
     [HideInInspector] public UnityEvent<ActionType> selectedNewAction = new UnityEvent<ActionType>();
@@ -40,6 +41,7 @@ public class Action_Controller : MonoBehaviour
             if (child.tag == Utils.textTag) textField = child.gameObject.GetComponentInChildren<TMP_Text>();
             if (child.tag == Utils.imageTag) actionImage = child.gameObject.GetComponentInChildren<SpriteRenderer>();
             if (child.tag == Utils.buttonTag) actionButton = child.gameObject.GetComponentInChildren<Button>();
+            if (child.tag == Utils.selectTag) selection = child.gameObject.GetComponentInChildren<Image>();
         }
 
         if (actionImage == null) Debug.LogError($"Could not find image with tag {Utils.imageTag}");
@@ -61,8 +63,18 @@ public class Action_Controller : MonoBehaviour
 
     public void UpdateVisuals()
     {
-        if (selected) actionImage.color = Color.black;
-        else actionImage.color = Color.white;
+        if (selected) 
+        {
+            actionImage.color = Color.black;
+            selection.enabled = true;
+        }
+        else 
+        {
+            if (!pickable) actionImage.color = Color.gray;
+            else actionImage.color = Color.white;
+            
+            selection.enabled = false;
+        }
     }
 
     void ActionClicked()

@@ -28,6 +28,7 @@ public class Utils
     public const string buttonTag = "Button";
     public const string textTag = "Text";
     public const string imageTag = "Image";
+    public const string selectTag = "Button_Selection";
     public const string hpTag = "HPbar";
 
     // Layers
