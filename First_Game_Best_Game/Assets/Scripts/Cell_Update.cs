@@ -9,8 +9,13 @@ public class Cell_Update : MonoBehaviour
     // odstrani� serialized je to iba aby som videl zmenu v editore
     [SerializeField] private bool hasTower;
     [SerializeField] private GameObject towerPrefab;
+    //Action s anedá v inspectore zobraziť by default  :( sad lebo abstract class
+    private Action towerAction;
+
     int towerOrder = 20;
     SpriteRenderer spriteRenderer;
+
+    
 
     public bool CanHavePath
     {
@@ -209,10 +214,10 @@ public class Cell_Update : MonoBehaviour
         return detectedCells;
     }
 
-    public void AddTower(int towerType)
+    public void AddTower(int towerType, Action action)
     {
 
-
+        towerAction = action;
 
         if (towerPrefab == null)
         {
@@ -241,11 +246,12 @@ public class Cell_Update : MonoBehaviour
             return;
         }
 
-        // Find the first child (the most recently added tower, if following AddTower logic)
+        // Find the first child (the most recently added tower, if following AddTower logic) Toto by malo byť simple ale bulletproof pretože Na bunke s abude pridavať iba 1 objekt max
         Transform child = transform.GetChild(transform.childCount - 1);
 
         // Log the name of the child being removed
         Debug.Log($"Removing tower: {child.name}");
+        towerAction.AddAction(1);
 
         // Destroy the child GameObject
         Destroy(child.gameObject);
