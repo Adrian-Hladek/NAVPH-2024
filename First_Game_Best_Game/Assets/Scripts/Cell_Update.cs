@@ -209,7 +209,7 @@ public class Cell_Update : MonoBehaviour
         return detectedCells;
     }
 
-    public void AddTower(string childName,int towerType)
+    public void AddTower(int towerType)
     {
 
 
@@ -231,6 +231,32 @@ public class Cell_Update : MonoBehaviour
 
         // Optionally, log the successful addition
         Debug.Log($"Prefab '{towerPrefab.name}' instantiated as a child.");
+    }
+
+    public void RemoveTower()
+    {
+        if (transform.childCount == 0)
+        {
+            Debug.LogWarning("No towers to remove.");
+            return;
+        }
+
+        // Find the first child (the most recently added tower, if following AddTower logic)
+        Transform child = transform.GetChild(transform.childCount - 1);
+
+        // Log the name of the child being removed
+        Debug.Log($"Removing tower: {child.name}");
+
+        // Destroy the child GameObject
+        Destroy(child.gameObject);
+
+        // Optionally, log the successful removal
+        Debug.Log("Tower removed successfully.");
+
+
+
+
+
     }
 
 }

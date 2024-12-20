@@ -52,9 +52,10 @@ public class MoveTower : Action
         //Physics2D.SyncTransforms();
 
         Debug.Log("Moving tower");
+
         // Set the property value
-        //cellComponent.HasTower = true;
-        //cellComponent.AddTower("Tower", Resources.Load<Sprite>("Towers/Basic_Tower_transparent"), Vector2.zero, 3);
+        cellComponent.HasTower = false;
+        cellComponent.RemoveTower();
 
         // AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
         //cellComponent.UpdateNearbyCells();
