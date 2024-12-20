@@ -19,6 +19,7 @@ public class Action_Controller : MonoBehaviour
     
     bool selected = false;
     bool pickable = true;
+    bool disabled = false;
 
     public bool IsSelected
     {
@@ -72,7 +73,7 @@ public class Action_Controller : MonoBehaviour
         {
             if (!pickable) actionImage.color = Color.gray;
             else actionImage.color = Color.white;
-            
+
             selection.enabled = false;
         }
     }

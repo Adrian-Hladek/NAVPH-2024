@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.Events;
 
 
 public class Action_Inventory : MonoBehaviour
@@ -80,7 +79,6 @@ public class Action_Inventory : MonoBehaviour
         return holdingAction;
     }
 
-
     public ActionType TryPerformAction()
     {
         // Find action in inventory
@@ -94,10 +92,6 @@ public class Action_Inventory : MonoBehaviour
         }
         // No action selected
         else if (performing_action.type == ActionType.None) return ActionType.None;
-
-
-
-
 
         // Find object to perform action on
         GameObject target = null;
