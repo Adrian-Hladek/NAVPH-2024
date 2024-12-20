@@ -209,7 +209,7 @@ public class Cell_Update : MonoBehaviour
         return detectedCells;
     }
 
-    public void AddTower(string childName,int towerType, Sprite sprite, Vector2 position, float radius)
+    public void AddTower(string childName,int towerType)
     {
 
 
