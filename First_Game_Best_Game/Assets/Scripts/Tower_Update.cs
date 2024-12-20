@@ -73,21 +73,57 @@ public class Tower_Update : MonoBehaviour
 
     public void TowerSetup(int typeOfTower)
     {
-        Debug.Log("Outside");
+        
+        GameObject loadedPrefab = Resources.Load<GameObject>("Prefabs/Bullet");
 
-        // Load the prefab from the Resources folder
-        GameObject loadedPrefab = Resources.Load<GameObject>("Prefabs/Small_Bullet");
-        TowerType = typeOfTower;
-        if (loadedPrefab != null)
+        switch (typeOfTower)
         {
-            bulletPrefab = loadedPrefab; // Correct way to set the property
-            Debug.Log("Inside");
+            case 0: // Example: Basic Tower
+
+                if (loadedPrefab != null)
+                {
+                    bulletPrefab = loadedPrefab; // Correct way to set the property
+                    Debug.Log("Basic Tower prefab");
+                }
+                else
+                {
+                    Debug.LogError("Bullet prefab could not be loaded from Resources.");
+                }
+
+                targetingRange = 5f;
+                //rotationSpeed = 200f;
+                bps = 1f;
+                Debug.Log("Basic Tower setup complete.");
+                break;
+
+            case 1: // Example: Advanced Tower
+                loadedPrefab = Resources.Load<GameObject>("Prefabs/Small_Bullet");
+                if (loadedPrefab != null)
+                {
+                    bulletPrefab = loadedPrefab; // Correct way to set the property
+                    Debug.Log("Basic Tower prefab");
+                }
+                else
+                {
+                    Debug.LogError("Bullet prefab could not be loaded from Resources.");
+                }
+                targetingRange = 7f;
+                //rotationSpeed = 200f;
+                bps = 5f;
+                Debug.Log("Fast Tower setup complete.");
+                break;
+
+
+            default: // Handle unknown tower types
+                Debug.LogWarning("Unknown tower type specified.");
+
+
+
+                break;
         }
-        else
-        {
-            Debug.LogError("Bullet prefab could not be loaded from Resources.");
-            Debug.Log(bulletPrefab);
-        }
+
+
+
     }
 
 
