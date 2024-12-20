@@ -3,9 +3,9 @@ using UnityEngine;
 using System.Collections.Generic;
 
 
-public class BuildTower : Action
+public class BuildTowerFast : Action
 {
-    public BuildTower(int count, Action_Controller control)
+    public BuildTowerFast(int count, Action_Controller control)
     {
         type = ActionType.Tower_Basic;
         target = null;
@@ -21,14 +21,14 @@ public class BuildTower : Action
 
     public override LayerMask GetTargetLayers()
     {
-        string[] masks = new string[]{Utils.cellLayer};
+        string[] masks = new string[] { Utils.cellLayer };
         return LayerMask.GetMask(masks);
     }
 
     public override bool IsExecutable(GameObject cell)
     {
         Cell_Update cellComponent = cell.GetComponent<Cell_Update>();
-        if (cellComponent == null) 
+        if (cellComponent == null)
         {
             Debug.LogError($"Cell {cell.name} has NO update");
             return false;
@@ -43,14 +43,14 @@ public class BuildTower : Action
     {
 
         base.ExecuteAction();
-        
+
         Cell_Update cellComponent = target.GetComponent<Cell_Update>();
 
         //Physics2D.SyncTransforms();
 
         // Set the property value
         cellComponent.HasTower = true;
-        cellComponent.AddTower("Tower0",0, Resources.Load<Sprite>("Towers/Basic_Tower_transparent"),Vector2.zero,3);
+        cellComponent.AddTower("Tower1", 1, Resources.Load<Sprite>("Towers/Basic_Tower_transparent"), Vector2.zero, 3);
 
         // AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
         //cellComponent.UpdateNearbyCells();

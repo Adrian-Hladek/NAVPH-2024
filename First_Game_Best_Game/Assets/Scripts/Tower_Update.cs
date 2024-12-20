@@ -77,7 +77,7 @@ public class Tower_Update : MonoBehaviour
 
         // Load the prefab from the Resources folder
         GameObject loadedPrefab = Resources.Load<GameObject>("Prefabs/Small_Bullet");
-
+        TowerType = typeOfTower;
         if (loadedPrefab != null)
         {
             bulletPrefab = loadedPrefab; // Correct way to set the property

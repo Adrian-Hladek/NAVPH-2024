@@ -10,6 +10,7 @@ public enum ActionType
     Delete = 3,
     Tower_Basic = 4,
     Tower_Move = 5,
+    Tower_Fast = 6,
 }
 
 public abstract class Action
@@ -88,6 +89,9 @@ public abstract class Action
 
             case ActionType.Tower_Move:
                 return new MoveTower(count, controller);
+
+            case ActionType.Tower_Fast:
+                return new BuildTowerFast(count, controller);
         }
 
         return null;
