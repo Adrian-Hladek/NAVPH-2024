@@ -65,12 +65,12 @@ public class Utils
     // Sprites
     public static string getActionSprite(ActionType type)
     {
-        if (type == ActionType.Rotate) return "Actions/Circle-Arrow";
+        if (type == ActionType.Rotate) return "Actions/rotation_blue";
         else if (type == ActionType.Create) return "Actions/Pickaxe";
         else if (type == ActionType.Delete) return "Actions/Pickaxe";
-        else if (type == ActionType.Tower_Basic) return "Actions/Pickaxe";
-        else if (type == ActionType.Tower_Move) return "Actions/Basic_Tower_transparent";
-        else if (type == ActionType.Tower_Fast) return "Actions/Basic_tower";
+        else if (type == ActionType.Tower_Basic) return "Actions/120";
+        else if (type == ActionType.Tower_Move) return "Actions/Remove";
+        else if (type == ActionType.Tower_Fast) return "Actions/120blue";
 
         Debug.LogError($"Wrong action type {type}");
         return "";
