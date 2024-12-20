@@ -1,15 +1,18 @@
 using Unity;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Apple;
 
 
 public class MoveTower : Action
 {
+    private object destination;
+
     public MoveTower(int count, Action_Controller control)
     {
-        type = ActionType.Tower_Basic;
+        type = ActionType.Tower_Move;
         target = null;
-
+        destination = null;
         actionCount = count;
         controller = control;
     }
@@ -34,7 +37,7 @@ public class MoveTower : Action
             return false;
         }
 
-        if (cellComponent.HasPath || cellComponent.HasTower) return false;
+        if (!cellComponent.HasTower) return false;
 
         return base.IsExecutable(cell);
     }
@@ -45,12 +48,13 @@ public class MoveTower : Action
         base.ExecuteAction();
 
         Cell_Update cellComponent = target.GetComponent<Cell_Update>();
-
+ 
         //Physics2D.SyncTransforms();
 
+        Debug.Log("Moving tower");
         // Set the property value
-        cellComponent.HasTower = true;
-        cellComponent.AddTower("Tower", Resources.Load<Sprite>("Towers/Basic_Tower_transparent"), Vector2.zero, 3);
+        //cellComponent.HasTower = true;
+        //cellComponent.AddTower("Tower", Resources.Load<Sprite>("Towers/Basic_Tower_transparent"), Vector2.zero, 3);
 
         // AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
         //cellComponent.UpdateNearbyCells();

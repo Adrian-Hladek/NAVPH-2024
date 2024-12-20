@@ -209,7 +209,7 @@ public class Cell_Update : MonoBehaviour
         return detectedCells;
     }
 
-    public void AddTower(string childName, Sprite sprite, Vector2 position, float radius)
+    public void AddTower(string childName,int towerType, Sprite sprite, Vector2 position, float radius)
     {
 
 
@@ -221,6 +221,13 @@ public class Cell_Update : MonoBehaviour
         }
 
         GameObject child = Instantiate(towerPrefab, transform);
+        Tower_Update towerStats = child.GetComponent<Tower_Update>();
+        if (towerStats != null)
+        {
+            Debug.Log(towerStats.name);
+            towerStats.TowerSetup(towerType);
+        }
+
 
         // Optionally, log the successful addition
         Debug.Log($"Prefab '{towerPrefab.name}' instantiated as a child.");

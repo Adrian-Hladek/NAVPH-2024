@@ -16,11 +16,31 @@ public class Tower_Update : MonoBehaviour
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] private float bps = 1f; //bullets per second
+    [SerializeField] private int towerType;
 
     private float timeUntilFire;
     private Transform target;
 
-    private void Update()
+
+
+
+    public float TargetingRange
+    {
+        get { return targetingRange; }
+        set { targetingRange = value; }
+    }
+
+
+    public int TowerType
+    {
+        get { return towerType; }
+        set { towerType = value; }
+
+    }
+
+
+
+    private void FixedUpdate()
     {
         if (target == null)
         {
@@ -29,6 +49,7 @@ public class Tower_Update : MonoBehaviour
         }
 
         RotateTowardsTarget();
+        
 
         if (!CheckTargetIsInRange())
         {
@@ -36,7 +57,7 @@ public class Tower_Update : MonoBehaviour
         }
         else
         {
-            timeUntilFire += Time.deltaTime;
+        timeUntilFire += Time.fixedDeltaTime;    
 
             if (timeUntilFire >= 1f / bps)
             {
@@ -50,7 +71,24 @@ public class Tower_Update : MonoBehaviour
 
 
 
+    public void TowerSetup(int typeOfTower)
+    {
+        Debug.Log("Outside");
 
+        // Load the prefab from the Resources folder
+        GameObject loadedPrefab = Resources.Load<GameObject>("Prefabs/Small_Bullet");
+
+        if (loadedPrefab != null)
+        {
+            bulletPrefab = loadedPrefab; // Correct way to set the property
+            Debug.Log("Inside");
+        }
+        else
+        {
+            Debug.LogError("Bullet prefab could not be loaded from Resources.");
+            Debug.Log(bulletPrefab);
+        }
+    }
 
 
     private void Shoot()

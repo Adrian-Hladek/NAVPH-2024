@@ -93,30 +93,7 @@ public abstract class Action
         return null;
     }
 
-    bool AddBasicTower(GameObject cell)
-    {
-        Cell_Update cellComponent = cell.GetComponent<Cell_Update>();
 
-        // NO Cell_Update component
-        if (cellComponent == null)
-        {
-            Debug.LogError($"Object {cell.name} does NOT have Cell_Update");
-            return false;
-        }
-
-        // Cannot add path - exisitng path or path not possible
-        if (cellComponent.HasPath  || cellComponent.HasTower) return false;
-
-        Physics2D.SyncTransforms();
-
-        // Set the property value
-        cellComponent.HasTower = true;
-        cellComponent.AddTower("Turret", Resources.Load<Sprite>("Towers/Basic_Tower_transparent"),Vector2.zero,3);
-            // AddTurret(string childName, Sprite sprite, Vector2 position, float radius)
-        //cellComponent.UpdateNearbyCells();
-
-        return true;
-    }
 
 }
 

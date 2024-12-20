@@ -95,6 +95,10 @@ public class Action_Inventory : MonoBehaviour
         // No action selected
         else if (performing_action.type == ActionType.None) return ActionType.None;
 
+
+
+
+
         // Find object to perform action on
         GameObject target = null;
         RaycastHit2D[] possibleTargets = Utils.HitColliders(performing_action.GetTargetLayers());
