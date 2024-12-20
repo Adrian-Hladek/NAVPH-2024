@@ -39,6 +39,7 @@ public class Game_Speed_Controller : MonoBehaviour
         speedButton.onClick.AddListener(Selected);
         level.changedLevelState.AddListener(UpdateAccessibility);
 
+        speedButton.interactable = false;
         Disselected();
     }
 
@@ -46,23 +47,21 @@ public class Game_Speed_Controller : MonoBehaviour
     {
         level.SetLevelSpeed(gameSpeed);
         speedImage.color = selectImageColor;
-        Debug.Log($"Button {this.gameObject.name} SELECTED");
     }
 
     public void Disselected()
     {
         speedImage.color = Color.white;
-        Debug.Log($"Button {this.gameObject.name} DISSELECTED");
     }
 
     void UpdateAccessibility(LevelState state)
     {
         if (state == LevelState.GameOver || state == LevelState.Finished) 
         {
-            speedButton.enabled = false;
-            Disselected();
+            speedButton.interactable = false;
+            speedImage.color = Color.black;
         }
-        else speedButton.enabled = true;
+        else speedButton.interactable = true;
     }
 
 }
