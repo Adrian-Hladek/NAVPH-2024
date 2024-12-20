@@ -54,7 +54,8 @@ MonoBehaviour:
   firingPoint: {fileID: 5875528420901744322}
   targetingRange: 5
   rotationSpeed: 200
-  bps: 1
+  bps: 10
+  towerType: 0
 --- !u!1 &6053762941940015810
 GameObject:
   m_ObjectHideFlags: 0
