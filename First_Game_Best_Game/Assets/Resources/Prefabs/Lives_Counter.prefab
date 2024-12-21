@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 573001643704339687}
   - component: {fileID: 1616719443433507206}
   m_Layer: 5
-  m_Name: Lives_Count
+  m_Name: Lives_Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

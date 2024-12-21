@@ -23,6 +23,7 @@ public class Level_Manager : MonoBehaviour
 
     [HideInInspector] public UnityEvent<LevelState> changedLevelState = new UnityEvent<LevelState>();
     [HideInInspector] public UnityEvent<int> changedLivesCount = new UnityEvent<int>();
+    [HideInInspector] public UnityEvent<Queue <Enemy_Spawner>> updatedWaves = new UnityEvent<Queue <Enemy_Spawner>> ();
 
     void Awake()
     {
@@ -62,13 +63,10 @@ public class Level_Manager : MonoBehaviour
 
         currentWave = null;
         currentState = LevelState.Editing;
-        changedLivesCount.Invoke(playerHealth);
-    }
 
-    // TODO - remove
-    void Start()
-    {
-        ActivateNextWave();
+        changedLivesCount.Invoke(playerHealth);
+        updatedWaves.Invoke(waves);
+        changedLevelState.Invoke(currentState);
     }
 
     public bool LevelIsPlaying()
@@ -97,6 +95,7 @@ public class Level_Manager : MonoBehaviour
         currentState = LevelState.Fighting;
 
         inventory.UpdateDisabledActions(currentState);
+        updatedWaves.Invoke(waves);
         changedLevelState.Invoke(currentState);
     }
 
@@ -156,6 +155,8 @@ public class Level_Manager : MonoBehaviour
 
             inventory.UpdateDisabledActions(currentState);
             changedLevelState.Invoke(currentState);
+
+            updatedWaves.Invoke(waves);
         }
     }
 }
