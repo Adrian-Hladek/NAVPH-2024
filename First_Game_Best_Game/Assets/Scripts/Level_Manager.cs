@@ -17,10 +17,12 @@ public class Level_Manager : MonoBehaviour
     Enemy_Spawner currentWave;
     Map_Pathing pathing;
     LevelState currentState;
+    Action_Inventory inventory;
 
     [SerializeField] private int playerHealth = 0;
 
     [HideInInspector] public UnityEvent<LevelState> changedLevelState = new UnityEvent<LevelState>();
+    [HideInInspector] public UnityEvent<int> changedLivesCount = new UnityEvent<int>();
 
     void Awake()
     {
@@ -39,7 +41,15 @@ public class Level_Manager : MonoBehaviour
         pathing = FindObjectOfType<Map_Pathing>();
         if (pathing == null) 
         {
-            Debug.LogError("Map has NO path");
+            Debug.LogError("Level has NO path");
+            enabled = false;
+            return;
+        }
+
+        inventory = FindObjectOfType<Action_Inventory>();
+        if (inventory == null) 
+        {
+            Debug.LogError("Level has NO inventory");
             enabled = false;
             return;
         }
@@ -52,8 +62,12 @@ public class Level_Manager : MonoBehaviour
 
         currentWave = null;
         currentState = LevelState.Editing;
+        changedLivesCount.Invoke(playerHealth);
+    }
 
-        // TODO - remove
+    // TODO - remove
+    void Start()
+    {
         ActivateNextWave();
     }
 
@@ -81,15 +95,21 @@ public class Level_Manager : MonoBehaviour
 
         currentWave = waves.Dequeue();
         currentState = LevelState.Fighting;
+
+        inventory.UpdateDisabledActions(currentState);
         changedLevelState.Invoke(currentState);
     }
 
-    void ReducePlayerHealth(int livesLost)
+    void ChangePlayerHealth(int livesDifference)
     {
-        playerHealth -= livesLost;
+        playerHealth += livesDifference;
+        changedLivesCount.Invoke(playerHealth);
+
         if (playerHealth <= 0) 
         {
             currentState = LevelState.GameOver;
+
+            inventory.UpdateDisabledActions(currentState);
             changedLevelState.Invoke(currentState);
         }
     }
@@ -114,15 +134,17 @@ public class Level_Manager : MonoBehaviour
 
                 // Update enemy list
                 currentWave.RemoveDefeatedEnemies();
-                int livesLost = currentWave.RespawnEnemies(pathing.path);
+                int livesLost = 0 - currentWave.RespawnEnemies(pathing.path);
 
-                if (livesLost > 0) ReducePlayerHealth(livesLost);
+                if (livesLost < 0) ChangePlayerHealth(livesLost);
             }
             // Deactivate wave
             else 
             {
                 currentWave = null;
                 currentState = LevelState.Editing;
+
+                inventory.UpdateDisabledActions(currentState);
                 changedLevelState.Invoke(currentState);
             }
         }
@@ -131,6 +153,8 @@ public class Level_Manager : MonoBehaviour
         else if (waves.Count == 0) 
         {
             currentState = LevelState.Finished;
+
+            inventory.UpdateDisabledActions(currentState);
             changedLevelState.Invoke(currentState);
         }
     }

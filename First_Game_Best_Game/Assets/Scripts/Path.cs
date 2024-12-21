@@ -132,7 +132,7 @@ public class PathNode
 
         if (nodeDistances[end.GetId()] != int.MaxValue) 
         {
-            Debug.Log($"Shortest distance to end point = {nodeDistances[end.GetId()]}");
+            //Debug.Log($"Shortest distance to end point = {nodeDistances[end.GetId()]}");
             return ReconstructPath(validNodes, nodeDistances, start, end);
         }
 

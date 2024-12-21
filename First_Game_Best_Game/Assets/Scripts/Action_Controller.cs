@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,10 +9,10 @@ public class Action_Controller : MonoBehaviour
     [SerializeField] public ActionType actionType;
 
     // UI 
-    TMP_Text textField;
-    SpriteRenderer actionImage;
-    Button actionButton;
-    Image selection;
+    TMP_Text textField = null;
+    SpriteRenderer actionImage = null;
+    Button actionButton = null;
+    Image selection = null;
 
     // Events
     [HideInInspector] public UnityEvent<ActionType> selectedNewAction = new UnityEvent<ActionType>();
@@ -27,11 +28,18 @@ public class Action_Controller : MonoBehaviour
         set { selected = value; }
     }
 
+    public bool IsDisabled
+    {
+        get { return disabled; }
+        set { disabled = value; }
+    }
+
     public bool CanBePicked
     {
         get { return pickable; }
         set { pickable = value; }
     }
+
 
     void Awake()
     {
@@ -45,21 +53,27 @@ public class Action_Controller : MonoBehaviour
             if (child.tag == Utils.selectTag) selection = child.gameObject.GetComponentInChildren<Image>();
         }
 
-        if (actionImage == null) Debug.LogError($"Could not find image with tag {Utils.imageTag}");
+        if (actionImage == null) Debug.LogError($"Object {this.gameObject.name} could not FIND image with tag {Utils.imageTag}");
         else actionImage.sprite = Resources.Load<Sprite>(Utils.getActionSprite(actionType));
 
-        if (actionButton == null) Debug.LogError($"Could not find button with tag {Utils.buttonTag}");
+        if (actionButton == null) Debug.LogError($"Object {this.gameObject.name} could not FIND button with tag {Utils.buttonTag}");
         else actionButton.onClick.AddListener(ActionClicked);
 
-        if (textField == null) Debug.LogError($"Could not find text with tag {Utils.textTag}");
+        if (textField == null) Debug.LogError($"Object {this.gameObject.name} could not FIND text with tag {Utils.textTag}");
+
+        if (selection == null) Debug.LogError($"Object {this.gameObject.name} could not FIND selection image with tag {Utils.selectTag}");
 
         UpdateVisuals();
+    }
+
+    public void SetInteractibility()
+    {
+        actionButton.interactable = pickable && !disabled;
     }
 
     public void UpdateCount(int actionCount)
     {
         textField.text = actionCount.ToString();
-        actionButton.interactable = pickable;
     }
 
     public void UpdateVisuals()
@@ -71,7 +85,7 @@ public class Action_Controller : MonoBehaviour
         }
         else 
         {
-            if (!pickable) actionImage.color = Color.gray;
+            if (!pickable || disabled) actionImage.color = Color.gray;
             else actionImage.color = Color.white;
 
             selection.enabled = false;
@@ -80,7 +94,7 @@ public class Action_Controller : MonoBehaviour
 
     void ActionClicked()
     {
-        if (!pickable) return;
+        if (!pickable || disabled) return;
 
         if (selected) selectedOldAction.Invoke();
         else selectedNewAction.Invoke(actionType);

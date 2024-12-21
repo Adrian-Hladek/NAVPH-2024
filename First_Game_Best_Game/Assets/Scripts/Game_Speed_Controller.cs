@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Game_Speed_Controller : MonoBehaviour
@@ -59,7 +57,7 @@ public class Game_Speed_Controller : MonoBehaviour
         if (state == LevelState.GameOver || state == LevelState.Finished) 
         {
             speedButton.interactable = false;
-            speedImage.color = Color.black;
+            speedImage.color = Color.grey;
         }
         else speedButton.interactable = true;
     }

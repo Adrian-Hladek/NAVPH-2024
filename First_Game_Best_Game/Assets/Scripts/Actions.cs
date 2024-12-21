@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 
@@ -44,6 +45,12 @@ public abstract class Action
         return actionCount > 0;
     }
 
+    public void DisableAction(bool disable)
+    {
+        controller.IsDisabled = disable;
+        UpdateController();
+    }
+
     public void SelectAction(bool select)
     {
         controller.IsSelected = select;
@@ -67,6 +74,7 @@ public abstract class Action
             controller.IsSelected = false;
         }
 
+        controller.SetInteractibility();
         controller.UpdateCount(actionCount);
         controller.UpdateVisuals();
     }
@@ -96,9 +104,6 @@ public abstract class Action
 
         return null;
     }
-
-    
-
 }
 
 

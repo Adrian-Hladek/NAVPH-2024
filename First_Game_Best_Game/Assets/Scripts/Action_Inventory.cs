@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 
 public class Action_Inventory : MonoBehaviour
@@ -63,6 +64,30 @@ public class Action_Inventory : MonoBehaviour
     {
         actionHolder.DropAction();
         UpdateActionControllers(ActionType.None);
+    }
+
+    public void UpdateDisabledActions(LevelState state)
+    {
+        if (state == LevelState.Finished || state == LevelState.GameOver)
+        {
+            foreach ((ActionType type, Action action) in actions) action.DisableAction(true);
+            ClearPickedAction();
+        }
+
+        else if (state == LevelState.Editing)
+        {
+            foreach ((ActionType type, Action action) in actions) action.DisableAction(false);
+        }
+
+        else if (state == LevelState.Fighting)
+        {
+            ActionType[] disabledTypes = new ActionType[] {ActionType.Rotate, ActionType.Create, ActionType.Delete};
+
+            foreach ((ActionType type, Action action) in actions) action.DisableAction(disabledTypes.Contains(type));
+
+            Action currentAction = GetCurrentAction();
+            if (disabledTypes.Contains(currentAction.type)) ClearPickedAction();
+        }
     }
     
     void UpdateActionControllers(ActionType selectedType)
